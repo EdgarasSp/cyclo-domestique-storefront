@@ -53,19 +53,18 @@ body {
     border: 1px solid black !important;
 }
 
-
-
 /*navbar*/
 #navbarNav .navbar-nav .nav-link {
     color: #ffffff;
-    font-weight: bolder;
+    /*font-weight: bolder;*/
 }
 .bg-white #navbarNav .navbar-nav .nav-link {
     color: #000000;
-    font-weight: bolder;
+    /*font-weight: bolder;*/
 }
 .navbar-brand {
-    opacity: 0;
+    opacity: 1;
+    color: #ffffff !important;
 }
 .navbar-expand-lg {
     -webkit-transition: all .35s;
