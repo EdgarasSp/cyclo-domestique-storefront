@@ -63,9 +63,15 @@ body {
     /*font-weight: bolder;*/
 }
 .navbar-brand {
-    opacity: 1;
-    color: #ffffff !important;
+    color: #ffffff;
+    font-weight: bold;
 }
+
+.navbar-brand-white {
+    color: #ffffff  !important;
+    font-weight: bold;
+}
+
 .navbar-expand-lg {
     -webkit-transition: all .35s;
     transition: all .35s;
