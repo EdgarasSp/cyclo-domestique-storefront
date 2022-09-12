@@ -110,12 +110,12 @@
           </li>
           <!--categories end-->
           <!--all auth account menu start-->
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <div class="col-12 col-lg-4 my-auto mr-5 py-lg-0">
+            <ul class="list-inline list-unstyled my-0">
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
-                          <p class="my-0 logo-font">Account</p>
+                          <p class="my-0 logo-font"><i class="fas fa-user fa-lg"></i></p>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -123,7 +123,8 @@
                             {% if request.user.is_superuser %}
                                 <a href="#" class="Invetory Management"></a>
                             {% endif %}
-                            <a href="#" class="dropdown-item logo-font">${{ user.username }} Account</a>
+                            <!-- <a class="dropdown-item">Hi, {{ user.username }}</a> -->
+                            <a href="#" class="dropdown-item">Account</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                         {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -133,11 +134,11 @@
                 </li>
                 <!--basket start-->
                 <li class="list-inline-item">
-                    <a class="text-info font-weight-bold text-black nav-link" href="#">
+                    <a class="font-weight-bold text-black nav-link" href="#">
                         <div class="text-center">
-                            <p class="my-0">
-                              $0.00
-                            </p>
+                          <p class="my-0  logo-font"><i class="fas fa-shopping-bag fa-lg"></i>
+                              <!--$0.00 -->
+                          </p>
                         </div>
                     </a>
                 </li>
@@ -148,6 +149,54 @@
     </nav>
     <!--end navbar-->
   </header>
+
+  <!-- FOOTER -->
+  <footer class="footer shadow-sm bg-light">
+    <div class="container py-3">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-left" style="line-height: 32px;">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="text-black" href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="/contact">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-facebook fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-instagram fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p class="bg-white text-muted small text-center py-2 mb-0">&copy; By Edgaras Spiridonov for Code Institute 2022.</p>
+</footer>
+
 
 
   {% if messages %}

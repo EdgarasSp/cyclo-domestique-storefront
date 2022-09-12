@@ -1,11 +1,10 @@
 html {
     height: 100%;
+    margin: 0;
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 165px);
     color: #555;
     font-family: 'Lato';
 }
@@ -101,6 +100,35 @@ body {
     color: #ffffff;
 }
 
+/* Sticky footer styles */
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000000 !important;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 1; /* Vertically center the text there */
+}
+  
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.footer > p {
+      line-height: initial;
+}
+
+.footer a {
+    color: #000000 !important;
+}
+  
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -122,5 +150,36 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-carousel-item {
+        height: auto;
+        max-height: 640px;
+    }
+    #navbarNav .navbar-nav .nav-link {
+        color: #000;
+    }
+    .navbar-light {
+        background-color: #ffffff !important;
+        padding-top: 8px !important;
+    }
+    .navbar-brand {
+        opacity: 1;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 15%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px !important;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px !important;
     }
 }
