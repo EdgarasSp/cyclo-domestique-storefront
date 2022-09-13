@@ -1,0 +1,34 @@
+[
+    {
+        "pk":"1",
+        "model":"products.division",
+        "fields":{
+            "name":"bikes",
+            "friendly name":"Bikes"
+        }
+    },
+    {
+        "pk":"2",
+        "model":"products.division",
+        "fields":{
+            "name":"bike_parts",
+            "friendly name":"Bike Parts"
+        }
+    },
+    {
+        "pk":"3",
+        "model":"products.division",
+        "fields":{
+            "name":"tools",
+            "friendly name":"Tools"
+        }
+    },
+    {
+        "pk":"4",
+        "model":"products.division",
+        "fields":{
+            "name":"bike_service",
+            "friendly name":"Bike Service"
+        }
+    }
+]

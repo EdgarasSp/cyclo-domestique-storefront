@@ -1,0 +1,762 @@
+[
+    {
+        "pk":"1",
+        "model":"products.product",
+        "fields":{
+            "category":"1",
+            "sku":"SKU70913702",
+            "brand":"CANNONDALE",
+            "name":"Synapse Carbon 105 Road Bike",
+            "size":"54cm",
+            "amount":"5",
+            "color":"Mantis 22",
+            "description":"A road bike that?s light, stiff, fast and surprisingly comfortable.",
+            "full description":"A road bike that?s light, stiff, fast and surprisingly comfortable. Your rides will go longer. You will barely notice. Where it thrives: The open road, up and down hills, rough pavement. What it?s built for: Comfort, handling, and going long.",
+            "Key Features":"Lightweight BallisTec carbon frameset with Shimano 105 group with hydraulic disc brakes and Cannondale 1 crank",
+            "price":"2500",
+            "rating":"4",
+            "image":"70913702_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/70913702_l.jpg"
+        }
+    },
+    {
+        "pk":"2",
+        "model":"products.product",
+        "fields":{
+            "category":"1",
+            "sku":"SKU93405002",
+            "brand":"TREK",
+            "name":"Domane AL 3 Disc 2022 Road Bike",
+            "size":"56cm",
+            "amount":"10",
+            "color":"Crystal White22",
+            "description":"Domane AL 3 Disc is a smooth, stable and super fun road bike.",
+            "full description":"Domane AL 3 Disc is a smooth, stable and super fun road bike. It is a blast on everything from longer loops to group rides and even light gravel trails. The lightweight and comfortable frame features a road-smoothing carbon fork, quality parts and a wide range of gears ready for bigger adventures.",
+            "Key Features":"DuoTrap S compatibility makes it easy to wirelessly track your rides, so you can set goals and watch yourself reach them. The unique IsoSpeed Carbon fork, which swoops forward toward the dropouts, absorbs vibrations from the road so your arms wont fatigue as quickly. The Shimano Sora drive train has 18 speeds, with integrated brake/shift levers. Its a lighter parts group than Shimanos introductory group set, and provides a wide range of gears thats great for climbing.",
+            "price":"1100",
+            "rating":"4.5",
+            "image":"93405001_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93405001_l.jpg"
+        }
+    },
+    {
+        "pk":"3",
+        "model":"products.product",
+        "fields":{
+            "category":"1",
+            "sku":"SKU70762615",
+            "brand":"SPECIALIZED",
+            "name":"Allez Sprint Comp 2022 Road Bike",
+            "size":"56cm",
+            "amount":"2",
+            "color":"Oasis/Grey 22",
+            "description":"All-new Allez Sprint based on Tarmac SL7",
+            "full description":"We created the all-new Allez Sprint by cannibalizing the Tarmac SL7. We tore the Tarmac apart, and rebuilt it from alloy with our Smartweld technology. We leveraged every innovation and insight learned during its development to create the all-new Allez Sprint. Whether chasing a National title or attacking your buddies 15 minutes into an IncheasyInch Sunday spin, we won?t be offended if you mistake the Allez for a Tarmac SL7. Some may call it a carbon copy, we call it the World?s First Alloy Super Bike.",
+            "Key Features":"The Allez Sprint is the fastest alloy road bike in history, thanks to the time its sibling, the Tarmac SL7, spent in the wind. It?s details like the most complex alloy head tube we?ve ever made and integrated cables that make it 41 seconds faster over 40km than the previous Allez Sprint. That?s a hell of a facelift. With 41 seconds, you?d have a podium picture in your Insta feed, just saying. Whether you?re launching a sprint out of the final corner or attacking from the gun like a young Italian at the Giro, the Allez Sprint, with its one-piece bottom bracket and downtube, delivers the ruthless efficiency of alloy with unprecedented stability. By balancing power at the pedals with input at the bars, the Allez Sprint keeps you fast and confident on the limit. Dive for the winning gap, bang elbows in the final meters, dissect the most technical descents, all without feeling like you?ve gone ten rounds with the heavyweight champ. Dropped seat stays, and the Tarmac SL7?s carbon seat post and fork make the Allez Sprint supple in the saddle and precise at the bars?all with Tarmac SL7s World Championship-proven geometry. It?s as comfy as it is beautiful. Well, almost. One innovation over any other helps us deliver the new Allez Sprint?s aerodynamics, power transfer, and handling?Smartweld. Making the fastest bikes in the world out of carbon wasn?t hard enough. We hydroformed the bottom bracket and down tube from a single piece of alloy, built our most complex alloy head tube ever, and then put it all together with Smartweld. It?s what makes the Allez Sprint the first alloy super bike. ",
+            "price":"2650",
+            "rating":"5",
+            "image":"70762615_l (1).webp",
+            "image link":"https://www.evanscycles.com/images/products/70762615_l.jpg"
+        }
+    },
+    {
+        "pk":"4",
+        "model":"products.product",
+        "fields":{
+            "category":"1",
+            "sku":"SKU71286469",
+            "brand":"CANNONDALE",
+            "name":"Synapse Carbon 4 2022 Road Bike",
+            "size":"58cm",
+            "amount":"0",
+            "color":"Rose Gold 22",
+            "description":" Roll smooth, roll fast, roll confident.",
+            "full description":"Road Reimagined: Roll smooth, roll fast, roll confident. Wherever the road takes you, roll with Synapse ? our most comfortable, all-around, up-for-anything, pure road machine. Where it thrives: The open road, up and down hills, rough pavement. What it is built for: Comfort, handling, going long",
+            "Key Features":"Lightweight Synapse Carbon frameset / SmartSense ready. Shimano Tiagra 10-speed group w/ hydraulic disc brakes. Integrated Cannondale App connectivity",
+            "price":"2159",
+            "rating":"4",
+            "image":"71286469_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/71286469_l.jpg"
+        }
+    },
+    {
+        "pk":"5",
+        "model":"products.product",
+        "fields":{
+            "category":"2",
+            "sku":"SKU71331904",
+            "brand":"HAIBIKE",
+            "name":"HardSeven 5 2022 Electric Mountain Bike",
+            "size":"M",
+            "amount":"2",
+            "color":"Honey/Teal 22",
+            "description":"Adventures - here we come!",
+            "full description":"Tour or trail? Uphill or downhill? With the HardSeven 5, there is no need for tradeoffs because this is a versatile and agile eMTB. With 120mm travel, snappy disc brakes, nimble 27.5 wheels and a powerful Bosch Performance Line motor with a sleek, integrated 500Wh battery you will have a huge amount of fun on and off the trail. Adventures - here we come!",
+            "Key Features":"Aluminium frame with Bosch Performance Line, 65Nm 25km/h drive unit.  Bosch PowerTube 500Wh battery and award winning SR Suntour XCM32 Boost DS fork with 120mm trave",
+            "price":"2500",
+            "rating":"5",
+            "image":"71331904_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/71331904_l.jpg"
+        }
+    },
+    {
+        "pk":"6",
+        "model":"products.product",
+        "fields":{
+            "category":"2",
+            "sku":"SKU91692612",
+            "brand":"TREK",
+            "name":"Marlin 7 Mountain Bike",
+            "size":"XXL",
+            "amount":"5",
+            "color":"The Trek Marlin 7 is where race-worthy mountain bikes begin",
+            "description":"The Trek Marlin 7 is where race-worthy mountain bikes begin. The smooth, lightweight RockShox fork and upgraded parts make this model the best choice for new riders who want a fast cross country hardtail that will hold its own against our higher-end race bikes. Youre new to the trail but have serious singletrack aspirations, and want a race-worthy mountain bike with upgrades on the parts that make a big difference in performance, like a higher quality suspension fork and a wide-range 1x drive train.",
+            "full description":"Alpha Silver Aluminium Frame allows easier handling on the toughest of trails. RockShox Judy Fork is ready to tackle the most demanding trail and enduro rides. Shimano Deore 10 Speed Drivetrain delivers personalized gear choices that take you as far and wide as you want to go. Shimano MT200 Hydraulic Disc Brakes for reliability and consistency you can count on.",
+            "Key Features":" Light and durable SmartForm C3 Alloy frame. SR Suntour XCR32 RL suspension fork, 100mm travel, remote lockout. Shimano Deore 10-speed drivetrain w/ double chainring crank.",
+            "price":"659",
+            "rating":"4.5",
+            "image":"91692619_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91692619_l.jpg"
+        }
+    },
+    {
+        "pk":"7",
+        "model":"products.product",
+        "fields":{
+            "category":"2",
+            "sku":"SKU91730718",
+            "brand":"GT",
+            "name":"Aggressor Expert 2022 Mountain Bike",
+            "size":"XL",
+            "amount":"4",
+            "color":"Slate Gray 23",
+            "description":"GT Aggressor Expert is a versatile little offering",
+            "full description":"Take it to the park, practice your skids, cruise the commute or take it out into the wilderness, the GT Aggressor Expert is a versatile little offering. With an off-road friendly geometry and a lightweight alloy frame, it?s perfect for everyday recreational use. At the heart of the Aggressor Expert is a completely re-designed alloy frame which is teamed up with an updated triple triangle frame with floating stays for welcome extra comfort. Packed with performance features, the Aggressor is kitted out with SR Suntour XCM-DS fork, Shimano Altus/Tourney drivetrain and Mech Disc 160/160mm rotors.",
+            "Key Features":"GT 6061 T6 Aluminum Frame, Triple Triangle w/ Floating Seat Stays, Forged Drop-outs w/ Disc Brake Mounts, Zero Stack 1 1/8 Head Tube",
+            "price":"550",
+            "rating":"3.5",
+            "image":"91730718_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91730718_l.jpg"
+        }
+    },
+    {
+        "pk":"8",
+        "model":"products.product",
+        "fields":{
+            "category":"2",
+            "sku":"SKU71330202",
+            "brand":"HAIBIKE",
+            "name":"AllMtn 3 2022 Electric Mountain Bike",
+            "size":"M",
+            "amount":"2",
+            "color":"Metal/Honey 22",
+            "description":"The AllMtn 3 is the perfect all-rounder for any terrain",
+            "full description":"The AllMtn 3 is the perfect all-rounder for any terrain: With 160 mm suspension travel, 4-piston disc brakes from Shimano and a powerful Bosch Performance CX Gen 4 motor, this e-mountain bike impresses even on more demanding trails. Mixed wheel sizes with 29 at the front and 27.5 at the rear round off the package and ensure comfortable rolling behaviour and perfect traction so that you master even the steepest uphills and downhills with ease.",
+            "Key Features":"Bosch Performance CX Gen4 Drive Unit. RockShox 35 Silver fork with 160mm travel. Lightweight aluminium frame.",
+            "price":"4200",
+            "rating":"4",
+            "image":"71330202_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/71330202_l.jpg"
+        }
+    },
+    {
+        "pk":"9",
+        "model":"products.product",
+        "fields":{
+            "category":"2",
+            "sku":"SKU70969316",
+            "brand":"SPECIALIZED",
+            "name":"Stumpjumper Comp Alloy 2022 Mountain Bike",
+            "size":"S",
+            "amount":"15",
+            "color":"Sage Green 22",
+            "description":"Rail-sharp cornering and balanced front and rear stiffness",
+            "full description":"Metal fans rejoice! The Stumpjumper Comp Alloy rocks on, with one of the most advanced alloy frames ever developed. From the frame?s asymmetrical design, taking in the refined suspension kinematics and all-new geometry, to a build kit that strikes the optimal combination of performance and value, it?s metal, but it ain?t heavy metal. And it?s ready to slay some dirt.",
+            "Key Features":"THE TRAIL BENCHMARK ? When Specialized set out to design the all-new Stumpjumper, they pursued some hefty goals. It had to excel on any kind of trail, for every style of rider. To achieve that, we went after serious weight reduction without sacrificing durability, a stiff, responsive chassis that still rides light and lively, geometry that improves everyone?s riding, and the best suspension kinematics we know how to design. Turns out, you can have your cake and eat it too with the new Stumpjumper. THE SWEETEST 130MM OF TRAVEL YOU?LL EVER RIDE ? The massaged the kinematics of the Stumpjumper suspension bring out the very best all-round performance possible in a 130mm package. Countless hours of suspension lab development and field testing created a refined mid-travel ripper that eats big terrain like a gravity fed beast, handles like a dream everywhere, and climbs like it has a motor.",
+            "price":"2850",
+            "rating":"5",
+            "image":"70969316_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/70969316_l.jpg"
+        }
+    },
+    {
+        "pk":"10",
+        "model":"products.product",
+        "fields":{
+            "category":"3",
+            "sku":"SKU93918118",
+            "brand":"PINACLE",
+            "name":"Koto 16 Inch Kids Bike",
+            "size":"16 Inch",
+            "amount":"10",
+            "color":"Blue (B)",
+            "description":"A lightweight aluminium frame and 16 inch wheels",
+            "full description":"We designed the Pinnacle Koto to give your little one that extra boost of confidence on the school run and out and about on the weekends. A larger frame than our Pinnacle Koa, we made the Koto with the idea to eventually take off the stabilisers and encourage your child to start riding unassisted.",
+            "Key Features":"Lightweight aluminium frame and wheels. Child friendly short reach brake levers, comfortable rubber grips, and easy to use single speed. Confidence-inspiring geometry to encourage your child to get going straight away and eventually gear towards being able to ride without the stabilisers",
+            "price":"235",
+            "rating":"4.5",
+            "image":"93918118_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93918118_l.jpg"
+        }
+    },
+    {
+        "pk":"11",
+        "model":"products.product",
+        "fields":{
+            "category":"3",
+            "sku":"SKU93843232",
+            "brand":"MUDDYFOX",
+            "name":"Synergy 20 Inch Girls Bike",
+            "size":"20 Inch",
+            "amount":"6",
+            "color":"Pink",
+            "description":"An ideal first proper bike for your little one",
+            "full description":"The Muddyfox Synergy 20 is an ideal first proper bike for your little one. 6 gears are a good number for your child to get used to using for the first time and the frame shape has been designed to make it easy for them to get on and off the bike whenever they want to. Whether they are riding on paths, grass, or pavements, the Synergy is robust and stable enough to keep your little one going as far as they want to.",
+            "Key Features":"Alloy rims are lightweight. Sloped top-tube shape makes it easy to get on and off. V- brakes for reliable stopping in all weather conditions.",
+            "price":"119",
+            "rating":"4",
+            "image":"93843232_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93843232_l.jpg"
+        }
+    },
+    {
+        "pk":"12",
+        "model":"products.product",
+        "fields":{
+            "category":"3",
+            "sku":"SKU93199412",
+            "brand":"HOY",
+            "name":"Bonaly 26 Inch Wheel Disc Kids Bike",
+            "size":"26 Inch",
+            "amount":"7",
+            "color":"Orange",
+            "description":"The Bonaly is our best-selling children?s bike",
+            "full description":"At Hoy bikes we?re motivated by always remembering how riding a bike is a special part of childhood, so our bikes make that experience more enjoyable for children and offer the most value and reward for parents. The Bonaly is our best-selling children?s bike, named after the area of the Pentland Hills where a younger Sir Chris Hoy first rode his mountain bike. Everything about this bike has been designed to make it equally likely to be a part of an illustrious cycling career as those hills were. Understanding that a child?s bike is a much greater percentage of their weight than an adult?s bike is, we reduced the weight of the redesigned Bonaly wherever we could ? and it was a light bike to begin with.",
+            "Key Features":"Hoy 6066-T6 Heat Treated Alloy, W/Double And Triple Butted Tubes and Smooth Welds. Bottle Cage and Mudguard Mounts",
+            "price":"560",
+            "rating":"4.5",
+            "image":"93199412_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93199412_l.jpg"
+        }
+    },
+    {
+        "pk":"13",
+        "model":"products.product",
+        "fields":{
+            "category":"3",
+            "sku":"SKU93459815",
+            "brand":"COSMIC",
+            "name":"Urban 16 Inch Kids Bike",
+            "size":"16 Inch",
+            "amount":"0",
+            "color":"Green",
+            "description":"Great for a first bike",
+            "full description":"Let your young one learn the joys of cycling with the Urban 16 Inch Childrens Bike from Cosmic. Great for a first bike, the Cosmic Urban has a single speed drivechain for simplicity with an adjustable seatpost, grippy rubber tires, a chain protector for safety and steel caliper brakes to the front and rear. There are reflectors throughout for visibility with a front bell, a rigid steel frame and a rigid BMX front fork for stability while they learn to ride.",
+            "Key Features":"Single speed drivechain with - 16 wheels with alloy rims. Steel frame and handlebars Rigid BMX style front fork for stability.  Fully enclosed chainguard for childrens safety front, rear and side reflectors.",
+            "price":"65",
+            "rating":"3",
+            "image":"93459815_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93459815_l.jpg"
+        }
+    },
+    {
+        "pk":"14",
+        "model":"products.product",
+        "fields":{
+            "category":"4",
+            "sku":"SKU70013703",
+            "brand":"ZIPP",
+            "name":"Zipp?s 303 S Series Tubeless Disc Brake wheelset",
+            "size":"700c",
+            "amount":"12",
+            "color":"Black",
+            "description":"303S CL Carbon Tubeless Center Lock Disc Brake 700C Sram 10/11 Speed 12X142mm Rear Wheel",
+            "full description":"Zipp?s 303 S Series Tubeless Disc Brake wheelset provides today?s cyclists the versatility they demand with the speed they crave. Expanding greatly on its heritage of conquering the Spring Classics, this 303 wheelset maintains its ideal-for-every-terrain 45mm rim depth but adds a significantly wider internal width to provide greater performance and ride quality in almost every measurable way. Road bikes are more versatile than ever, no matter the road surface, but just as fast as before. The 303 S offers an entirely new rim profile and design to optimize rider performance on this new breed of bike. This wheelset is tubeless for disc-brake bikes, allowing the ability to run wide tires at lower pressures for race-ready speed on or off the pavement. The 303 S is among our lightest wheelsets, optimized for top aero performance with a 28mm tire but capable of handling gravel tires up to 50mm wide.",
+            "Key Features":"New Zipp graphics and cosmetic identity that scream speed. Fastest with 28mm, fits wide gravel tires as well, 76 / 176 DB hubs with Center locking interface. Wide rims optimize tire profile to allow lower tire pressure, especially with tubeless. The result is a larger contact patch for increase grip for confident cornering, descending, and handling in wet conditions.",
+            "price":"515",
+            "rating":"5",
+            "image":"70013703_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/70013703_l.jpg"
+        }
+    },
+    {
+        "pk":"15",
+        "model":"products.product",
+        "fields":{
+            "category":"4",
+            "sku":"SKU91762303",
+            "brand":"MAVIC",
+            "name":"Crossride - Mountain Bike Rear Wheel",
+            "size":"700c",
+            "amount":"0",
+            "color":"Black",
+            "description":"Crossride FTS-X 6 Bolt 27.5 Mountain Bike Rear Wheel",
+            "full description":"The Crossride FTS-X 27.5 6 Bolt Rear Wheel 2016 from Mavic is the ideal replacement wheel for those who simply want one that is simple and reliable.",
+            "Key Features":"FTS-X 27.5 6 Bolt Rear Wheel ",
+            "price":"120",
+            "rating":"3",
+            "image":"91762303_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91762303_l.jpg"
+        }
+    },
+    {
+        "pk":"16",
+        "model":"products.product",
+        "fields":{
+            "category":"4",
+            "sku":"SKU93379311",
+            "brand":"RALEIGH",
+            "name":"26Inch Rear Rim Brake Nutted Wheel - Free Wheel",
+            "size":"26 Inch",
+            "amount":"2",
+            "color":"Silver",
+            "description":"Raleigh?s most economical rear wheel",
+            "full description":"Raleigh?s most economical rear wheel. 26 x 1.75Inch with silver alloy rim. It has a 36 hole alloy hub with nutted axle. This rear wheel is a suitable replacement for most entry level 26Inch wheeled bikes. The rear hub gear is sided and threaded to take a standard multiple freewheel",
+            "Key Features":"26 X 1.75Inch REAR WHEEL, ALLOY HUB, SCREW ON",
+            "price":"18.99",
+            "rating":"4.5",
+            "image":"93379311_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93379311_l.jpg"
+        }
+    },
+    {
+        "pk":"17",
+        "model":"products.product",
+        "fields":{
+            "category":"4",
+            "sku":"SKU91385803",
+            "brand":"MAVIC",
+            "name":"Ksyrium Pro Carbon UST Centrelock Disc Brake 700c Road Wheelset",
+            "size":"700c",
+            "amount":"9",
+            "color":"Black",
+            "description":"Mavic Ksyrium Pro Carbon UST Centrelock Disc Brake 700c Road Wheelset",
+            "full description":"The Ksyrium line has always offered the unbeatable combination of light weight, high stiffness, comfort and reliability. Now with added Mavic UST Road Tubeless technology to make the Ksyrium Carbon SL UST even faster. Eliminating the tube also eliminates friction, so you roll faster with greater efficiency. And now you can run lower tire pressures in the Yksion Pro UST Tubeless tires for increased comfort and a reduced risk of flats. As a bonus, the UST system including sealant weighs less than a traditional tube and tire system.",
+            "Key Features":"Added rim width (19mm internal/25mm external) allows for increased air volume in the tires, which further improves ride quality, and the round, smooth rim profile makes it one of the most aerodynamic wheels in its category. The spokes are bladed and double butted. Using 20 in front and 24 rear creates high stiffness, low weight and long-term reliability. The Ksyrium Pro Carbon SL C also includes Instant Drive 360 freewheel system hubs for fast engagement, high axle stiffness and great durability. And if you need to service it, the tool-free design makes it simpler than ever.",
+            "price":"1190",
+            "rating":"3",
+            "image":"91385803_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91385803_l.jpg"
+        }
+    },
+    {
+        "pk":"18",
+        "model":"products.product",
+        "fields":{
+            "category":"4",
+            "sku":"SKU91379903",
+            "brand":"MAVIC",
+            "name":"Mavic Crossmax Elite UST Boost 29 Mountainbike Wheelset",
+            "size":"700c",
+            "amount":"5",
+            "color":"Black",
+            "description":"Crossmax Elite UST Boost 29 Mountainbike Wheelset",
+            "full description":"",
+            "Key Features":"",
+            "price":"545",
+            "rating":"5",
+            "image":"91379903_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/91379903_l.jpg"
+        }
+    },
+    {
+        "pk":"19",
+        "model":"products.product",
+        "fields":{
+            "category":"5",
+            "sku":"SKU91506603",
+            "brand":"VITTORIA",
+            "name":"Zaffrio Pro IV G2.0 700C Folding Clincher Road Tyre",
+            "size":"28mm",
+            "amount":"20",
+            "color":"Black",
+            "description":"Zaffrio Pro IV G2.0 700C Folding Clincher Road Tyre",
+            "full description":"As a designated long-distance tyre, the popular road bike tyre is perfect for eating miles on intensive rides. Designed for all road and weather conditions, the robust all-rounder benefits from the improved GRAPHENE 2.0 rubber compound setting new standards in comfort, rolling resistance, grip and wear resistance.",
+            "Key Features":"GRAPHENE 2.0 rubber compound",
+            "price":"19",
+            "rating":"0",
+            "image":"91506603_l.webp",
+            "image link":"https://www.evanscycles.com/brand/vittoria/zaffrio-pro-iv-g20-700c-folding-clincher-road-tyre-915066#colcode=91506603"
+        }
+    },
+    {
+        "pk":"20",
+        "model":"products.product",
+        "fields":{
+            "category":"5",
+            "sku":"SKU70886203",
+            "brand":"VITTORIA",
+            "name":"Rubino Pro IV 700c Fold G2.0 Clincher Road Tyre Twin Pack",
+            "size":"28mm",
+            "amount":"12",
+            "color":"Black",
+            "description":"Rubino Pro IV 700c Fold G2.0 Clincher Road Tyre Twin Pack",
+            "full description":"Designed for intensive training, it is equally suitable for racing events. The Rubino Pro builds on the standard Rubino platform, utilising the same exclusive 3C Graphene compound structure, long service life, puncture protection, and sharp handling traits, but substitutes a folding bead material for reduced weight. The Rubino Pro has long been a favourite for both training and racing, and with the addition of Graphene technology compounds, is more versatile than ever!",
+            "Key Features":"Exclusive 3C Graphene compound structure",
+            "price":"84.99",
+            "rating":"5",
+            "image":"70886203_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/70886203_l.jpg"
+        }
+    },
+    {
+        "pk":"21",
+        "model":"products.product",
+        "fields":{
+            "category":"5",
+            "sku":"SKU93935403",
+            "brand":"VITTORIA",
+            "name":"Barzo Rigid 29 Mountain Bike Tyre",
+            "size":"2.25 Inch",
+            "amount":"13",
+            "color":"Black",
+            "description":"Barzo Rigid 29 Mountain Bike Tyre",
+            "full description":"Riding technical XC? The Barzo is the choice of the 2020 World Champion, as well as the winner of the BC Bike Race. How can such an aggressive XC tyre roll so fast? The magic starts in the centre tread, where we place an alternating ridge design, and progressive sipe angles. Cornering duties are handled by the moto-style block knobs, laid out in a proven V-formation. The result is a tyre that corners as fast as it rolls, while still offering the protection of a full depth tread. Rocks and roots? Check. World Championship? ",
+            "Key Features":"Moto-style block knobs, laid out in a proven V-formation",
+            "price":"24.99",
+            "rating":"3.5",
+            "image":"93935403_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93935403_l.jpg"
+        }
+    },
+    {
+        "pk":"22",
+        "model":"products.product",
+        "fields":{
+            "category":"5",
+            "sku":"SKU91598804",
+            "brand":"VITTORIA",
+            "name":"Mezcal III TLR 29 XCR G2.0",
+            "size":"2.25 Inch",
+            "amount":"17",
+            "color":"Black",
+            "description":"Mezcal III TLR 29 XCR G2.0",
+            "full description":"",
+            "Key Features":"",
+            "price":"54.99",
+            "rating":"4",
+            "image":"91598804_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91598804_l.jpg"
+        }
+    },
+    {
+        "pk":"23",
+        "model":"products.product",
+        "fields":{
+            "category":"6",
+            "sku":"SKU97414710",
+            "brand":"TOPEAK",
+            "name":"Mini 20 Pro Multi-Tool",
+            "size":"One Size",
+            "amount":"30",
+            "color":"Gold",
+            "description":"Mini 20 Pro Multi-Tool",
+            "full description":"This Professional quality, one piece, light weight folding tool offering hardened steel tools with 20 functions. Ideal for taking with you when out on the bike.",
+            "Key Features":"Professional quality, litweight",
+            "price":"31.99",
+            "rating":"3",
+            "image":"97414710_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/97414710_l.jpg"
+        }
+    },
+    {
+        "pk":"24",
+        "model":"products.product",
+        "fields":{
+            "category":"6",
+            "sku":"SKU97414711",
+            "brand":"TOPEAK",
+            "name":"Mini 20 Pro Multi-Tool",
+            "size":"One Size",
+            "amount":"23",
+            "color":"Silver",
+            "description":"Mini 20 Pro Multi-Tool",
+            "full description":"This Professional quality, one piece, light weight folding tool offering hardened steel tools with 20 functions. Ideal for taking with you when out on the bike.",
+            "Key Features":"Professional quality, litweight",
+            "price":"31.99",
+            "rating":"3",
+            "image":"97414711_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/97414711_l.jpg"
+        }
+    },
+    {
+        "pk":"25",
+        "model":"products.product",
+        "fields":{
+            "category":"6",
+            "sku":"SKU91190901",
+            "brand":"PARK",
+            "name":"I-Beam Mini Fold-Up Hex Wrench Chain Tool Screwdriver and Star-Shaped Wrench Set",
+            "size":"One Size",
+            "amount":"16",
+            "color":"Blue",
+            "description":"I-Beam Mini Fold-Up Hex Wrench Chain Tool Screwdriver and Star-Shaped Wrench Set",
+            "full description":"The Park Tools I-beam Mini Fold-Up Hex Wrench Chain Tool Screwdriver and Star-Shaped Wrench Set is an ideal jersey pocket rider. T",
+            "Key Features":"he Aluminium construction and design of the I-beam makes it super compact and strong. The multi-tool is robust and light weight and will take anything you throw at it.",
+            "price":"24.99",
+            "rating":"4",
+            "image":"91190901_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91190901_l.jpg"
+        }
+    },
+    {
+        "pk":"26",
+        "model":"products.product",
+        "fields":{
+            "category":"6",
+            "sku":"SKU91190801",
+            "brand":"PARK",
+            "name":"I-Beam IB2C Mini Fold-Up Hex Wrench Screwdriver and Star-Shaped Wrench Set",
+            "size":"One Size",
+            "amount":"17",
+            "color":"Blue",
+            "description":"I-Beam IB2C Mini Fold-Up Hex Wrench Screwdriver and Star-Shaped Wrench Set",
+            "full description":"The Park Tools I-beam IB2C Mini Fold-Up Hex Wrench and Screwdriver set is ideal to take with you on every ride. The I-beam technology is super strong, compact and light weight, which are the main things you want to be looking for when purchasing a new multi-tool. All of the tools fold into the I-Beam to create a neat regular shape that will slip easily into a jersey pocket or seatpack. ",
+            "Key Features":"The Tool includes: 1.5, 2, 2.5, 3, 4, 5, 6 and 8 mm wrenches which cover most fixings on a bike including many crank bolts, A T25 Star shaped wrench is useful for Disc brake rotor bolts and a straight blade screwdriver is ideal for adjusting screws on brake and gear components. Overall this multi-tool packs plenty of tool bits to help you in some of the trickiest situations.",
+            "price":"14.99",
+            "rating":"3",
+            "image":"91190801_l_a1.webp",
+            "image link":"https://www.evanscycles.com/images/products/91190801_l_a1.jpg"
+        }
+    },
+    {
+        "pk":"27",
+        "model":"products.product",
+        "fields":{
+            "category":"6",
+            "sku":"SKU97681001",
+            "brand":"TOPEAK",
+            "name":"Topeak Survival Gear Box",
+            "size":"One Size",
+            "amount":"36",
+            "color":"Silver",
+            "description":"Survival Gear Box",
+            "full description":"The Topeak Survival Gear Box is an update of the classic tool kit. ",
+            "Key Features":"The new Survival Tool Box features 22 pro quality hardened tools in a compact, custom moulded plastic case. 233g.",
+            "price":"27.99",
+            "rating":"5",
+            "image":"97681001_l.jpg",
+            "image link":"https://www.evanscycles.com/images/products/97681001_l.jpg"
+        }
+    },
+    {
+        "pk":"28",
+        "model":"products.product",
+        "fields":{
+            "category":"7",
+            "sku":"SKU91250203",
+            "brand":"FEW",
+            "name":"Compact Folding Workstand",
+            "size":"One Size",
+            "amount":"3",
+            "color":"Black",
+            "description":"Compact Folding Workstand",
+            "full description":"The new FWE Compact Folding Workstand has been redesigned to be more feature rich, more stable and easier to store - perfect for the home or travelling. A workstand makes repairing your bike an easy task with good access to your drivetrain, wheels and underside of your bike.",
+            "Key Features":"Strong metal construction with spring loaded clamp.",
+            "price":"47",
+            "rating":"0",
+            "image":"91250203_l_a1.webp",
+            "image link":"https://www.evanscycles.com/images/products/91250203_l_a1.jpg"
+        }
+    },
+    {
+        "pk":"29",
+        "model":"products.product",
+        "fields":{
+            "category":"8",
+            "sku":"SKU91313713",
+            "brand":"TOPEAK",
+            "name":"Joe Blow Sport III Track Pump",
+            "size":"One Size",
+            "amount":"6",
+            "color":"Yellow",
+            "description":"Joe Blow Sport III Track Pump",
+            "full description":"The Joe Blow Sport III Track Pump continues the tradition of improving floor pump performance. The durable steel barrel and base is combined with an ergonomic padded handle to make inflating tyres an easy task. ",
+            "Key Features":"The rotating connection ensures that the Joe Blow Sport III Track Pumps hose is kept tangle free, whilst the 3Inch easy-to-read chronograph gauge allows you to monitor the inflation in real time. An updated hammer type TwinHead? DX now features a longer lever for easier use.",
+            "price":"40.99",
+            "rating":"4.5",
+            "image":"91313713_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91313713_l.jpg"
+        }
+    },
+    {
+        "pk":"30",
+        "model":"products.product",
+        "fields":{
+            "category":"8",
+            "sku":"SKU93075101",
+            "brand":"PARK",
+            "name":"PFP8 Home Mechanic Track Pump",
+            "size":"One Size",
+            "amount":"8",
+            "color":"Blue",
+            "description":"PFP8 Home Mechanic Track Pump",
+            "full description":"The Park PFP8 Home Mechanic Track Pump is great value, versatile and extremely durable. Park Tools PFP8 is the successor to their best selling PFP6 track pump. This floor pump will feel at home in the workshop, at home or even out at the track. Park Tool have ensured this pump is as usable as possible, so they included their composite head with thumb lock that fits Presta, Schrader and Dunlop valves.",
+            "Key Features":"The Park Tool PFP8 Home Mechanic Track Pump features a very smooth and durable steel barrel. This is a rarity at this price of pump and greatly improves durability whilst improving pumping efficiency at high pressures. ",
+            "price":"34.99",
+            "rating":"4",
+            "image":"93075101_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93075101_l.jpg"
+        }
+},
+    {
+        "pk":"31",
+        "model":"products.product",
+        "fields":{
+            "category":"8",
+            "sku":"SKU93780611",
+            "brand":"MUDDYFOX",
+            "name":"Track Pump 200",
+            "size":"One Size",
+            "amount":"2",
+            "color":"Black",
+            "description":"Track Pump 200",
+            "full description":"This Muddyfox Track Pump 200 is an alloy track pump, the alloy construction means that this pump is lightweight and strong, a folding step allows for this pump to be a floor standing design. Muddyfox branding provides a great look that also offers instant brand recognition.",
+            "Key Features":"An integrated pressure gauge allows you to read as you pump. This pump is Schrader and Presta valve compatible. ",
+            "price":"10.99",
+            "rating":"4",
+            "image":"93780611_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/93780611_l.jpg"
+        }
+    },
+    {
+        "pk":"32",
+        "model":"products.product",
+        "fields":{
+            "category":"9",
+            "sku":"SKU97625901",
+            "brand":"MUC-OFF",
+            "name":"Muc-Off Dry Lube 50mil",
+            "size":"50ml",
+            "amount":"42",
+            "color":"Black",
+            "description":"Dry Lube 50ml",
+            "full description":"Lube is a durable, deep penetrating Chain Lubricant and oil that?s formulated to hold up in extreme conditions that would destroy ordinary chain lubes. And there?s no need to worry because Muc-Off Dry Lube is biodegradable, so it?s safe for you, your bike and the planet.",
+            "Key Features":"Muc-Off Dry Lube is a highly versatile, dry weather chain oil that has state of the art penetrative qualities to ensure that the lube is driven deep into each chain link?s core. ",
+            "price":"4.99",
+            "rating":"4.5",
+            "image":"97625901_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/97625901_l.jpg"
+        }
+    },
+    {
+        "pk":"33",
+        "model":"products.product",
+        "fields":{
+            "category":"9",
+            "sku":"SKU97625902",
+            "brand":"MUC-OFF",
+            "name":"Muc-Off Dry Lube 120 ml",
+            "size":"120ml",
+            "amount":"12",
+            "color":"Black",
+            "description":"Dry Lube 120,l",
+            "full description":"Lube is a durable, deep penetrating Chain Lubricant and oil that?s formulated to hold up in extreme conditions that would destroy ordinary chain lubes. And there?s no need to worry because Muc-Off Dry Lube is biodegradable, so it?s safe for you, your bike and the planet.",
+            "Key Features":"Muc-Off Dry Lube is a highly versatile, dry weather chain oil that has state of the art penetrative qualities to ensure that the lube is driven deep into each chain link?s core. ",
+            "price":"11.99",
+            "rating":"4.5",
+            "image":"97625901_l_a1.webp",
+            "image link":"https://www.evanscycles.com/images/products/97625901_l_a1.jpg"
+        }
+    },
+    {
+        "pk":"34",
+        "model":"products.product",
+        "fields":{
+            "category":"9",
+            "sku":"SKU91027901",
+            "brand":"MUC-OFF",
+            "name":"Muc-Off C3 Ceramic Dry Lube - 50ml",
+            "size":"50ml",
+            "amount":"10",
+            "color":"Black",
+            "description":"C3 Ceramic Dry Lube - 50ml",
+            "full description":"The Muc-Off C3 Dry Ceramic Chain Lube raises the bar when it comes to providing the ultimate lubrication. It provides total corrosion protection and unparalleled performance in dry, dusty and damp conditions. The Muc-Off RandD team definitely didn?t cut corners when they brought the future of bike lubes to the masses.",
+            "Key Features":"With added nano ceramic particles and synthetic polymers, C3 Dry Ceramic Chain Lube maximises your power output by reducing metal to metal contact to a ground breaking, low level and provides up to 10 times the performance of conventional chain oils and lubes. ",
+            "price":"10.99",
+            "rating":"5",
+            "image":"91027901_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/91027901_l.jpg"
+        }
+    },
+    {
+        "pk":"35",
+        "model":"products.product",
+        "fields":{
+            "category":"9",
+            "sku":"SKU97626201",
+            "brand":"MUC-OFF",
+            "name":"Muc-Off Wet Lube",
+            "size":"120ml",
+            "amount":"14",
+            "color":"Black",
+            "description":"Wet Lube 120mil",
+            "full description":"Muc-Off Wet Chain Lube is an ultra durable, long distance bicycle chain lubricant. Our state of the art formula has been derived from natural ingredients and made completely from renewable sources.",
+            "Key Features":"Oil that?s been specifically formulated to excel over long distances in wet or muddy conditions",
+            "price":"8.99",
+            "rating":"4",
+            "image":"97626201_l.webp",
+            "image link":"https://www.evanscycles.com/images/products/97626201_l.jpg"
+        }
+    },
+    {
+        "pk":"36",
+        "model":"products.product",
+        "fields":{
+            "category":"10",
+            "sku":"SKU97621234",
+            "brand":"Gold Service",
+            "name":"Same or next day service",
+            "size":"n/a",
+            "amount":"999",
+            "color":"Gold",
+            "description":"Buy online or just come to the store",
+            "full description":"Full safety check, complete strip down with 23-part clean and regrease and new brake and gear cables fitted ",
+            "Key Features":"Ideal for frequent riders, regular commuters or bike that havent been used in years. All the benefits of a Silver Service, PLUS:  Bike stripped back to frame and inspected, cleaned, re-built and re-greased. Replacement parts fitted for free. Components adjusted. All parts come with a 12-month guarantee against manufacturing defects. Also includes a 6-month labour guarantee.",
+            "price":"35",
+            "rating":"5",
+            "image":"Gold_1600x.webp",
+            "image link":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Gold_1600x.png?v=1627493762"
+        }
+    },
+    {
+        "pk":"37",
+        "model":"products.product",
+        "fields":{
+            "category":"11",
+            "sku":"SKU97621235",
+            "brand":"Silver Service",
+            "name":"Same or next day service",
+            "size":"n/a",
+            "amount":"999",
+            "color":"Silver",
+            "description":"Buy online or just come to the store",
+            "full description":"Full safety check, 15-part clean and adjustment and new brake and gear cables fitted",
+            "Key Features":"Perfect for high mileage bikes or bikes that havent been used for a while. All the benefits of a Bronze Service, PLUS: Cables replaced (cost included). Wheels trued (straightened) Gears lubricated and hydraulic brakes bled (cost included). All parts come with a 12-month guarantee against manufacturing defects. Also includes a 6-month labour guarantee.",
+            "price":"55",
+            "rating":"4",
+            "image":"Silver_1600x.webp",
+            "image link":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Silver_1600x.png?v=1627493852"
+        }
+    },
+    {
+        "pk":"38",
+        "model":"products.product",
+        "fields":{
+            "category":"12",
+            "sku":"SKU97621236",
+            "brand":"Bronze Service",
+            "name":"Same or next day service",
+            "size":"n/a",
+            "amount":"999",
+            "color":"Bronze",
+            "description":"Buy online or just come to the store",
+            "full description":"Full safety check and basic 12-part clean and adjustment ",
+            "Key Features":"Great for maintaining a mechanically sound bike. Gears and brakes adjusted and aligned Tyre condition and pressure checked. All parts come with a 12-month guarantee against manufacturing defects. Also includes a 6-month labour guarantee.",
+            "price":"100",
+            "rating":"3",
+            "image":"Bronze_2048x.webp",
+            "image link":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Bronze_2048x.png?v=1627493683"
+        }
+    }
+]
