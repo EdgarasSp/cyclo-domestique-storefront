@@ -98,8 +98,18 @@ body {
     color: #ffffff;
 }
 
-/* Sticky footer styles */
 
+/*main card*/
+
+.card:hover {
+    box-shadow: 0 .5rem 0.5rem rgba(0,0,0,.10)!important;
+}
+
+.card-size{
+    min-width: 310px;
+}
+
+/* Sticky footer styles */
 
 .footer {
     position: fixed;

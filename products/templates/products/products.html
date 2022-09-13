@@ -2,38 +2,40 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {{ products }}
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {{ products }}
         </div>
     </div>
+</div>
 
 
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-12">
-                <h2 class="font-weight-bold mb-3">{{ category.name }}</h2>
-            </div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="font-weight-bold mb-3">{{ category.name }}</h2>
         </div>
-        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3">
+    </div>
+    <div class="product-container">
+        <div class="row">
             {% for product in products %}
-                <div class="col mb-4 bike">
-                    <a href="/product/{{ product.name }}" class="text-decoration-none">  <!-- Update -->
-                        <div class="card h-100 shadow-sm">
+                <div class="col mb-4" style="min-width: 310px; ">
+                    <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                        <!-- Update -->
+                        <div class="card h-100 " >
                             {% if product.image %}
                             <a href="">
                                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -54,21 +56,21 @@
                             <div class="dropdown-divider"></div>
                             <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
                                 <div class="dropdown-divider"></div>
-                                <small class="text-muted "><strong>Size:</strong> {{product.size}}</small>
-                                <small class="text-muted"><strong>Color:</strong> {{product.color}}</small>
-
+                                <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                <small class=""><strong>Color:</strong> {{product.color}}</small>
+    
                                 {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                <small class=""><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                 {% else %}
-                                    <small class="text-muted">No Rating</small>
+                                <small class="">No Rating</small>
                                 {% endif %}
                             </div>
                         </div>
                     </a>
                 </div>
-            {% endfor%}
+            {% endfor %}
         </div>
+    </div>
     
-    
-
+</div>
 {% endblock %}
