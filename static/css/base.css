@@ -98,7 +98,6 @@ body {
     color: #ffffff;
 }
 
-
 /*main card*/
 
 .card:hover {
@@ -109,6 +108,9 @@ body {
     min-width: 310px;
 }
 
+.poundSign:before{
+    content: '£';
+}
 /* Sticky footer styles */
 
 .footer {
