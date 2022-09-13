@@ -106,6 +106,7 @@ body {
 
 .card-size{
     min-width: 310px;
+    max-width: 318px;
 }
 
 .poundSign:before{

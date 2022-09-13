@@ -69,7 +69,7 @@
               <a class="dropdown-item" href="{% url 'products' %}?category=mountain_bikes">Mountain Bikes</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=kids_bikes">Kids Bikes</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'products' %}?division=bikes">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes">Show All</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -81,7 +81,7 @@
               <a class="dropdown-item" href="{% url 'products' %}?category=wheel_hubs">Wheel &amp Hubs</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=tyres_tubes">Tyres &amp Tubes</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'products' %}?division=bike_parts">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Show All</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -95,7 +95,7 @@
               <a class="dropdown-item" href="{% url 'products' %}?category=track_pump">Track Pump</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=lubes_grease">Lubes &amp Grease</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'products' %}?division=tools">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=track_pump,bike_multi_tools,stands, lubes_grease">Show All</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -108,7 +108,7 @@
               <a class="dropdown-item" href="{% url 'products' %}?category=silver_service">Silver Service</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=bronze_service">Bronze Service</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'products' %}?division=bike_service">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=gold_service,silver_service,bronze_service">Show All</a>
             </div>
           </li>
           <li class="nav-item logo-font">
