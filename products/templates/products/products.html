@@ -17,4 +17,54 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="font-weight-bold mb-3">{{ category.name }}</h2>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3">
+            {% for product in products %}
+                <div class="col mb-4 bike">
+                    <a href="/product/{{ product.name }}" class="text-decoration-none">  <!-- Update -->
+                        <div class="card h-100 shadow-sm">
+                            {% if product.image %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body d-block align-self-stretch">
+                                <h5 class="card-title" style="height: 35%">{{ product.name }}</h5>
+                                <p class="card-text" style="height: 30%">{{product.description}}</p>
+                                <div class="d-flex align-items-center justify-content-end mt-1">
+                                    <span class="lead font-weight-bold ">&pound {{product.price}}</span>
+                                    <!--<a href="/product/{{ product.name }}" class="btn btn-secondary btn-sm ml-4">Details</a> -->
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                <div class="dropdown-divider"></div>
+                                <small class="text-muted "><strong>Size:</strong> {{product.size}}</small>
+                                <small class="text-muted"><strong>Color:</strong> {{product.color}}</small>
+
+                                {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor%}
+        </div>
+    
+    
+
 {% endblock %}
