@@ -1,6 +1,6 @@
 [
     {
-        "pk":"1",
+        "pk":1,
         "model":"products.product",
         "fields":{
             "category":"1",
@@ -16,11 +16,11 @@
             "price":"2500",
             "rating":"4",
             "image":"70913702_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/70913702_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/70913702_l.jpg"
         }
     },
     {
-        "pk":"2",
+        "pk":2,
         "model":"products.product",
         "fields":{
             "category":"1",
@@ -36,11 +36,11 @@
             "price":"1100",
             "rating":"4.5",
             "image":"93405001_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93405001_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93405001_l.jpg"
         }
     },
     {
-        "pk":"3",
+        "pk":3,
         "model":"products.product",
         "fields":{
             "category":"1",
@@ -56,11 +56,11 @@
             "price":"2650",
             "rating":"5",
             "image":"70762615_l (1).webp",
-            "image_link":"https://www.evanscycles.com/images/products/70762615_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/70762615_l.jpg"
         }
     },
     {
-        "pk":"4",
+        "pk":4,
         "model":"products.product",
         "fields":{
             "category":"1",
@@ -76,11 +76,11 @@
             "price":"2159",
             "rating":"4",
             "image":"71286469_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/71286469_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/71286469_l.jpg"
         }
     },
     {
-        "pk":"5",
+        "pk":5,
         "model":"products.product",
         "fields":{
             "category":"2",
@@ -96,11 +96,11 @@
             "price":"2500",
             "rating":"5",
             "image":"71331904_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/71331904_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/71331904_l.jpg"
         }
     },
     {
-        "pk":"6",
+        "pk":6,
         "model":"products.product",
         "fields":{
             "category":"2",
@@ -116,11 +116,11 @@
             "price":"659",
             "rating":"4.5",
             "image":"91692619_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91692619_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91692619_l.jpg"
         }
     },
     {
-        "pk":"7",
+        "pk":7,
         "model":"products.product",
         "fields":{
             "category":"2",
@@ -136,11 +136,11 @@
             "price":"550",
             "rating":"3.5",
             "image":"91730718_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91730718_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91730718_l.jpg"
         }
     },
     {
-        "pk":"8",
+        "pk":8,
         "model":"products.product",
         "fields":{
             "category":"2",
@@ -156,11 +156,11 @@
             "price":"4200",
             "rating":"4",
             "image":"71330202_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/71330202_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/71330202_l.jpg"
         }
     },
     {
-        "pk":"9",
+        "pk":9,
         "model":"products.product",
         "fields":{
             "category":"2",
@@ -176,11 +176,11 @@
             "price":"2850",
             "rating":"5",
             "image":"70969316_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/70969316_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/70969316_l.jpg"
         }
     },
     {
-        "pk":"10",
+        "pk":10,
         "model":"products.product",
         "fields":{
             "category":"3",
@@ -196,11 +196,11 @@
             "price":"235",
             "rating":"4.5",
             "image":"93918118_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93918118_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93918118_l.jpg"
         }
     },
     {
-        "pk":"11",
+        "pk":11,
         "model":"products.product",
         "fields":{
             "category":"3",
@@ -216,11 +216,11 @@
             "price":"119",
             "rating":"4",
             "image":"93843232_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93843232_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93843232_l.jpg"
         }
     },
     {
-        "pk":"12",
+        "pk":12,
         "model":"products.product",
         "fields":{
             "category":"3",
@@ -236,11 +236,11 @@
             "price":"560",
             "rating":"4.5",
             "image":"93199412_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93199412_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93199412_l.jpg"
         }
     },
     {
-        "pk":"13",
+        "pk":13,
         "model":"products.product",
         "fields":{
             "category":"3",
@@ -256,11 +256,11 @@
             "price":"65",
             "rating":"3",
             "image":"93459815_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93459815_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93459815_l.jpg"
         }
     },
     {
-        "pk":"14",
+        "pk":14,
         "model":"products.product",
         "fields":{
             "category":"4",
@@ -276,11 +276,11 @@
             "price":"515",
             "rating":"5",
             "image":"70013703_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/70013703_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/70013703_l.jpg"
         }
     },
     {
-        "pk":"15",
+        "pk":15,
         "model":"products.product",
         "fields":{
             "category":"4",
@@ -296,11 +296,11 @@
             "price":"120",
             "rating":"3",
             "image":"91762303_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91762303_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91762303_l.jpg"
         }
     },
     {
-        "pk":"16",
+        "pk":16,
         "model":"products.product",
         "fields":{
             "category":"4",
@@ -316,11 +316,11 @@
             "price":"18.99",
             "rating":"4.5",
             "image":"93379311_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93379311_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93379311_l.jpg"
         }
     },
     {
-        "pk":"17",
+        "pk":17,
         "model":"products.product",
         "fields":{
             "category":"4",
@@ -336,11 +336,11 @@
             "price":"1190",
             "rating":"3",
             "image":"91385803_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91385803_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91385803_l.jpg"
         }
     },
     {
-        "pk":"18",
+        "pk":18,
         "model":"products.product",
         "fields":{
             "category":"4",
@@ -356,11 +356,11 @@
             "price":"545",
             "rating":"5",
             "image":"91379903_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/91379903_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91379903_l.jpg"
         }
     },
     {
-        "pk":"19",
+        "pk":19,
         "model":"products.product",
         "fields":{
             "category":"5",
@@ -376,11 +376,11 @@
             "price":"19",
             "rating":"0",
             "image":"91506603_l.webp",
-            "image_link":"https://www.evanscycles.com/brand/vittoria/zaffrio-pro-iv-g20-700c-folding-clincher-road-tyre-915066#colcode=91506603"
+            "image_url":"https://www.evanscycles.com/brand/vittoria/zaffrio-pro-iv-g20-700c-folding-clincher-road-tyre-915066#colcode=91506603"
         }
     },
     {
-        "pk":"20",
+        "pk":20,
         "model":"products.product",
         "fields":{
             "category":"5",
@@ -396,11 +396,11 @@
             "price":"84.99",
             "rating":"5",
             "image":"70886203_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/70886203_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/70886203_l.jpg"
         }
     },
     {
-        "pk":"21",
+        "pk":21,
         "model":"products.product",
         "fields":{
             "category":"5",
@@ -416,11 +416,11 @@
             "price":"24.99",
             "rating":"3.5",
             "image":"93935403_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93935403_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93935403_l.jpg"
         }
     },
     {
-        "pk":"22",
+        "pk":22,
         "model":"products.product",
         "fields":{
             "category":"5",
@@ -436,11 +436,11 @@
             "price":"54.99",
             "rating":"4",
             "image":"91598804_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91598804_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91598804_l.jpg"
         }
     },
     {
-        "pk":"23",
+        "pk":23,
         "model":"products.product",
         "fields":{
             "category":"6",
@@ -456,11 +456,11 @@
             "price":"31.99",
             "rating":"3",
             "image":"97414710_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/97414710_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/97414710_l.jpg"
         }
     },
     {
-        "pk":"24",
+        "pk":24,
         "model":"products.product",
         "fields":{
             "category":"6",
@@ -476,11 +476,11 @@
             "price":"31.99",
             "rating":"3",
             "image":"97414711_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/97414711_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/97414711_l.jpg"
         }
     },
     {
-        "pk":"25",
+        "pk":25,
         "model":"products.product",
         "fields":{
             "category":"6",
@@ -496,11 +496,11 @@
             "price":"24.99",
             "rating":"4",
             "image":"91190901_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91190901_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91190901_l.jpg"
         }
     },
     {
-        "pk":"26",
+        "pk":26,
         "model":"products.product",
         "fields":{
             "category":"6",
@@ -516,11 +516,11 @@
             "price":"14.99",
             "rating":"3",
             "image":"91190801_l_a1.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91190801_l_a1.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91190801_l_a1.jpg"
         }
     },
     {
-        "pk":"27",
+        "pk":27,
         "model":"products.product",
         "fields":{
             "category":"6",
@@ -536,11 +536,11 @@
             "price":"27.99",
             "rating":"5",
             "image":"97681001_l.jpg",
-            "image_link":"https://www.evanscycles.com/images/products/97681001_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/97681001_l.jpg"
         }
     },
     {
-        "pk":"28",
+        "pk":28,
         "model":"products.product",
         "fields":{
             "category":"7",
@@ -556,11 +556,11 @@
             "price":"47",
             "rating":"0",
             "image":"91250203_l_a1.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91250203_l_a1.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91250203_l_a1.jpg"
         }
     },
     {
-        "pk":"29",
+        "pk":29,
         "model":"products.product",
         "fields":{
             "category":"8",
@@ -576,11 +576,11 @@
             "price":"40.99",
             "rating":"4.5",
             "image":"91313713_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91313713_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91313713_l.jpg"
         }
     },
     {
-        "pk":"30",
+        "pk":30,
         "model":"products.product",
         "fields":{
             "category":"8",
@@ -596,11 +596,11 @@
             "price":"34.99",
             "rating":"4",
             "image":"93075101_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93075101_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93075101_l.jpg"
         }
 },
     {
-        "pk":"31",
+        "pk":31,
         "model":"products.product",
         "fields":{
             "category":"8",
@@ -616,11 +616,11 @@
             "price":"10.99",
             "rating":"4",
             "image":"93780611_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/93780611_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/93780611_l.jpg"
         }
     },
     {
-        "pk":"32",
+        "pk":32,
         "model":"products.product",
         "fields":{
             "category":"9",
@@ -636,11 +636,11 @@
             "price":"4.99",
             "rating":"4.5",
             "image":"97625901_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/97625901_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/97625901_l.jpg"
         }
     },
     {
-        "pk":"33",
+        "pk":33,
         "model":"products.product",
         "fields":{
             "category":"9",
@@ -656,11 +656,11 @@
             "price":"11.99",
             "rating":"4.5",
             "image":"97625901_l_a1.webp",
-            "image_link":"https://www.evanscycles.com/images/products/97625901_l_a1.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/97625901_l_a1.jpg"
         }
     },
     {
-        "pk":"34",
+        "pk":34,
         "model":"products.product",
         "fields":{
             "category":"9",
@@ -676,11 +676,11 @@
             "price":"10.99",
             "rating":"5",
             "image":"91027901_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/91027901_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/91027901_l.jpg"
         }
     },
     {
-        "pk":"35",
+        "pk":35,
         "model":"products.product",
         "fields":{
             "category":"9",
@@ -696,11 +696,11 @@
             "price":"8.99",
             "rating":"4",
             "image":"97626201_l.webp",
-            "image_link":"https://www.evanscycles.com/images/products/97626201_l.jpg"
+            "image_url":"https://www.evanscycles.com/images/products/97626201_l.jpg"
         }
     },
     {
-        "pk":"36",
+        "pk":36,
         "model":"products.product",
         "fields":{
             "category":"10",
@@ -716,11 +716,11 @@
             "price":"35",
             "rating":"5",
             "image":"Gold_1600x.webp",
-            "image_link":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Gold_1600x.png?v=1627493762"
+            "image_url":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Gold_1600x.png?v=1627493762"
         }
     },
     {
-        "pk":"37",
+        "pk":37,
         "model":"products.product",
         "fields":{
             "category":"11",
@@ -736,11 +736,11 @@
             "price":"55",
             "rating":"4",
             "image":"Silver_1600x.webp",
-            "image_link":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Silver_1600x.png?v=1627493852"
+            "image_url":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Silver_1600x.png?v=1627493852"
         }
     },
     {
-        "pk":"38",
+        "pk":38,
         "model":"products.product",
         "fields":{
             "category":"12",
@@ -756,7 +756,7 @@
             "price":"100",
             "rating":"3",
             "image":"Bronze_2048x.webp",
-            "image_link":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Bronze_2048x.png?v=1627493683"
+            "image_url":"https://cdn.shopify.com/s/files/1/0254/4153/4048/products/Bronze_2048x.png?v=1627493683"
         }
     }
 ]
