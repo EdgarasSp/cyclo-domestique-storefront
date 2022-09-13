@@ -19,7 +19,6 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
   {% endblock %}
 
   {% block extra_css %}
@@ -66,7 +65,7 @@
               Bikes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <a class="dropdown-item" href="{% url 'products' %}?category=road_bikes">Road Bikes</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=road_bikes">Road Bikes</a> <!-- tik vardas-->
               <a class="dropdown-item" href="{% url 'products' %}?category=mountain_bikes">Mountain Bikes</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=kids_bikes">Kids Bikes</a>
               <div class="dropdown-divider"></div>
