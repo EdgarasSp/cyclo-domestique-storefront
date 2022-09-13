@@ -64,11 +64,11 @@
               Bikes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <a class="dropdown-item" href="#">Road Bikes</a>
-              <a class="dropdown-item" href="#">Mountain Bikes</a>
-              <a class="dropdown-item" href="#">Kids Bikes</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=road_bikes">Road Bikes</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=mountain_bikes">Mountain Bikes</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=kids_bikes">Kids Bikes</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?division=bikes">Show All</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -77,10 +77,10 @@
               Parts
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
-              <a class="dropdown-item" href="#">Wheel &amp Hubs</a>
-              <a class="dropdown-item" href="#">Tyres &amp Tubes</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=wheel_hubs">Wheel &amp Hubs</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=tyres_tubes">Tyres &amp Tubes</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?division=bike_parts">Show All</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -89,11 +89,12 @@
               Tools
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown3">
-              <a class="dropdown-item" href="#">Bike Work Stands</a>
-              <a class="dropdown-item" href="#">Track Pump</a>
-              <a class="dropdown-item" href="#">Lubes &amp Grease</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=bike_stands">Bike Work Stands</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=multi_tools">Multi Tools</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=track_pump">Track Pump</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=lubes_grease">Lubes &amp Grease</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?division=tools">Show All</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -102,11 +103,11 @@
               Service
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown4">
-              <a class="dropdown-item" href="#">Gold Service</a>
-              <a class="dropdown-item" href="#">Silver Service</a>
-              <a class="dropdown-item" href="#">Bronze Service</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=gold_service">Gold Service</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=silver_service">Silver Service</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=bronze_service">Bronze Service</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Show All</a>
+              <a class="dropdown-item" href="{% url 'products' %}?division=bike_service">Show All</a>
             </div>
           </li>
           <li class="nav-item logo-font">
