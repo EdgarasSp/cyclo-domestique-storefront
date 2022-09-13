@@ -1,110 +1,110 @@
 [
     {
-        "pk":"1",
+        "pk":1,
         "model":"products.category",
         "fields":{
             "division":"1",
             "name":"road_bikes",
-            "friendly name":"Road Bikes"
+            "friendly_name":"Road Bikes"
         }
     },
     {
-        "pk":"2",
+        "pk":2,
         "model":"products.category",
         "fields":{
             "division":"1",
             "name":"mountain_bikes",
-            "friendly name":"Mountain Bikes"
+            "friendly_name":"Mountain Bikes"
         }
     },
     {
-        "pk":"3",
+        "pk":3,
         "model":"products.category",
         "fields":{
             "division":"1",
             "name":"kids_bikes",
-            "friendly name":"Kids Bikes"
+            "friendly_name":"Kids Bikes"
         }
     },
     {
-        "pk":"4",
+        "pk":4,
         "model":"products.category",
         "fields":{
             "division":"2",
             "name":"wheel_hubs",
-            "friendly name":"Wheel and Hubs"
+            "friendly_name":"Wheel and Hubs"
         }
     },
     {
-        "pk":"5",
+        "pk":5,
         "model":"products.category",
         "fields":{
             "division":"2",
             "name":"tyres_tubes",
-            "friendly name":"Tyres and Tubes"
+            "friendly_name":"Tyres and Tubes"
         }
     },
     {
-        "pk":"6",
+        "pk":6,
         "model":"products.category",
         "fields":{
             "division":"3",
             "name":"multi_tools",
-            "friendly name":"Multi Tools"
+            "friendly_name":"Multi Tools"
         }
     },
     {
-        "pk":"7",
+        "pk":7,
         "model":"products.category",
         "fields":{
             "division":"3",
             "name":"bike_stands",
-            "friendly name":"Bike Work Stands"
+            "friendly_name":"Bike Work Stands"
         }
     },
     {
-        "pk":"8",
+        "pk":8,
         "model":"products.category",
         "fields":{
             "division":"3",
             "name":"track_pump",
-            "friendly name":"Track Pump"
+            "friendly_name":"Track Pump"
         }
     },
     {
-        "pk":"9",
+        "pk":9,
         "model":"products.category",
         "fields":{
             "division":"3",
             "name":"lubes_grease",
-            "friendly name":"Lubes and Grease"
+            "friendly_name":"Lubes and Grease"
         }
     },
     {
-        "pk":"10",
+        "pk":10,
         "model":"products.category",
         "fields":{
             "division":"4",
             "name":"gold_service",
-            "friendly name":"Gold Service"
+            "friendly_name":"Gold Service"
         }
     },
     {
-        "pk":"11",
+        "pk":11,
         "model":"products.category",
         "fields":{
             "division":"4",
             "name":"silver_service",
-            "friendly name":"Silver Service"
+            "friendly_name":"Silver Service"
         }
     },
     {
-        "pk":"12",
+        "pk":12,
         "model":"products.category",
         "fields":{
             "division":"4",
             "name":"bronze_service",
-            "friendly name":"Bronze Service"
+            "friendly_name":"Bronze Service"
         }
     }
 ]
