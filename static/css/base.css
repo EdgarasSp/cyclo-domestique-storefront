@@ -126,6 +126,10 @@ body {
 .poundSign:before{
     content: '£';
 }
+
+.image-size{
+    min-height: 285px;
+}
 /* Sticky footer styles */
 
 .footer {

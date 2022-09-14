@@ -32,16 +32,18 @@
                         <!-- Update -->
                         <div class="card h-100 " >
                             {% if product.image %}
-                            <a href="{% url 'product_details' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
                             {% else %}
-                            <a href="{% url 'product_details' product.id %}">
+                            <a class=" image-size" href="{% url 'product_details' product.id %}">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             </a>
                             {% endif %}
                             <div class="card-body d-block align-self-stretch">
-                                <h5 class="card-title" style="height: 35%">{{ product.name }}</h5>
+                                <div class="small"> {{product.brand}} </div>
+                                <div class="dropdown-divider"></div>
+                                <h5 class="card-title mb-0" style="height: 32%"> {{ product.name }}</h5>
                                 <p class="card-text" style="height: 30%">{{product.description}}</p>
                                 <div class="d-flex align-items-center justify-content-end mt-1">
                                     <span class="lead text-success"> {{product.price}}</span>
