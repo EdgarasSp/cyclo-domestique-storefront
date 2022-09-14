@@ -39,7 +39,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     size = models.CharField(max_length=254, null=True, blank=True)
-    amount = models.DecimalField(max_digits=10, decimal_places=2, default=10)
+    amount = models.DecimalField(max_digits=10, decimal_places=0, default=10)
     color = models.CharField(max_length=30, null=True, blank=True)
     description = models.TextField(max_length=254, null=True, blank=True)
     full_description = models.TextField(blank=True, null=True)
