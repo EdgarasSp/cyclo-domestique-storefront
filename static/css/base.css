@@ -4,10 +4,17 @@ html {
 }
 
 body {
-    height: calc(100vh - 165px);
+    /*height: calc(100vh - 100px);*/
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 100%;
     font-family: 'Lato';
 }
 
+.container {
+    padding-bottom: 100px; 
+
+}
 .icon {
     align-items: center;
     display: inline-flex;
@@ -115,19 +122,22 @@ body {
 /* Sticky footer styles */
 
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     color: #000000 !important;
+    z-index: 1030;
     /* Set the fixed height of the footer here */
     height: 60px;
-    line-height: 1; /* Vertically center the text there */
+    
 }
   
 .footer > .container {
     padding-right: 15px;
     padding-left: 15px;
+    
+
 }
 
 .footer > p {
@@ -160,7 +170,7 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 100px;
     }
 }
 
