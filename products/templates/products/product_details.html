@@ -83,7 +83,32 @@
                     <p class="d-inline-flex align-items-end text-muted small text-right">VAT Included</p>
                 </div>
                 <div class="product-details-container mt-1 text-right">
-                    <a href="/product/{{ product.name }}" class="btn btn-success flex-column ml-4x float-right">Add to Basket</a>
+
+
+                    <!--THIS-->
+
+                    <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="w-100 ">
+                            <div class="d-flex align-items-start justify-content-end">
+                                <p class="mt-3  mr-2 small align-items-start"><strong>Quantity:</strong></p>
+                                <div class="form-group mr-3">
+                                    <div class="input-group d-flex align-items-start  justify-content-between">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn btn-success flex-column ml-4x float-right" value="Add to basket">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+
+
+                      <!--THIS-->
+
+
+
+                    
                     <!-- add if in stock show button disabled "out of stock" if in stock enabled success "Add To Basket"-->
                 </div>
             </div>
