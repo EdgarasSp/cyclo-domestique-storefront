@@ -15,9 +15,9 @@
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
-            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="/products">/products</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="?category={{ product.category }}"> FIX {{ product.category }} </a></li>
-            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="">{{ product.sku }} </a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products">/products</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="?category={{ product.category }}"> FIX {{ product.category }} </a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="">{{ product.sku }} </a></li>
           </ol>
         </nav>
     </div>
@@ -28,13 +28,13 @@
             <div class="col">
                 <h2 id="productTitle" class="font-weight-bold">{{ product.brand }}</h2>
                 <h3 id="productTitle" class="font-weight-bold">{{ product.name }}</h3>
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider col-11"></div>
             </div>
         </div>
     </div>
     <div class="row mt-1 ">
 
-        <div class="col-8  mb-1 ">
+        <div class="col-7  mb-1 ">
             <div class="">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -91,23 +91,23 @@
     </div>
     <h6 class="text-black font-weight-bold mt-3 ">Key Features:</h6>
     <div class=" w-100">
-        <div class="dropdown-divider"></div>
-        <div class="col-12 bg-light ">
+        <div class="dropdown-divider col-11"></div>
+        <div class="col-11 bg-light ">
             <div class="product-details-container pt-1 pb-5">
                 <p class="mt-2">{{ product.key_features }}</p>
             </div>
         </div>
-        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider col-11"></div>
     </div>
     <h6 class="text-black font-weight-bold mt-3 ">Product Reviews:</h6>
     <div class=" w-100">
-        <div class="dropdown-divider"></div>
-        <div class="col-12">
+        <div class="dropdown-divider col-11"></div>
+        <div class="col-11">
             <div class="product-details-container pt-1 pb-5">
                 <p class="mt-2">PLACEHOLDER</p>
             </div>
         </div>
-        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider col-11"></div>
     </div>
 </div>
 {% endblock %}

@@ -23,9 +23,9 @@
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
-            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="/products">/products</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products">/products</a></li>
             {% for c in current_categories %}
-                <li class="breadcrumb-item"><a class="text-black text-uppercase" href="{% url 'products' %}?category={{ c.name }}"> {{ c.name }}</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="{% url 'products' %}?category={{ c.name }}"> {{ c.name }}</a></li>
             {% endfor %}
           </ol>
         </nav>
@@ -41,7 +41,7 @@
                     {% endfor %}
                         {% if current_categories or current_sorting == 'None_None' %} 
                         {% else %} 
-                        <h2 class="text-black text-uppercase mb-5 text-center "> Our Products <span class="small text-lowercase">by {{ current_sorting }}</span></h2> 
+                        <h2 class="text-black text-uppercase mb-5 text-center "> Our Products <br> <span class="small text-lowercase">by {{ current_sorting }}</span></h2> 
                             <!--- FIXED TO SHOW FRIENDLY TITLE-->
                         {% endif %}
                 {% else %}
