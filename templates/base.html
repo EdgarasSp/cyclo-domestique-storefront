@@ -158,7 +158,14 @@
                     <a class="nav-link btn btn-dark text-white py-1" href="{% url 'view_basket' %}">
                         <div class="text-center">
                           <p class="my-0 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1"></i>
-                              <span class="poundSign"> 0.00 </span> <span class="ml-1">(0) </span>
+                              <span class="poundSign">
+                                {% if grand_total %}
+                                    {{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    0.00
+                                {% endif %}
+                            <!--</span>
+                            <span class="ml-1 small">(50) </span> -->
                           </p>
                
                         </div>
