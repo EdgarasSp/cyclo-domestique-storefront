@@ -35,10 +35,10 @@
     <div class="row mt-1 ">
 
         <div class="col-7  mb-1 ">
-            <div class="">
+            <div class="" >
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="" style="max-width: 620px !important;"  src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
                 {% else %}
                 <a href="">
