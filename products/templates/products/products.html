@@ -23,13 +23,35 @@
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
-            <li class="breadcrumb-item"><a class="text-black" href="/products">/products</a></li>
-            <li class="breadcrumb-item"><a class="text-black" href="?category={{ current_categories }}"> fix </a></li> <!-- if category none hide (basicly when all products)-->
+            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="/products">/products</a></li>
+            {% for c in current_categories %}
+                <li class="breadcrumb-item"><a class="text-black text-uppercase" href="{% url 'products' %}?category={{ c.name }}"> {{ c.name }}</a></li>
+            {% endfor %}
           </ol>
         </nav>
     </div>
 </div>
 <div class="container ">
+    <div class="row">
+        <div class="col-12">
+            <div class="col">
+                {% if current_categories or current_sorting != 'None_None' %}
+                    {% for c in current_categories %}
+                    <h2 class="text-black text-uppercase mb-5 text-center "> {{ c.friendly_name }}</h2>
+                    {% endfor %}
+                        {% if current_categories or current_sorting == 'None_None' %}
+                            <h2 class="text-black text-uppercase mb-5 text-center "> Our Products 2 </h2>  
+                            <!--- FIX IF FILTERED NOT SHOWING TITLE-->
+                            {% endif %}
+                {% else %}
+                <h2 class="text-black text-uppercase mb-5 text-center "> Our Products</h2>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
     <div class="product-container">
         <div class="row">
             {% for product in products %}

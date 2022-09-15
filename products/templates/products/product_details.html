@@ -15,9 +15,9 @@
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
-            <li class="breadcrumb-item"><a class="text-black" href="/products">/products</a></li>
-            <li class="breadcrumb-item"><a class="text-black" href="?category={{ product.category }}">{{ product.category }} </a></li>
-            <li class="breadcrumb-item"><a class="text-black" href="">{{ product.sku }} </a></li>
+            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="/products">/products</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="?category={{ product.category }}"> FIX {{ product.category }} </a></li>
+            <li class="breadcrumb-item"><a class="text-black text-uppercase" href="">{{ product.sku }} </a></li>
           </ol>
         </nav>
     </div>
@@ -34,7 +34,7 @@
     </div>
     <div class="row mt-1 ">
 
-        <div class="col-8  mb-5 ">
+        <div class="col-8  mb-1 ">
             <div class="">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
