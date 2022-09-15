@@ -18,12 +18,18 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2 class="font-weight-bold mb-3">{{ category.name }}</h2>
-        </div>
+<div class="ml-3">
+    <div class="col-md-12 px-0">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+            <li class="breadcrumb-item"><a class="text-black" href="/products">/products</a></li>
+            <li class="breadcrumb-item"><a class="text-black" href="?category={{ current_categories }}"> fix </a></li> <!-- if category none hide (basicly when all products)-->
+          </ol>
+        </nav>
     </div>
+</div>
+<div class="container ">
     <div class="product-container">
         <div class="row">
             {% for product in products %}
@@ -46,7 +52,7 @@
                                 <h5 class="card-title mb-0" style="height: 32%"> {{ product.name }}</h5>
                                 <p class="card-text" style="height: 30%">{{product.description}}</p>
                                 <div class="d-flex align-items-center justify-content-end mt-1">
-                                    <span class="lead text-success"> {{product.price}}</span>
+                                    <span class="lead text-success poundSign"> {{product.price}}</span>
                                     <!-- <div class="currency">1000</div> # TOBEFIXED currency.js -->
                                     <!--<a href="/product/{{ product.name }}" class="btn btn-secondary btn-sm ml-4">Details</a> -->
                                 </div>

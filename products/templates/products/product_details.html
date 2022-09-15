@@ -6,12 +6,23 @@
 {% endblock %}
 
 {% block page_header %}
-
 {% endblock %}
 
 {% block content %}
 
-<div class="container header-container">
+<div class="ml-3 header-container">
+    <div class="col-md-12  px-0">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
+            <li class="breadcrumb-item"><a class="text-black" href="/products">/products</a></li>
+            <li class="breadcrumb-item"><a class="text-black" href="?category={{ product.category }}">{{ product.category }} </a></li>
+            <li class="breadcrumb-item"><a class="text-black" href="">{{ product.sku }} </a></li>
+          </ol>
+        </nav>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-12">
             <div class="col">

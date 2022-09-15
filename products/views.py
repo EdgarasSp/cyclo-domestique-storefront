@@ -10,6 +10,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    catg_value = None
     sort = None
     direction = None
 
@@ -48,6 +49,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+
     }
 
     return render(request, 'products/products.html', context)
