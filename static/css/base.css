@@ -130,6 +130,37 @@ body {
 .image-size{
     min-height: 285px;
 }
+
+/* back to top button */
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: black !important;
+    border-radius: 25px;
+
+}
+
+.btt-button:hover {
+    background-color: white !important;
+
+}
+
+.fa-arrow-up{
+    color: white !important;
+}
+
+.fa-arrow-up:hover{
+    color: black !important;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* Sticky footer styles */
 
 .footer {
