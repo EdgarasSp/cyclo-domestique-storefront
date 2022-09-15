@@ -39,10 +39,11 @@
                     {% for c in current_categories %}
                     <h2 class="text-black text-uppercase mb-5 text-center "> {{ c.friendly_name }}</h2>
                     {% endfor %}
-                        {% if current_categories or current_sorting == 'None_None' %}
-                            <h2 class="text-black text-uppercase mb-5 text-center "> Our Products 2 </h2>  
-                            <!--- FIX IF FILTERED NOT SHOWING TITLE-->
-                            {% endif %}
+                        {% if current_categories or current_sorting == 'None_None' %} 
+                        {% else %} 
+                        <h2 class="text-black text-uppercase mb-5 text-center "> Our Products <span class="small text-lowercase">by {{ current_sorting }}</span></h2> 
+                            <!--- FIXED TO SHOW FRIENDLY TITLE-->
+                        {% endif %}
                 {% else %}
                 <h2 class="text-black text-uppercase mb-5 text-center "> Our Products</h2>
 
