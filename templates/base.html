@@ -145,7 +145,7 @@
                           <p class="my-0 logo-font"><i class="fas fa-user fa-lg"></i></p>
                         </div>
                     </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <a href="#" class="dropdown-item">Inventory</a>
@@ -164,7 +164,7 @@
                 </li>
                 <!--basket start-->
                 <li class="list-inline-item">
-                    <a class="font-weight-bold text-black nav-link" href="#">
+                    <a class="font-weight-bold text-black nav-link" href="{% url 'view_basket' %}">
                         <div class="text-center">
                           <p class="my-0  logo-font"><i class="fas fa-shopping-bag fa-lg"></i>
                               <!--$0.00 -->
