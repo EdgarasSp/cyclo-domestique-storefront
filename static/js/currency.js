@@ -5,8 +5,7 @@ $(document).ready(function() {
         let num = Number(x[i].innerHTML)
                 .toLocaleString('en');
                 
-        x[i].innerHTML = num;
-
+        x[i].innerHTML = numto.Fixed(2);
         x[i].classList.add("poundSign");
     }
 
