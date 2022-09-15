@@ -189,8 +189,31 @@ body {
 .footer a {
     color: #f8f9fa !important;
 }
-  
 
+
+/* sticky checkout */
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  
+    @media (min-width: 32rem) {
+      grid-template-columns: 250px minmax(10px, 1fr);
+    }
+  
+    > * {
+      padding: 1rem;
+
+    }
+  }
+  
+  aside {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+  }
 
 /* -------------------------------- Media Queries */
 
@@ -212,7 +235,7 @@ body {
     }
 
     .header-container {
-        padding-top: 70px;
+        padding-top: 50px;
     }
 }
 

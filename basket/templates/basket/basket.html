@@ -63,42 +63,43 @@
             </div>
             {% endif %}
         </div>
-        <div class="dropdown-divider"></div>
-        <div class="col-md-3 mt-1 ">
-            {% if basket_items %}
-            <div class="table-responsive rounded border py-4 px-2 bg-light ">
-                <div>
-                    <div class="text-right mr-2">
-                        <h6><strong>Basket Total: <span class="poundSign currency">{{ total|floatformat:2 }}</span></strong></h6>
-                        <h6><span class="poundSign currency">Delivery: </span>{{ delivery|floatformat:2 }}</h6>
-                        <h5 class="mt-4"><strong>Grand Total: <span class="poundSign currency">{{ grand_total|floatformat:2 }}</span></strong></h5>
-                        {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong><span class="poundSign currency">{{ free_delivery_delta }}</span></strong> more!
-                            </p>
-                        {% endif %}
+        <div class="col-md-3 wrapper ">
+            <aside>
+                {% if basket_items %}
+                <div class="table-responsive rounded border py-4 px-2 bg-light ">
+                    <div>
+                        <div class="text-right mr-2">
+                            <h6><strong>Basket Total: <span class="poundSign currency">{{ total|floatformat:2 }}</span></strong></h6>
+                            <h6><span class="poundSign currency">Delivery: </span>{{ delivery|floatformat:2 }}</h6>
+                            <h5 class="mt-4"><strong>Grand Total: <span class="poundSign currency">{{ grand_total|floatformat:2 }}</span></strong></h5>
+                            {% if free_delivery_delta > 0 %}
+                                <p class="mb-1 text-danger">
+                                    You could get free delivery by spending just <strong><span class="poundSign currency">{{ free_delivery_delta }}</span></strong> more!
+                                </p>
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="text-right mr-2">
-                        <a href="" class="btn btn-success rounded-1">
-                            <span class="">Continue to Payment</span>
-                            <span class="icon">
-                                <i class="fas fa-lock"></i>
-                            </span>
-                        </a>                     
+                    <div>
+                        <div class="text-right mr-2">
+                            <a href="" class="btn btn-success rounded-1">
+                                <span class="">Continue to Payment</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>                     
+                        </div>
                     </div>
+                {% else %}
+                    <p class="lead mb-5  border">Your basket is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Add items to basket to view them here.</span>
+                    </a>
+                {% endif %}
                 </div>
-            {% else %}
-                <p class="lead mb-5  border">Your basket is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Add items to basket to view them here.</span>
-                </a>
-            {% endif %}
-            </div>
+            </aside>
         </div>
     </div>
 </div>
