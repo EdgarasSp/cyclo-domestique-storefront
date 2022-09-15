@@ -19,7 +19,7 @@
 {% block content %}
 
 <div class="ml-3">
-    <div class="col-md-12 px-0">
+    <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
@@ -37,22 +37,53 @@
             <div class="col">
                 {% if current_categories or current_sorting != 'None_None' %}
                     {% for c in current_categories %}
-                    <h2 class="text-black text-uppercase mb-5 text-center "> {{ c.friendly_name }}</h2>
+                    <h3 class="text-black text-uppercase font-weight-bold mb-3 text-center "> {{ c.friendly_name }}</h3>
                     {% endfor %}
+                        <!--- NO LONGER WORKS IF REMOVED SORTING OPTIONS IN NAV, CURRENTLY COMMENTED OUT IN BASE-->
                         {% if current_categories or current_sorting == 'None_None' %} 
                         {% else %} 
-                        <h2 class="text-black text-uppercase mb-5 text-center "> Our Products <br> <span class="small text-lowercase">by {{ current_sorting }}</span></h2> 
+                        <h3 class="text-black text-uppercase font-weight-bold mb-3 text-center "> Our Products 2 </h3> 
                             <!--- FIXED TO SHOW FRIENDLY TITLE-->
                         {% endif %}
                 {% else %}
-                <h2 class="text-black text-uppercase mb-5 text-center "> Our Products</h2>
-
+                <h3 class="text-black text-uppercase mb-3 font-weight-bold text-center "> Our Products</h3>
                 {% endif %}
-
+            </div>
+            <div class="product-container col-11">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first pl-0">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if products|length > 1  %} 
+                                <a>Found {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</a>
+                            {% else %}
+                                {% if products|length == 0  %} 
+                                    <a>Found {{ products|length }} No Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</a>
+                                {% else %} 
+                                    <a>Found {{ products|length }} Product{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</a>
+                                {% endif %}
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <div class="product-container">
         <div class="row">
             {% for product in products %}
