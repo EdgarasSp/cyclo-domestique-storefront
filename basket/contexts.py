@@ -10,6 +10,9 @@ def basket_contents(request):
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+        if delivery > settings.STANDARD_DELIVERY_MAXIMUM:
+            delivery = Decimal(settings.STANDARD_DELIVERY_MAXIMUM)
+            free_delivery_delta = 0
     else:
         delivery = 0
         free_delivery_delta = 0
