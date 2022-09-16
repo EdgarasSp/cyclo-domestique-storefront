@@ -54,7 +54,7 @@
                             <p class="my-0 poundSign currency">{{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
-                            <form class="form update-form" method="POST" action="">
+                            <form class="form update-form" method="POST" action="{% url 'update_basket' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
