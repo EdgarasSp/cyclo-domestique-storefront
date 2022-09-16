@@ -95,7 +95,30 @@
                                     <p class="mt-3  mr-2 small align-items-start"><strong> Quantity:</strong></p>
                                     <div class="form-group mr-3">
                                         <div class="input-group d-flex align-items-start  justify-content-between">
-                                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0" 
+                                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <!-- INPUT MAX TO BE FIXED IF BUTTONS NO BUTTON MAX IS WOrKING BASED ON AMOUNT-->
+                                            <input class="form-control qty_input" type="number"
+                                                name="quantity" value="1" min="1" max="{{ product.amount }}"
+                                                data-item_id="{{ product.id }}"
+                                                id="id_qty_{{ product.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+
+                                            <!-- <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"> -->
+
                                         </div>
                                     </div>
                                     <input type="submit" class="btn btn-success flex-column ml-4x float-right" value="Add to basket">
@@ -140,4 +163,9 @@
         <div class="dropdown-divider col-11"></div>
     </div>
 </div>
+{% endblock %}
+
+
+{% block extra_js %}
+{% static 'js/qty_input_buttons.js' %}">
 {% endblock %}

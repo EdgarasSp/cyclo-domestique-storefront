@@ -211,7 +211,7 @@ body {
   
   aside {
     position: sticky;
-    top: 80px;
+    top: 90px;
     align-self: start;
   }
 
@@ -235,7 +235,7 @@ body {
     }
 
     .header-container {
-        padding-top: 50px;
+        padding-top: 60px;
     }
 }
 
