@@ -106,7 +106,13 @@
                                 <h5 class="card-title mb-0" style="height: 32%"> {{ product.name }}</h5>
                                 <p class="card-text" style="height: 30%">{{product.description}}</p>
                                 <div class="d-flex align-items-center justify-content-end mt-1">
-                                    <span class="lead text-success poundSign currency"> {{product.price}}</span>
+                                    {% if product.amount > 1 %}
+                                        <p class="mt-4  mr-2 small " ><strong>In Stock</strong></p>
+                                        <span class="lead text-success poundSign currency"> {{product.price}}</span>
+                                    {% else %}
+                                        <p class="mt-4  mr-2 small text-danger" ><strong>Out of Stock</strong></p>
+                                        <span class="lead text-success poundSign currency"> {{product.price}}</span>
+                                    {% endif %}
                                     <!-- <div class="currency">1000</div> # TOBEFIXED currency.js -->
                                     <!--<a href="/product/{{ product.name }}" class="btn btn-secondary btn-sm ml-4">Details</a> -->
                                 </div>
@@ -118,7 +124,7 @@
                                 <small class=""><strong>Color:</strong> {{product.color}}</small>
     
                                 {% if product.rating %}
-                                <small class=""><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
                                 {% else %}
                                 <small class="">No Rating</small>
                                 {% endif %}
