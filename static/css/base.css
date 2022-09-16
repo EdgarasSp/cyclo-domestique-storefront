@@ -157,7 +157,9 @@ body {
     color: black !important;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item  {
     cursor: pointer;
 }
 

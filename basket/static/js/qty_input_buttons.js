@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
 
