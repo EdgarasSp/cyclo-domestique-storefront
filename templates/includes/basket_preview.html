@@ -2,34 +2,37 @@
     <!--<div class="arrow-up arrow-success"></div>-->
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark">
-        <strong class="mr-auto">Success!</strong>
-        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <strong class="mr-auto">Basket Preview</strong>
     </div>
     <div class="toast-body bg-white">
         <div class="row">
             <div class="col">
                 {{ message }}
-                <hr class="mt-1 mb-3">
             </div>
         </div>
         {% if grand_total %}
-            <p class="logo-font bg-white text-black py-1">Your basket ({{ product_count }})</p>
-            <div class="basket-notification-wrapper">
+            <p class="logo-font bg-white text-black pt-1 pb-1 mb-0">Your basket ({{ product_count }})</p>
+                {% if product_count > 11 %}
+                    <p class=" small text-black pb-1 mb-0"> Some items are hidden, open basket to view all items.</p>
+                {% else %}
+                {% endif %}
+            <hr class="mt-1 mb-1">
+            <div class="basket-preview-wrapper">
                 {% for item in basket_items %}
                     <div class="row">
                         <div class="col-2 my-1">
                             <img class="w-100" src="{{ item.product.image.url }}">
                         </div>
                         <div class="col-10">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small text-muted">Size: {{ item.product.size|upper }}</p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}
+                                <span class="my-0 ml-2 small text-muted">Size: {{ item.product.size|upper }}</span></p>
+
                         </div>
                     </div>
                 {% endfor %}
             </div>
+            <hr class="mt-1 mb-1">
             <div class="row">
                 <div class="col">
                     <strong><p class="mt-3 mb-1 text-black px-5 text-uppercase">
@@ -41,14 +44,10 @@
                             Spend <strong class="poundSign currency">{{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_basket' %}" class="btn btn-block btn-success rounded-1">
-                        <span class="">View Basket</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>                  
-                    </a>
                 </div>
             </div>
+        {% else %}
+            <p class="bg-white text-black py-1">Your basket is Empty.</p>
         {% endif %}
     </div>
 </div>
