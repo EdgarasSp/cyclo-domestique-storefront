@@ -38,13 +38,13 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p class="text-center">{% blocktrans %}New customer? Please
-<a href="{{ signup_url }}">sign up</a> here to create an account.{% endblocktrans %}</p>
+<p class="text-center pb-3">{% blocktrans %}New customer? Please
+<a href="{{ signup_url }}">register</a> to create an account.{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login text-center" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
