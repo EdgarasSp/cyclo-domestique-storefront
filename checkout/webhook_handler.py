@@ -83,12 +83,11 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(basket).items():
                     product = Product.objects.get(id=item_id)
-                    for size, quantity in item_data['items_by_size'].items():
+                    if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
-                            quantity=quantity,  #check if working
-                            product_size=size,  #check if working
+                            quantity=item_data,
                         )
                         order_line_item.save()
             except Exception as e:
