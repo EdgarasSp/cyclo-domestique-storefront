@@ -26,3 +26,17 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+def profile_orders(request):
+    """ Display the user orders. """
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    form = UserProfileForm(instance=profile)
+    orders = profile.orders.all()
+
+    template = 'profiles/orders.html'
+    context = {
+        'orders': orders,  # THIS TO BE MOVED TO SEPERATE PAGE
+    }
+
+    return render(request, template, context)
