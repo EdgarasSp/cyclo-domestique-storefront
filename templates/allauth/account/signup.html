@@ -14,17 +14,48 @@
 
 {% block inner_content %}
 
-<h3 class="text-black text-uppercase font-weight-bold mb-5 text-center pl-3"> {% trans "Sign Up" %} </h3>
+<h3 class="text-black text-uppercase font-weight-bold mb-5 text-center pl-3"> {% trans "Register" %} </h3>
 
 <p class="text-center pb-3">{% blocktrans %}Already have an account?   You can <a href="{{ login_url }}">Login</a> here.{% endblocktrans %}</p>
 
-<form class="signup text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form class="signup " id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  <div class="text left pl-5 pr-5">
+    {{ form|crispy }}
+  </div>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button class="btn btn-success flex-column text-centerpy-1" type="submit">{% trans "Register" %}</button>
+  <div class="text-center">
+    <button class="btn btn-success flex-column text-center py-1" type="submit">{% trans "Register" %}</button>
+  </div>
+  
 </form>
+
+<!-- THIS NEEDS TO BE LOADED FROM CSS FILE-->
+<style>
+  .navbar-expand-lg {
+      padding-top: .5rem !important;
+      background-color: #ffffff;
+  }
+  #navbarNav .navbar-nav .nav-link {
+      color: #000;
+  }
+
+  .nav-logo {
+      color: #000000 !important;
+      font-weight: bold;
+      text-decoration: none !important;
+  }
+
+  .brand-home {
+      opacity: 1 !important;
+  }
+  .bike-img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+  }
+</style>
 
 {% endblock %}

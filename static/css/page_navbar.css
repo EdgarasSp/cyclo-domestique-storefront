@@ -5,6 +5,13 @@
 #navbarNav .navbar-nav .nav-link {
     color: #000;
 }
+
+.nav-logo {
+    color: #000000 !important;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
 .brand-home {
     opacity: 1 !important;
 }

@@ -25,7 +25,10 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    text-decoration: none !important;
 }
+
+
 
 .main-logo-link {
     width: fit-content;
@@ -65,6 +68,19 @@ body {
     height: 300px;
 }
 /*navbar*/
+
+.nav-logo, .nav-logo:hover {
+    color: #ffffff;
+    font-size: larger;
+    text-decoration: none !important;
+}
+
+.bg-white .nav-logo {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
 #navbarNav .navbar-nav .nav-link {
     color: #ffffff;
     /*font-weight: bolder;*/

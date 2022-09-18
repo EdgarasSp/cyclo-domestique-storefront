@@ -1,5 +1,6 @@
 {% extends "account/base.html" %}
 
+
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -42,9 +43,11 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 <a href="{{ signup_url }}">register</a> to create an account.{% endblocktrans %}</p>
 {% endif %}
 
-<form class="login text-center" method="POST" action="{% url 'account_login' %}">
+<form class="login " method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form|crispy }}
+  <div class="text left pl-5 pr-5">  
+    {{ form|crispy }}
+  </div>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
@@ -55,4 +58,30 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 </form>
 
+
+<!-- THIS NEEDS TO BE LOADED FROM CSS FILE-->
+<style>
+  .navbar-expand-lg {
+      padding-top: .5rem !important;
+      background-color: #ffffff;
+  }
+  #navbarNav .navbar-nav .nav-link {
+      color: #000;
+  }
+
+  .nav-logo {
+      color: #000000 !important;
+      font-weight: bold;
+      text-decoration: none !important;
+  }
+
+  .brand-home {
+      opacity: 1 !important;
+  }
+  .bike-img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+  }
+</style>
 {% endblock %}
