@@ -307,6 +307,13 @@ body {
     align-self: start;
   }
 
+
+/* authorizasiot pages */
+  .auth-pages {
+    box-shadow: 0 .5rem 0.5rem rgba(0,0,0,.10)!important;
+    border: 1px solid rgba(207, 207, 207, 0.966) !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
