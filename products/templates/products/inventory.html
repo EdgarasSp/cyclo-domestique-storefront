@@ -61,8 +61,8 @@
                                         </a>
                                         {% endif %}
                                     </td>
-                                    <td><p class="mt-1 small">{{product.category.division }}</p></td>
-                                    <td><p class="mt-1 small">{{product.category }}</p></td>
+                                    <td><p class="mt-1 small text-capitalize">{{product.category.division }}</p></td>
+                                    <td><p class="mt-1 small text-capitalize">{{product.category }}</p></td>
                                     <td><p class="mt-1 small">{{product.sku }}</p></td>
                                     <td><p class="mt-1 small">{{product.brand}}</p></td>
                                     <td><p class="mt-1 small">{{product.name}}</p></td>
@@ -78,7 +78,7 @@
                                     <td class=" poundSign currency">{{product.price}}</td>
                                     <td> <div>
                                         <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt"></i></a>
-                                        <a class="btn btn-danger btn-sm text-white py-0 px-1" href="#"><i class="far fa-times-circle"></i></a>
+                                        <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle"></i></a>
                                     </div></td>
                                 </tr>
                             {% endfor %}

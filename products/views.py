@@ -131,9 +131,10 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_details', args=[product.id]))
+            # return redirect(reverse('add_product'))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -156,8 +157,8 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('inventory'))
-            # return redirect(reverse('product_details', args=[product.id]))  # if from product details and if from inventory
+            # return redirect(reverse('inventory'))
+            return redirect(reverse('product_details', args=[product.id]))  # if from product details and if from inventory
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
@@ -172,3 +173,14 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request,'Product deleted!')
+    return redirect(reverse('inventory'))
+
+
+### if edit or add redirect to product details then return to inventory
