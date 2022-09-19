@@ -25,8 +25,47 @@
         </div>
         <div class="row">
             <div class="col-12 ml-3">
-                <p class="text-light bg-success rounded py-1 px-1">Your Purchases</p>
-                {{ orders }}
+                <div class="order-history table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="rounded">
+                            <tr class="text-light bg-dark rounded py-1 px-1">
+                                <th class="font-weight-normal">Order Number</th>
+                                <th class="font-weight-normal">Order Date</th>
+                                <th class="font-weight-normal">Items</th>
+                                <th class="font-weight-normal">Order Total</th>
+                                <th class="font-weight-normal">Order Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:10 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="">
+                                                    {{ item.product.size }}
+                                                    {{ item.product.name }} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td class="poundSign currency">{{ order.grand_total }}</td>
+                                                        <!-- TO BE REPLACED WITH ORDER STATUS-->
+                                    <td>{{ order.town_or_city }}</td>
+                                    
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
