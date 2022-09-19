@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left pl-3"> Inventory management</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ml-3">
+                <div class="order-history table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="rounded">
+                            <tr class="text-light bg-dark rounded py-1 px-1">
+                                <th class="font-weight-normal small">ID</th>
+                                <th class="font-weight-normal small">Image</th>
+                                <th class="font-weight-normal small">Division</th>
+                                <th class="font-weight-normal small">Category</th>
+                                <th class="font-weight-normal small">SKU</th>
+                                <th class="font-weight-normal small">Brand</th>
+                                <th class="font-weight-normal small">Name</th>
+                                <th class="font-weight-normal small">Size</th>
+                                <th class="font-weight-normal small">Color</th>
+                                <th class="font-weight-normal small">Amount</th>
+                                <th class="font-weight-normal small">Price</th>
+                                <th class="font-weight-normal small">Actions</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products %}
+                                <tr class="">
+                                    <td><p class="mt-1 small">{{product.pk }}</p></td>
+                                    <td>
+                                        {% if product.image %}
+                                        <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle" style="height: 50px; width: 50px;" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size"   href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" style="height: 50px; width: 50px;" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                    </td>
+                                    <td><p class="mt-1 small">{{product.category.division }}</p></td>
+                                    <td><p class="mt-1 small">{{product.category }}</p></td>
+                                    <td><p class="mt-1 small">{{product.sku }}</p></td>
+                                    <td><p class="mt-1 small">{{product.brand}}</p></td>
+                                    <td><p class="mt-1 small">{{product.name}}</p></td>
+                                    <td><p class="mt-1 small">{{product.size}}</p></td>
+                                    <td><p class="mt-1 small">{{product.color}}</p></td>
+                                    <td >
+                                        {% if product.amount > 1 %}
+                                            <p class="mt-1 small"> {{product.amount}}</p>
+                                        {% else %}
+                                            <p class="mt-1 mr-2 small text-danger" ><strong>Out of Stock</strong></p>
+                                        {% endif %}
+                                    </td>
+                                    <td class=" poundSign currency">{{product.price}}</td>
+                                    <td> <div>
+                                        <a class="btn btn-success btn-sm text-white py-0 px-1" href="#"><i class="fas fa-pencil-alt"></i></a>
+                                        <a class="btn btn-danger btn-sm text-white py-0 px-1" href="#"><i class="far fa-times-circle"></i></a>
+                                    </div></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}

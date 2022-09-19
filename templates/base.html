@@ -146,7 +146,7 @@
                 <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options">
                   {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
-                  <a href="#" class="dropdown-item text-primary text-uppercase">Inventory</a>
+                  <a href="{% url 'inventory' %}" class="dropdown-item text-primary text-uppercase">Inventory</a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item text-primary text-uppercase">Site Orders</a>
                   <div class="dropdown-divider"></div>
