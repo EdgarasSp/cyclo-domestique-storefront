@@ -20,11 +20,12 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left pl-3"> Inventory management</h3>
+                <h3 class="text-black text-uppercase font-weight-bold mb-1 text-left pl-3"> Inventory management</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-12 ml-3">
+                <div class="row"><a class="btn btn-success btn-sm ml-3 my-3 text-white text-left" href="{% url 'add_product' %}">Add Product</a></div>
                 <div class="order-history table-responsive rounded">
                     <table class="table table-sm table-borderless">
                         <thead class="rounded">
@@ -88,8 +89,4 @@
         </div>
     </div>
     
-{% endblock %}
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
