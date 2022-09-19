@@ -23,7 +23,7 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'orders': orders,  # THIS TO BE MOVED TO SEPERATE PAGE
+        'orders': orders, 
         'on_profile_page': True
     }
 
@@ -38,7 +38,7 @@ def profile_orders(request):
 
     template = 'profiles/orders.html'
     context = {
-        'orders': orders,  # THIS TO BE MOVED TO SEPERATE PAGE
+        'orders': orders,  
     }
 
     return render(request, template, context)
