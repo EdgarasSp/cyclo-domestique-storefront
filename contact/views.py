@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
@@ -53,3 +53,18 @@ def site_messages(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_message(request, pk):   ### product_id
+    """ Delete a product from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+    
+    message = get_object_or_404(ContactForm, pk=pk)   ## new
+    message.delete()
+    messages.success(request, 'Product deleted!')
+
+    return redirect(reverse('site_messages'))

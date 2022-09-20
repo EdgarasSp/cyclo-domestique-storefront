@@ -203,5 +203,3 @@ def delete_product(request, product_id):
     messages.success(request,'Product deleted!')
     return redirect(reverse('inventory'))
 
-
-### if edit or add redirect to product details then return to inventory
