@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserProfile
+from checkout.models import Order
 
 
 class UserProfileForm(forms.ModelForm):
@@ -35,3 +36,22 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = ''  # may need to change to match crispy form style border-black rounded-0 profile-form-input
             self.fields[field].label = False
+
+
+
+
+
+################################# CHANGE STATUS ORDER ##############################
+class UpdateOrder(forms.ModelForm):
+
+        class Meta:
+            model = Order
+            fields = ('status',)
+
+        def status(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            state = Order.status.objects.all()
+
+            self.fields['status'].choices = state
+            for field_name, field in self.fields.items():
+                field.widget.attrs['class'] = ''

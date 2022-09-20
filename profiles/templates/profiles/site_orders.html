@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left pl-3"> Site Order History</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ml-3">
+                <div class="order-history table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="rounded">
+                            <tr class="text-light bg-dark rounded py-1 px-1">
+                                <th class="font-weight-normal">User Name</th>
+                                <th class="font-weight-normal">Order Number</th>
+                                <th class="font-weight-normal">Order Date</th>
+                                <th class="font-weight-normal">Items</th>
+                                <th class="font-weight-normal">Order Total</th>
+                                <th class="font-weight-normal">Order Status</th>
+                                <th class="font-weight-normal small">Actions</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <div>
+                                    <tr class="border-bottom">
+                                        <td>
+                                            {{ order.full_name }}
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'order_history' order.order_number %}"
+                                            title="{{ order.order_number }}">
+                                                {{ order.order_number|truncatechars:10 }}
+                                            </a>
+                                        </td>
+                                        <td>{{ order.date }}</td>
+                                        <td>
+                                            <ul class="list-unstyled">
+                                                {% for item in order.lineitems.all %}
+                                                    <li class="">
+                                                        {{ item.quantity }} x {{ item.product.name }}
+                                                        - {{ item.product.size }} 
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </td>
+                                        <td class="poundSign currency">{{ order.grand_total }}</td>
+                                        <td class="pt-2">
+                                            {% if order.status == 1 %}
+                                                <span class="p-1 rounded bg-primary text-white ">Shipped</span>
+                                            {% elif order.status == 2 %}
+                                                <span class="p-1 rounded bg-success text-white ">Completed</span>
+                                            {% elif order.status == 3 %}
+                                                <span class="p-1 rounded bg-warning text-dark">Hold</span>
+                                            {% elif order.status == 4 %}
+                                                <span class="p-1 rounded bg-danger text-white">Canceled</span>                                     
+                                            {% else %}
+                                                <span class="p-1 rounded bg-secondary text-white">Processing</span>  
+                                            {% endif %}
+                                        </td>
+                                        <td> <div>
+                                            <!--#######################################-->
+                                            <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_order' order.order_number %}"><i class="fas fa-pencil-alt"></i></a>
+                                        </div></td>  
+                                    </tr>
+                                </div>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
