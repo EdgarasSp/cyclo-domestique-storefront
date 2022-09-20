@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left pl-3"> Site Messages History</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ml-3">
+                <div class="order-history table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="rounded">
+                            <tr class="text-light bg-dark rounded py-1 px-1">
+                                <th class="font-weight-normal small">Status</th>
+                                <th class="font-weight-normal">Subject</th>
+                                <th class="font-weight-normal">Name</th>
+                                <th class="font-weight-normal">Surname</th>
+                                <th class="font-weight-normal">Number</th>
+                                <th class="font-weight-normal">Email</th>
+                                <th class="font-weight-normal">Message</th>
+                                <th class="font-weight-normal small">Received On</th>
+
+                                <th class="font-weight-normal small">Action</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for contact in all_messages %}
+                                <div>
+                                    <tr class="border-bottom">
+                                        <td class="pt-2 small ">
+                                            {% if contact.status == 1 %}
+                                                <span class="p-1 rounded bg-success text-white ">Actioned</span>                                    
+                                            {% else %}
+                                                <span class="p-1 rounded bg-primary text-white">New</span>  
+                                            {% endif %}
+                                        </td>
+                                        <td>{{ contact.subject_type }}</td>
+                                        <td>{{ contact.first_name }}</td>
+                                        <td>{{ contact.last_name }}</td>
+                                        <td>{{ contact.contact_number }}</td>
+                                        <td>{{ contact.email_address }}</td>
+                                        <td>{{ contact.message }}</td>
+                                        <td>{{ contact.received_date }}</td>
+                                        <td> <div>
+                                            <!--####################FIX###################-->
+                                            <a class="btn btn-success btn-sm text-white py-0 px-1" href=""><i class="fas fa-pencil-alt"></i></a>
+                                            
+                                        </div></td>  
+                                    </tr>
+                                </div>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}

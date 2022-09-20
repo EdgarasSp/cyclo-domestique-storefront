@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .models import ContactForm
@@ -34,9 +34,22 @@ def contact(request):
             request, messages.SUCCESS, f"Thank you {first_name}."
             f" For your message, we will reply within 24 hours.")
 
-        template = 'contact/contact_confirmation.html'
+        template = 'contact/contact.html'
 
         return render(request, template)
 
     else:
         return render(request, 'contact/contact.html')
+
+
+@login_required
+def site_messages(request):
+    """ Display site messages. """
+    all_messages = ContactForm.objects.all()
+
+    template = 'contact/contact_messages.html'
+    context = {
+        'all_messages': all_messages,
+    }
+
+    return render(request, template, context)

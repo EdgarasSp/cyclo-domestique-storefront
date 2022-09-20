@@ -5,7 +5,6 @@ from django.db import models
 STATUS = ((0, "New"), (1, "Actioned"))
 class ContactForm(models.Model):
     subject_type = models.CharField(max_length=100, null=True, blank=False)
-    service_location = models.CharField(max_length=100, null=True, blank=True)
     first_name = models.CharField(max_length=50, null=True, blank=True)
     last_name = models.CharField(max_length=50, null=True, blank=True)
     contact_number = models.CharField(max_length=20, null=True, blank=True)

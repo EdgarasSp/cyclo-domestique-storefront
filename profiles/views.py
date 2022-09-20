@@ -53,7 +53,7 @@ def site_orders(request):
 
     template = 'profiles/site_orders.html'
     context = {
-        'orders': orders,  
+        'orders': orders,
     }
 
     return render(request, template, context)
