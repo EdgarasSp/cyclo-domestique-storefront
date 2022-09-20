@@ -22,12 +22,9 @@
     <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/about">/about</a></li>
-            {% for c in current_categories %}
-                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="{% url 'products' %}?category={{ c.name }}"> {{ c.name }}</a></li>
-            {% endfor %}
-          </ol>
+            <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/about">/about</a></li>
+            </ol>
         </nav>
     </div>
 </div>
@@ -38,6 +35,85 @@
                 <h3 class="text-black text-uppercase mb-3 font-weight-bold text-center ">About Us</h3>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <section>
+                <h4 class="font-weight-bold">Who are we?</h4>
+                <hr>
+                <p>Established in 2022, Cyclo Domestique is a family business with 1 store located in south west
+                    Endgland.
+                    Cyclo Domestique's store feature Road, Mountain, Kids and Electric Bike and offer a wide
+                    range of products and services to all types of cyclists, from children learning to ride their first
+                    bike, through to performance athletes.</p>
+                <p>We remain committed to inspire more people to get out and ride a bike. For us, it's about much more
+                    than just selling
+                    bicycles
+                    — we're here to help people achieve their cycling goals. As we've grown, our family values have
+                    helped
+                    us build a strong team ethos and keep us focused on delivering an excellent experience for our
+                    customers.</p>
+                <p>We believe passionately that to get more people making cycling part of their lives, you've got to
+                    make it
+                    convenient and easy. So, in our Cyclo Domestique store, you can test a bike, before getting your own
+                    bike or if you need it repaired and spares and accessories. We also believe in leading by example
+                    and inspiring
+                    new cyclists to give it a go. In the end, it's all about going the extra mile, both for our
+                    customers and each other.</p>
+
+            </section>
+            <section>
+                <h4 class="mt-5 font-weight-bold">Our community work</h4>
+                <hr>
+                <p>We love cycling! And right from the start, we have sought to share our passion for two-wheeled travel
+                    with our local communities. We also deliver community maintenance classes and bike events.
+                    For beginners' we host road rides every Wednesday at 6pm and MTB ride in Shorne Woods every Friday
+                    at 5pm. No booking needed just come and ride with us.</p>
+                <p>We also enjoy offering proactive support to our local charity partners by participating in
+                    fundraising events, offer event support and raise awareness.</p>
+            </section>
+            <section>
+                <h4 class="mt-5 font-weight-bold">Our store</h4>
+                <hr>
+                <p>In our store we aim to offer the very best place to answer all of your cycling needs - whether
+                    that be the latest bikes from the biggest brands, expert advice from our in-store teams.</p>
+            </section>
+            <section>
+                <h4 class="mt-5 font-weight-bold">Where to find us</h4>
+                <hr>
+                <p>In our store we aim to offer the very best place to answer all of your cycling needs - whether
+                    that be the latest bikes from the biggest brands, expert advice from our in-store teams.</p>
+                
+                <div class="row">
+                    <hr>
+                    <div class="col-6 mt-2 text-center">
+                        <h6 class="font-weight-bold">Opening Times</h6>
+                        <p class="small my-1">Monday: 09:00 - 16:00</p>
+                        <p class="small my-1">Tuesday: 09:00 - 16:00</p>
+                        <p class="small my-1">Wednesday: 09:00 - 16:00</p>
+                        <p class="small my-1">Thursday: 09:00 - 16:00</p>
+                        <p class="small my-1">Friday: 09:00 - 16:00</p>
+                        <p class="small my-1">Saturday: 09:00 - 16:00</p>
+                        <p class="small my-1">Sunday: Closed</p>
+                    </div>
+                    <div class="col-6 mt-2 font-weight-bold text-center">
+                        <h6 class="font-weight-bold">Our Address</h6>
+                        <p  class="small my-1" >128-130 Maidstone Rd, <br> Rochester, <br> ME1 3DT, <br> United Kingdom</p>
+                    </div>
+                </div>
+
+                <div class="col-12 px-0 mt-2">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="903" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=%20rochester&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:300px;width:900px;}</style><a href="https://www.embedgooglemap.net">free map for website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:900px;}</style>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <div class="col-2"></div>
     </div>
 </div>
 {% endblock %}
