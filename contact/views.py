@@ -1,8 +1,42 @@
 from django.shortcuts import render
 
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
+from .models import ContactForm
+
 # Create your views here.
 
 def contact(request):
     """ A view to return the contact page """
 
-    return render(request, 'contact/contact.html')
+    if request.method == 'POST':
+        """ A view to post contact message """
+
+        subject_type = request.POST.get('subject_type')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+        message = request.POST.get('message')
+
+        contact_form = ContactForm.objects.create(
+            subject_type=subject_type,
+            first_name=first_name,
+            last_name=last_name,
+            contact_number=contact_number,
+            email_address=email_address,
+            message=message,
+        )
+
+        contact_form.save()
+
+        messages.add_message(
+            request, messages.SUCCESS, f"Thank you {first_name}."
+            f" For your message, we will reply within 24 hours.")
+
+        template = 'contact/contact_confirmation.html'
+
+        return render(request, template)
+
+    else:
+        return render(request, 'contact/contact.html')
