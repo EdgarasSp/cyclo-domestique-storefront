@@ -35,7 +35,19 @@
                             <p class="mb-0 pl-3 py-1 small text-black  font-weight-bold ">Order Status:</p>
                         </div>
                         <div class="col-12 col-md-5 text-right">
-                            <p class="my-0 mx-0 py-1 small font-weight-bold text-success">Completed</p>
+                            <p class="my-0 mx-0 py-1 small ">
+                                {% if order.status == 1 %}
+                                    <span class="p-1 rounded bg-primary text-white ">Shipped</span>
+                                {% elif order.status == 2 %}
+                                    <span class="p-1 rounded bg-success text-white ">Completed</span>
+                                {% elif order.status == 3 %}
+                                    <span class="p-1 rounded bg-warning text-dark">Hold</span>
+                                {% elif order.status == 4 %}
+                                    <span class="p-1 rounded bg-danger text-white">Canceled</span>                                     
+                                {% else %}
+                                    <span class="p-1 rounded bg-secondary text-white">Processing</span>  
+                                {% endif %}
+                            </p>
                         </div>
                     </div>
                 </div>

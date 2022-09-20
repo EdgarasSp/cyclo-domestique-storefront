@@ -51,15 +51,27 @@
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="">
-                                                    {{ item.product.size }}
-                                                    {{ item.product.name }} x{{ item.quantity }}
+                                                    {{ item.quantity }} x {{ item.product.name }}
+                                                     - {{ item.product.size }} 
+                                                    
                                                 </li>
                                             {% endfor %}
                                         </ul>
                                     </td>
                                     <td class="poundSign currency">{{ order.grand_total }}</td>
-                                                        <!-- TO BE REPLACED WITH ORDER STATUS-->
-                                    <td class=" text-success ">Completed</td>
+                                    <td class="pt-2">
+                                        {% if order.status == 1 %}
+                                            <span class="p-1 rounded bg-primary text-white ">Shipped</span>
+                                        {% elif order.status == 2 %}
+                                            <span class="p-1 rounded bg-success text-white ">Completed</span>
+                                        {% elif order.status == 3 %}
+                                            <span class="p-1 rounded bg-warning text-dark">Hold</span>
+                                        {% elif order.status == 4 %}
+                                            <span class="p-1 rounded bg-danger text-white">Canceled</span>                                     
+                                        {% else %}
+                                            <span class="p-1 rounded bg-secondary text-white">Processing</span>  
+                                        {% endif %}
+                                    </td>
                                     
                                 </tr>
                             {% endfor %}
