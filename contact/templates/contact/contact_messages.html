@@ -7,92 +7,101 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container mt-2">
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3 class="text-black text-uppercase font-weight-bold mb-3 text-left"> Site Messages History</h3>
-            </div>
+<div class="ml-3">
+    <div class="col-md-12 px-0 mb-1">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/contact/all-messages">all-messages</a></li>
+          </ol>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3 class="text-black text-uppercase font-weight-bold mb-3 text-left"> Site Messages History</h3>
         </div>
-        <div class="row mt-1 mb-2">
-            <div class="col-6">
-                <a class="btn btn-sm my-3 text-white text-left" href=""></a>
-            </div>
-            <div class="col-6  my-auto  order-md-last d-flex justify-content-center justify-content-md-end">
-                <div class="sort-select-wrapper w-50">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
-                        <!--<option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                        <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Subject (A-Z)</option>
-                        <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Subject (Z-A)</option>-->
-                        <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (A-Z)</option>
-                        <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (Z-A)</option>
-                        <!--<option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (low to high)</option>
-                        <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (high to low)</option>-->
-                    </select>
-                </div>
-            </div>
+    </div>
+    <div class="row mt-1 mb-2">
+        <div class="col-6">
+            <a class="btn btn-sm my-3 text-white text-left" href=""></a>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="order-history table-responsive rounded">
-                    <table class="table table-sm table-borderless">
-                        <thead class="rounded">
-                            <tr class="text-light bg-dark rounded py-1 px-1">
-                                <th class="font-weight-normal small">Status</th>
-                                <th class="font-weight-normal">Subject</th>
-                                <th class="font-weight-normal">Name</th>
-                                <th class="font-weight-normal">Surname</th>
-                                <th class="font-weight-normal">Number</th>
-                                <th class="font-weight-normal">Email</th>
-                                <th class="font-weight-normal">Message</th>
-                                <th class="font-weight-normal small">Received On</th>
-
-                                <th class="font-weight-normal small">Action</th>
-
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for contact in all_messages %}
-                                <div>
-                                    <tr class="border-bottom">
-                                        <td class="pt-2 small ">
-                                            {% if contact.status == 1 %}
-                                                <span class="p-1 rounded bg-success text-white ">Actioned</span>                                    
-                                            {% else %}
-                                                <span class="p-1 rounded bg-primary text-white">New</span>  
-                                            {% endif %}
-                                        </td>
-                                        <td>{{ contact.subject_type }}</td>
-                                        <td>{{ contact.first_name }}</td>
-                                        <td>{{ contact.last_name }}</td>
-                                        <td>{{ contact.contact_number }}</td>
-                                        <td>{{ contact.email_address }}</td>
-                                        <td>{{ contact.message }}</td>
-                                        <td>{{ contact.received_date }}</td>
-                                        <td> <div>
-                                            <!--####################FIX###################-->
-                                            <a class="btn btn-success btn-sm text-white py-0 px-1" href=""><i class="fas fa-pencil-alt"></i></a>
-                                            <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_message' pk=4 %}"><i class="far fa-times-circle"></i></a>
-                                        </div></td>  
-                                    </tr>
-                                </div>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
+        <div class="col-6  my-auto  order-md-last d-flex justify-content-center justify-content-md-end">
+            <div class="sort-select-wrapper w-50">
+                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
+                    <!--<option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Subject (A-Z)</option>
+                    <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Subject (Z-A)</option>-->
+                    <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (A-Z)</option>
+                    <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (Z-A)</option>
+                    <!--<option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (low to high)</option>
+                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (high to low)</option>-->
+                </select>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="order-history table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="rounded">
+                        <tr class="text-light bg-dark rounded py-1 px-1">
+                            <th class="font-weight-normal small">Status</th>
+                            <th class="font-weight-normal">Subject</th>
+                            <th class="font-weight-normal">Name</th>
+                            <th class="font-weight-normal">Surname</th>
+                            <th class="font-weight-normal">Number</th>
+                            <th class="font-weight-normal">Email</th>
+                            <th class="font-weight-normal">Message</th>
+                            <th class="font-weight-normal small">Received On</th>
+
+                            <th class="font-weight-normal small">Action</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for contact in all_messages %}
+                            <div>
+                                <tr class="border-bottom">
+                                    <td class="pt-2 small ">
+                                        {% if contact.status == 1 %}
+                                            <span class="p-1 rounded bg-success text-white ">Actioned</span>                                    
+                                        {% else %}
+                                            <span class="p-1 rounded bg-primary text-white">New</span>  
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ contact.subject_type }}</td>
+                                    <td>{{ contact.first_name }}</td>
+                                    <td>{{ contact.last_name }}</td>
+                                    <td>{{ contact.contact_number }}</td>
+                                    <td>{{ contact.email_address }}</td>
+                                    <td>{{ contact.message }}</td>
+                                    <td>{{ contact.received_date }}</td>
+                                    <td> <div>
+                                        <!--####################FIX###################-->
+                                        <a class="btn btn-success btn-sm text-white py-0 px-1" href=""><i class="fas fa-pencil-alt"></i></a>
+                                        <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_message' pk=4 %}"><i class="far fa-times-circle"></i></a>
+                                    </div></td>  
+                                </tr>
+                            </div>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
     
 {% endblock %}
 {% block postloadjs %}

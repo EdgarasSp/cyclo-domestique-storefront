@@ -7,104 +7,115 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container mt-2">
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3 class="text-black text-uppercase font-weight-bold mb-3 text-left"> Global Order History</h3>
-            </div>
+<div class="ml-3">
+    <div class="col-md-12 px-0 mb-1">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile">profile</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile/orders">orders</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile/orders/all">all-orders</a></li>
+          </ol>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3 class="text-black text-uppercase font-weight-bold mb-3 text-left"> Global Order History</h3>
         </div>
-        <div class="row mt-1 mb-2">
-            <div class="col-6">
-                <a class="btn btn-sm my-3 text-white text-left" href=""></a>
-            </div>
-            <div class="col-6  my-auto  order-md-last d-flex justify-content-center justify-content-md-end">
-                <div class="sort-select-wrapper w-50">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                        <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (low to high)</option>
-                        <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (high to low)</option>
-                        <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (low to high)</option>
-                        <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (high to low)</option>
-                    </select>
-                </div>
-            </div>
+    </div>
+    <div class="row mt-1 mb-2">
+        <div class="col-6">
+            <a class="btn btn-sm my-3 text-white text-left" href=""></a>
         </div>
-                <div class="order-history table-responsive rounded ">
-                    <table class="table table-sm table-borderless">
-                        <thead class="rounded">
-                            <tr class="text-light bg-dark rounded py-1 px-1">
-                                <th class="font-weight-normal">User Name</th>
-                                <th class="font-weight-normal">Order Number</th>
-                                <th class="font-weight-normal">Order Date</th>
-                                <th class="font-weight-normal">Items</th>
-                                <th class="font-weight-normal">Order Total</th>
-                                <th class="font-weight-normal">Order Status</th>
-                                <th class="font-weight-normal small">Actions</th>
-
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for order in orders %}
-                                <div>
-                                    <tr class="border-bottom">
-                                        <td>
-                                            {{ order.full_name }}
-                                        </td>
-                                        <td>
-                                            <a href="{% url 'order_history' order.order_number %}"
-                                            title="{{ order.order_number }}">
-                                                {{ order.order_number|truncatechars:10 }}
-                                            </a>
-                                        </td>
-                                        <td>{{ order.date }}</td>
-                                        <td>
-                                            <ul class="list-unstyled">
-                                                {% for item in order.lineitems.all %}
-                                                    <li class="">
-                                                        {{ item.quantity }} x {{ item.product.name }}
-                                                        - {{ item.product.size }} 
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </td>
-                                        <td class="poundSign currency">{{ order.grand_total }}</td>
-                                        <td class="pt-2 small ">
-                                            {% if order.status == 1 %}
-                                                <span class="p-1 rounded bg-primary text-white ">Shipped</span>
-                                            {% elif order.status == 2 %}
-                                                <span class="p-1 rounded bg-success text-white ">Completed</span>
-                                            {% elif order.status == 3 %}
-                                                <span class="p-1 rounded bg-warning text-dark">Hold</span>
-                                            {% elif order.status == 4 %}
-                                                <span class="p-1 rounded bg-danger text-white">Canceled</span>                                     
-                                            {% else %}
-                                                <span class="p-1 rounded bg-secondary text-white">Processing</span>  
-                                            {% endif %}
-                                        </td>
-                                        <td> <div>
-                                            <!--####################FIX###################-->
-                                            <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_order' order.order_number %}"><i class="fas fa-pencil-alt"></i></a>
-                                        </div></td>  
-                                    </tr>
-                                </div>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
+        <div class="col-6  my-auto  order-md-last d-flex justify-content-center justify-content-md-end">
+            <div class="sort-select-wrapper w-50">
+                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (low to high)</option>
+                    <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (high to low)</option>
+                    <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (low to high)</option>
+                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (high to low)</option>
+                </select>
             </div>
         </div>
     </div>
+            <div class="order-history table-responsive rounded ">
+                <table class="table table-sm table-borderless">
+                    <thead class="rounded">
+                        <tr class="text-light bg-dark rounded py-1 px-1">
+                            <th class="font-weight-normal">User Name</th>
+                            <th class="font-weight-normal">Order Number</th>
+                            <th class="font-weight-normal">Order Date</th>
+                            <th class="font-weight-normal">Items</th>
+                            <th class="font-weight-normal">Order Total</th>
+                            <th class="font-weight-normal">Order Status</th>
+                            <th class="font-weight-normal small">Actions</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                            <div>
+                                <tr class="border-bottom">
+                                    <td>
+                                        {{ order.full_name }}
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:10 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="">
+                                                    {{ item.quantity }} x {{ item.product.name }}
+                                                    - {{ item.product.size }} 
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td class="poundSign currency">{{ order.grand_total }}</td>
+                                    <td class="pt-2 small ">
+                                        {% if order.status == 1 %}
+                                            <span class="p-1 rounded bg-primary text-white ">Shipped</span>
+                                        {% elif order.status == 2 %}
+                                            <span class="p-1 rounded bg-success text-white ">Completed</span>
+                                        {% elif order.status == 3 %}
+                                            <span class="p-1 rounded bg-warning text-dark">Hold</span>
+                                        {% elif order.status == 4 %}
+                                            <span class="p-1 rounded bg-danger text-white">Canceled</span>                                     
+                                        {% else %}
+                                            <span class="p-1 rounded bg-secondary text-white">Processing</span>  
+                                        {% endif %}
+                                    </td>
+                                    <td> <div>
+                                        <!--####################FIX###################-->
+                                        <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_order' order.order_number %}"><i class="fas fa-pencil-alt"></i></a>
+                                    </div></td>  
+                                </tr>
+                            </div>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
     
 {% endblock %}
 {% block postloadjs %}

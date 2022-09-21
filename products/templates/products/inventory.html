@@ -7,108 +7,115 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container mt-2">
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container pb-2">
-        <div class="row">
-            <div class="col">
-                <h3 class="text-black text-uppercase font-weight-bold mb-1 text-left"> Inventory management</h3>
-            </div>
+<div class="ml-3">
+    <div class="col-md-12 px-0 mb-1">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
+            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products/inventory">inventory</a></li>
+          </ol>
+        </nav>
+    </div>
+</div>
+<div class="container pb-2">
+    <div class="row">
+        <div class="col">
+            <h3 class="text-black text-uppercase font-weight-bold mb-1 text-left"> Inventory management</h3>
         </div>
-
-
-        <div class="row">
-            <div class="col-12 ">
-                <div class="row mt-1 mb-2">
-                    <div class="col-6">
-                        <a class="btn btn-success btn-sm my-3 text-white text-left" href="{% url 'add_product' %}">Add Product</a>
-                    </div>
-                    <div class="col-6  my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="amount_asc" {% if current_sorting == 'amount_asc' %}selected{% endif %}>Stock (low to high)</option>
-                                <option value="amount_desc" {% if current_sorting == 'amount_desc' %}selected{% endif %}>Stock (high to low)</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                            </select>
-                        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 ">
+            <div class="row mt-1 mb-2">
+                <div class="col-6">
+                    <a class="btn btn-success btn-sm my-3 text-white text-left" href="{% url 'add_product' %}">Add Product</a>
+                </div>
+                <div class="col-6  my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="amount_asc" {% if current_sorting == 'amount_asc' %}selected{% endif %}>Stock (low to high)</option>
+                            <option value="amount_desc" {% if current_sorting == 'amount_desc' %}selected{% endif %}>Stock (high to low)</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
                     </div>
                 </div>
-                <div class="order-history table-responsive rounded">
-                    <table class="table table-sm table-borderless">
-                        <thead class="rounded">
-                            <tr class="text-light bg-dark rounded py-1 px-1">
-                                <th class="font-weight-normal small">ID</th>
-                                <th class="font-weight-normal small">Image</th>
-                                <th class="font-weight-normal small">Division</th>
-                                <th class="font-weight-normal small">Category</th>
-                                <th class="font-weight-normal small">SKU</th>
-                                <th class="font-weight-normal small">Brand</th>
-                                <th class="font-weight-normal small">Name</th>
-                                <th class="font-weight-normal small">Size</th>
-                                <th class="font-weight-normal small">Color</th>
-                                <th class="font-weight-normal small">Amount</th>
-                                <th class="font-weight-normal small">Price</th>
-                                <th class="font-weight-normal small">Actions</th>
+            </div>
+            <div class="order-history table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="rounded">
+                        <tr class="text-light bg-dark rounded py-1 px-1">
+                            <th class="font-weight-normal small">ID</th>
+                            <th class="font-weight-normal small">Image</th>
+                            <th class="font-weight-normal small">Division</th>
+                            <th class="font-weight-normal small">Category</th>
+                            <th class="font-weight-normal small">SKU</th>
+                            <th class="font-weight-normal small">Brand</th>
+                            <th class="font-weight-normal small">Name</th>
+                            <th class="font-weight-normal small">Size</th>
+                            <th class="font-weight-normal small">Color</th>
+                            <th class="font-weight-normal small">Amount</th>
+                            <th class="font-weight-normal small">Price</th>
+                            <th class="font-weight-normal small">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in products %}
+                            <tr class="">
+                                <td><p class="mt-1 small">{{product.pk }}</p></td>
+                                <td>
+                                    {% if product.image %}
+                                    <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                        <img class="card-img-top img-fluid  align-middle" style="height: 50px; width: 50px;" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a class=" image-size"   href="{% url 'product_details' product.id %}">
+                                        <img class="card-img-top img-fluid" style="height: 50px; width: 50px;" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                </td>
+                                <td><p class="mt-1 small text-capitalize">{{product.category.division }}</p></td>
+                                <td><p class="mt-1 small text-capitalize">{{product.category }}</p></td>
+                                <td><p class="mt-1 small">{{product.sku }}</p></td>
+                                <td><p class="mt-1 small">{{product.brand}}</p></td>
+                                <td><p class="mt-1 small">{{product.name}}</p></td>
+                                <td><p class="mt-1 small">{{product.size}}</p></td>
+                                <td><p class="mt-1 small">{{product.color}}</p></td>
+                                <td >
+                                    {% if product.amount > 1 %}
+                                        <p class="mt-1 small"> {{product.amount}}</p>
+                                    {% else %}
+                                        <p class="mt-1 mr-2 small text-danger" ><strong>Out of Stock</strong></p>
+                                    {% endif %}
+                                </td>
+                                <td class=" poundSign currency">{{product.price}}</td>
+                                <td> <div>
+                                    <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt"></i></a>
+                                    <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle"></i></a>
+                                </div></td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {% for product in products %}
-                                <tr class="">
-                                    <td><p class="mt-1 small">{{product.pk }}</p></td>
-                                    <td>
-                                        {% if product.image %}
-                                        <a class=" image-size" href="{% url 'product_details' product.id %}">
-                                            <img class="card-img-top img-fluid  align-middle" style="height: 50px; width: 50px;" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                        </a>
-                                        {% else %}
-                                        <a class=" image-size"   href="{% url 'product_details' product.id %}">
-                                            <img class="card-img-top img-fluid" style="height: 50px; width: 50px;" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                        </a>
-                                        {% endif %}
-                                    </td>
-                                    <td><p class="mt-1 small text-capitalize">{{product.category.division }}</p></td>
-                                    <td><p class="mt-1 small text-capitalize">{{product.category }}</p></td>
-                                    <td><p class="mt-1 small">{{product.sku }}</p></td>
-                                    <td><p class="mt-1 small">{{product.brand}}</p></td>
-                                    <td><p class="mt-1 small">{{product.name}}</p></td>
-                                    <td><p class="mt-1 small">{{product.size}}</p></td>
-                                    <td><p class="mt-1 small">{{product.color}}</p></td>
-                                    <td >
-                                        {% if product.amount > 1 %}
-                                            <p class="mt-1 small"> {{product.amount}}</p>
-                                        {% else %}
-                                            <p class="mt-1 mr-2 small text-danger" ><strong>Out of Stock</strong></p>
-                                        {% endif %}
-                                    </td>
-                                    <td class=" poundSign currency">{{product.price}}</td>
-                                    <td> <div>
-                                        <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt"></i></a>
-                                        <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle"></i></a>
-                                    </div></td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+</div>
     
 {% endblock %}
 

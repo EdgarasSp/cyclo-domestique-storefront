@@ -62,20 +62,6 @@
       <!--logo end-->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <!--<li class="nav-item dropdown">
-            <a class="nav-link logo-font dropdown-toggle" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>-->
-          <!--<a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">Price Highest</a>-->
-          <!--<a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
-                <div class="dropdown-divider"></div>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li>-->
           <li class="nav-item logo-font">
             <a class="nav-link" style="width: 140px;" href="{% url 'products' %}">All Products</a>
           </li>
@@ -157,8 +143,6 @@
                   <a href="{% url 'profile' %}" class="dropdown-item ">My Profile</a>
                   <div class="dropdown-divider"></div>
                   <a href="{% url 'profile_orders' %}" class="dropdown-item ">My Orders</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="{% url 'profile' %}" class="dropdown-item ">My Messages</a>
                   <div class="dropdown-divider"></div>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                   {% else %}
