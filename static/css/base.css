@@ -9,6 +9,7 @@ body {
     padding-bottom: 60px;
     min-height: 100%;
     font-family: 'Lato';
+    /*background-color: #f9f9f9;*/
 }
 
 .container {
@@ -27,8 +28,6 @@ body {
     text-transform: uppercase;
     text-decoration: none !important;
 }
-
-
 
 .main-logo-link {
     width: fit-content;

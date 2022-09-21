@@ -107,6 +107,21 @@
                     {% endfor %}
                 </table>
             </div>
+            {% else %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-light bg-dark ">
+                        <tr>
+                            <th scope="col" class="font-weight-normal">Product Info</th>
+                            <th scope="col" class="font-weight-normal">Product Name</th>
+                            <th scope="col" class="font-weight-normal pr-5">Size</th>
+                            <th scope="col" class="font-weight-normal">Price</th>
+                            <th scope="col" class="font-weight-normal px-5">Qty</th>
+                            <th scope="col" class="font-weight-normal">Subtotal</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
             {% endif %}
         </div>
         <div class="col-md-3 wrapper ">
@@ -135,16 +150,24 @@
                             </a>                     
                         </div>
                     </div>
-                {% else %}
-                    <p class="lead mb-5  border">Your basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Add items to basket to view them here.</span>
-                    </a>
-                {% endif %}
                 </div>
+                {% else %}
+                <div class="table-responsive rounded border py-4 px-2 bg-light ">
+                    <div>
+                        <div class="text-center mr-2">
+                            <h5><strong class="text-uppercase ">Your basket is empty</strong></h5>
+                            <h6 class="mt-4">Add items to basket and view them here.</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-right mx-2 mt-5">
+                            <a href="{% url 'products' %}" class=" col-12 text-uppercase btn btn-primary rounded-1">
+                                <span class="">View Our Products</span>
+                            </a>                     
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </aside>
         </div>
     </div>
