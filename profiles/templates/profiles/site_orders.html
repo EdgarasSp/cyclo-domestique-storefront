@@ -20,12 +20,26 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left pl-3"> Site Order History</h3>
+                <h3 class="text-black text-uppercase font-weight-bold mb-3 text-left"> Global Order History</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 ml-3">
-                <div class="order-history table-responsive rounded">
+        <div class="row mt-1 mb-2">
+            <div class="col-6">
+                <a class="btn btn-sm my-3 text-white text-left" href=""></a>
+            </div>
+            <div class="col-6  my-auto  order-md-last d-flex justify-content-center justify-content-md-end">
+                <div class="sort-select-wrapper w-50">
+                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (low to high)</option>
+                        <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (high to low)</option>
+                        <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (low to high)</option>
+                        <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (high to low)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+                <div class="order-history table-responsive rounded ">
                     <table class="table table-sm table-borderless">
                         <thead class="rounded">
                             <tr class="text-light bg-dark rounded py-1 px-1">
@@ -96,4 +110,33 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

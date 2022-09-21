@@ -52,10 +52,29 @@
             <span class="fas fa-caret-right p-0 pl-4 text-light" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+        <!-------------------------->
+        <div class="carousel-caption d-none d-md-block w-100 h-50 text-center" style="background-color: transparent;"> 
+            <div class="col-md-4 m-auto">
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border rounded-left py-4 border-secondary" type="text" name="q" placeholder="Shimano, Trek...">
+                        <div class="input-group-append ">
+                            <button class=" btn btn-success text-center border border-secondary rounded-right" type="submit">
+                                <span class="icon  ">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-------------------------->
     </div>
     <div class="d-block new_height">
         <p class="new_height">PLACEHOLDER</p>
     </div>
+    
 
 <!--end carousel-->
     

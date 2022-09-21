@@ -32,31 +32,117 @@ def profile(request):
 
 
 @login_required
-def profile_orders(request):
+def profile_orders(request):                 # USER ORDER HISTORY SEARCH
     """ Display the user orders. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+################################################################
+    query = None
+    categories = None
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                orders = orders.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            orders = orders.order_by(sortkey)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "Please enter search term!")
+                return redirect(reverse('orders'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            orders = orders.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
+
+##########################################################
+
     template = 'profiles/orders.html'
     context = {
-        'orders': orders,  
+        'orders': orders,
+        'search_term': query,
+        'current_categories': categories,
+        'current_sorting': current_sorting,
+        'on_inventory_page': True,
     }
 
     return render(request, template, context)
 
+
 @login_required
-def site_orders(request):
+def site_orders(request):                 # GLOBAL ORDER HISTORY SEARCH
     """ Display site orders. """
     orders = Order.objects.all()
+
+################################################################
+    query = None
+    categories = None
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                orders = orders.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            orders = orders.order_by(sortkey)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "Please enter search term!")
+                return redirect(reverse('orders'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            orders = orders.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
+
+##########################################################
 
     template = 'profiles/site_orders.html'
     context = {
         'orders': orders,
+        'search_term': query,
+        'current_categories': categories,
+        'current_sorting': current_sorting,
+        'on_inventory_page': True,
     }
 
     return render(request, template, context)
+
+
+
+
+
 
 
 def order_history(request, order_number):
@@ -69,6 +155,7 @@ def order_history(request, order_number):
 
     template = 'checkout/checkout_success.html'
     context = {
+
         'order': order,
         'from_profile': True,
     }

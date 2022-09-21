@@ -47,9 +47,50 @@ def site_messages(request):
     """ Display site messages. """
     all_messages = ContactForm.objects.all()
 
+
+################################################################
+    query = None
+    categories = None
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                all_messages = all_messages.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            all_messages = all_messages.order_by(sortkey)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "Please enter search term!")
+                return redirect(reverse('site_message'))  #tbs was site
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            all_messages = all_messages.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
+
+##########################################################
+
     template = 'contact/contact_messages.html'
     context = {
         'all_messages': all_messages,
+        'search_term': query,
+        'current_categories': categories,
+        'current_sorting': current_sorting,
+        'on_inventory_page': True,
     }
 
     return render(request, template, context)
