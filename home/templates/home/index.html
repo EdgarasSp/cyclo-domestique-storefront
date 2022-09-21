@@ -16,7 +16,7 @@
                 </div>
                 <div class="carousel-caption d-none d-md-block w-100 h-100">
                     <div class="text-center font-italic caption-text w-100 py-4">
-                        <h1 class="display-4">title</h1>
+                        <h1 class="display-2">title</h1>
                         <h3 class="font-weight-bolder">sub-title</h3>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="carousel-caption d-none d-md-block w-100 h-100">
                     <div class="text-center font-italic caption-text w-100 py-4">
-                        <h1 class="display-4">title</h1>
+                        <h1 class="display-3">title</h1>
                         <h3 class="font-weight-bolder">sub-title</h3>
                     </div>
                 </div>
@@ -52,14 +52,14 @@
             <span class="fas fa-caret-right p-0 pl-4 text-light" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-        <!-------------------------->
+        <!------------Search-------------->
         <div class="carousel-caption d-none d-md-block w-100 h-50 text-center" style="background-color: transparent;"> 
             <div class="col-md-4 m-auto">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border rounded-left py-4 border-secondary" type="text" name="q" placeholder="Shimano, Trek...">
                         <div class="input-group-append ">
-                            <button class=" btn btn-success text-center border border-secondary rounded-right" type="submit">
+                            <button class=" btn btn-primary text-center border border-secondary rounded-right" type="submit">
                                 <span class="icon  ">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -71,9 +71,88 @@
         </div>
         <!-------------------------->
     </div>
+    <!--Why Us Section Start-->
+    <div class="album_container mt-5">
+        <div class="album_photo_container">
+            <div class="album_item " style="background: rgba(45, 46, 46, 0.85)" >
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo"  alt="Hairdressers">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold display-4 text-uppercase" style="letter-spacing: 5px;">Vivian and Gill</h2>
+                        <h4 class="font-weight-bold display-5 text-uppercase"  style="letter-spacing: 5px;">ovely milk chocolate topping!</h5>
+                        <a class="btn btn-lg btn-primary my-3 text-white text-uppercase font-weight-bold" style="letter-spacing: 2px;" href="{% url 'add_product' %}">Add Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="album_photo_container">    
+            <div class="album_item " style="background: rgba(45, 46, 46, 0.85)" >
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1508763718304-b2ddedcc2e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo" alt="Hairdressers">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold display-4 text-uppercase" style="letter-spacing: 5px;">Vivian and Gill</h2>
+                        <h4 class="font-weight-bold display-5 text-uppercase"  style="letter-spacing: 5px;">ovely milk chocolate topping!</h5>
+                        <a class="btn btn-lg btn-primary my-3 text-white text-uppercase font-weight-bold" href="{% url 'add_product' %}">Add Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-1 album_photo_container">
+            <div class="album_item " style="background: rgba(45, 46, 46, 0.85)" >
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo"  alt="Hairdressers">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold display-4 text-uppercase" style="letter-spacing: 5px;">Vivian and Gill</h2>
+                        <h4 class="font-weight-bold display-5 text-uppercase"  style="letter-spacing: 5px;">ovely milk chocolate topping!</h5>
+                        <a class="btn btn-lg btn-primary my-3 text-white text-uppercase font-weight-bold" href="{% url 'add_product' %}">Add Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-1 album_photo_container">    
+            <div class="album_item " style="background: rgba(45, 46, 46, 0.85)" >
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1508763718304-b2ddedcc2e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo" alt="Hairdressers">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold display-4 text-uppercase" style="letter-spacing: 5px;">Vivian and Gill</h2>
+                        <h4 class="font-weight-bold display-5 text-uppercase"  style="letter-spacing: 5px;">ovely milk chocolate topping!</h5>
+                        <a class="btn btn-lg btn-primary my-3 text-white text-uppercase font-weight-bold" href="{% url 'add_product' %}">Add Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-12 py-5 mb-5">
+        <div class="row row align-items-center text-center" >
+            <div class="col-lg-6">
+                <h1 class="mt-3 text-center">Why Choose Us </h1>
+                <p class="lead text-secondary my-5">TT Beauty is an independent family run business, the new London salon has
+                been built on the success and reputation of our exceptional stylists. Original and authentic in its inspiration
+                the salon has a cosy and relaxing feel inspired by the love of the minimalistic lifestyle.</p>
+                <a href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes" class="btn btn-signup">Road Bikes</a>
+            </div>
+            <div class="col-md-6 col-lg-6 ">
+                <img src="#" class="img-fluid rounded-corners pt-5" alt="Hairdressers">
+            </div>
+        </div>
+    </div> 
+
+  <!--Why Us Section End-->
+
+
     <div class="d-block new_height">
         <p class="new_height">PLACEHOLDER</p>
     </div>
+
+
     
 
 <!--end carousel-->
