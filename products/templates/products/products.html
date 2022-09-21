@@ -25,7 +25,7 @@
           <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
             <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products">/products</a></li>
             {% for c in current_categories %}
-                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="{% url 'products' %}?category={{ c.name }}"> {{ c.name }}</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="{% url 'products' %}?category={{ c.name }}">{{ c.name }}</a></li>
             {% endfor %}
           </ol>
         </nav>
