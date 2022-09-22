@@ -464,13 +464,13 @@ body {
     top: 50%;
     left: 50%;
     color: #E7F0EF;
-    pointer-events: none;
     z-index: 3;
     background-color: rgba(2, 2, 2, 0.35) !important;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
 }
+
+
 
  .album_item .image_description h1 {
      color:#E7F0EF;
