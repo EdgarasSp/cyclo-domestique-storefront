@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="header-container">
+<div class="header-container header-mobile">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -42,8 +42,8 @@
                     <thead class="text-light bg-dark ">
                         <tr>
                             <th scope="col" class="font-weight-normal">Product Info</th>
-                            <th scope="col" class="font-weight-normal">Product Name</th>
-                            <th scope="col" class="font-weight-normal pr-5">Size</th>
+                            <th scope="col" class="font-weight-normal">Name</th>
+                            <th scope="col" class="font-weight-normal pr-5 d-none d-md-block d-lg-block d-xl-block">Size</th>
                             <th scope="col" class="font-weight-normal">Price</th>
                             <th scope="col" class="font-weight-normal px-5">Qty</th>
                             <th scope="col" class="font-weight-normal">Subtotal</th>
@@ -63,7 +63,7 @@
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
-                        <td class="py-3">
+                        <td class="py-3  d-none d-md-block d-lg-block d-xl-block">
                             <p class="my-0">{{ item.product.size }}</p>
                         </td>
                         <td class="py-3">
@@ -75,19 +75,19 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0 btn-smaller" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
+                                        <input class="form-control form-control-sm qty_input input-smaller"  type="number"
                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            <button class="increment-qty btn btn-sm btn-black rounded-0 btn-smaller"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>

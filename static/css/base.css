@@ -534,6 +534,8 @@ iframe{
         height:32px;
     }
 
+    
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -573,6 +575,10 @@ iframe{
         min-width: 310px;
         max-width: 345px;
     }
+
+    .header-mobile{
+        padding-top:50px !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -585,6 +591,10 @@ iframe{
         padding-bottom: 0px;
         padding-top: 0px;
         height:32px;
+    }
+
+    .header-mobile{
+        padding-top:50px !important;
     }
 
 

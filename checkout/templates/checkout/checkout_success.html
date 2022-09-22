@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="header-container">
+<div class="header-container header-mobile">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -34,8 +34,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3"></div>    
-        <div class="col-md-6">
+        <div class="col-2 d-none d-md-block d-lg-block d-xl-block"></div>    
+        <div class="col-12 col-md-8 ">
             <p class="pl-3 py-1 bg-dark text-white rounded">Your order information is below.</p>
             <div class="row">
                 <div class="col-12 col-md-8 small">
@@ -253,7 +253,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-md-3"></div>      
+        <div class="col-2 d-none d-md-block d-lg-block d-xl-block"></div>      
     </div>
 </div>
 {% endblock %}
