@@ -127,6 +127,11 @@ body {
     color: #ffffff;
 }
 
+.carousel-icon{
+    background-color: #000 !important;
+    border-radius: 25px !important;
+    border: #000 4px solid;
+}
 /*main card*/
 
 .card:hover {

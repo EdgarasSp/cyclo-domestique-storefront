@@ -7,156 +7,678 @@
 
 
 {% block content %}
-    <!--carousel-->
-    <div id="carouselCaptions" class="carousel slide carousel-fade  " data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item main-carousel-item position-relative active ">
-                <div class="d-flex justify-content-center">
-                    <img src="media/cover_coen-van-de-broek-OFyh9TpMyM8-unsplash.jpg" class="d-block" alt="cover-1">
-                </div>
-                <div class="carousel-caption d-none d-md-block w-100 h-100">
-                    <div class="text-center font-italic caption-text w-100 py-4">
-                        <h1 class="display-2">title</h1>
-                        <h3 class="font-weight-bolder">sub-title</h3>
-                    </div>
-                </div>
+<!--carousel-->
+<div id="carouselCaptions" class="carousel slide carousel-fade  " data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item main-carousel-item position-relative active ">
+            <div class="d-flex justify-content-center">
+                <img src="media/cover_coen-van-de-broek-OFyh9TpMyM8-unsplash.jpg" class="d-block" alt="cover-1">
             </div>
-            <div class="carousel-item main-carousel-item position-relative">
-                <div class="d-flex justify-content-center">
-                    <img src="media/cover_kenny-eliason-tokYjYqaPB0-unsplash.jpg" class="d-block cover" alt="cover-2">
-                </div>
-                <div class="carousel-caption d-none d-md-block w-100 h-100">
-                    <div class="text-center font-italic caption-text w-100 py-4">
-                        <h1 class="display-3">title</h1>
-                        <h3 class="font-weight-bolder">sub-title</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item main-carousel-item position-relative">
-                <div class="d-flex justify-content-center">
-                    <img src="media/cover_carter-moorse-kqtrpFb4bvE-unsplash.jpg" class="d-block cover" alt="cover-3">
-                </div>
-                <div class="carousel-caption d-none d-md-block w-100 h-100">
-                    <div class="text-center font-italic caption-text w-100 py-4">
-                        <h1 class="display-4">title</h1>
-                        <h3 class="font-weight-bolder">sub-title</h3>
-                    </div>
+            <div class="carousel-caption d-none d-md-block w-100 h-100">
+                <div class="text-center font-italic caption-text w-100 py-4">
+                    <h1 class="display-2">title</h1>
+                    <h3 class="font-weight-bolder">sub-title</h3>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
-            <span class="fas fa-caret-left p-0 pr-4 text-light" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
-            <span class="fas fa-caret-right p-0 pl-4 text-light" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <!------------Search-------------->
-        <div class="carousel-caption d-none d-md-block w-100 h-50 text-center background-none"> 
-            <div class="col-md-4 m-auto">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border rounded-left py-4 border-secondary" type="text" name="q" placeholder="Shimano, Trek...">
-                        <div class="input-group-append ">
-                            <button class=" btn btn-primary text-center border border-secondary rounded-right" type="submit">
-                                <span class="icon  ">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+        <div class="carousel-item main-carousel-item position-relative">
+            <div class="d-flex justify-content-center">
+                <img src="media/cover_kenny-eliason-tokYjYqaPB0-unsplash.jpg" class="d-block cover" alt="cover-2">
+            </div>
+            <div class="carousel-caption d-none d-md-block w-100 h-100">
+                <div class="text-center font-italic caption-text w-100 py-4">
+                    <h1 class="display-3">title</h1>
+                    <h3 class="font-weight-bolder">sub-title</h3>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item main-carousel-item position-relative">
+            <div class="d-flex justify-content-center">
+                <img src="media/cover_carter-moorse-kqtrpFb4bvE-unsplash.jpg" class="d-block cover" alt="cover-3">
+            </div>
+            <div class="carousel-caption d-none d-md-block w-100 h-100">
+                <div class="text-center font-italic caption-text w-100 py-4">
+                    <h1 class="display-4">title</h1>
+                    <h3 class="font-weight-bolder">sub-title</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+        <span class="fas fa-caret-left p-0 pr-4 text-light" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+        <span class="fas fa-caret-right p-0 pl-4 text-light" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!------------Search-------------->
+    <div class="carousel-caption d-none d-md-block w-100 h-50 text-center background-none">
+        <div class="col-md-4 m-auto">
+            <form method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border rounded-left py-4 border-secondary" type="text" name="q"
+                        placeholder="Shimano, Trek...">
+                    <div class="input-group-append ">
+                        <button class=" btn btn-primary text-center border border-secondary rounded-right"
+                            type="submit">
+                            <span class="icon  ">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-------------------------->
+</div>
+<!--Why Us Section Start-->
+<div class="album_container mt-5">
+    <div class="album_photo_container">
+        <div class="album_item ">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1552434195-d7e9db6cacd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                    class="album_photo" alt="Three road cyclist standing and chatting">
+            </div>
+            <div class="image_description">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Road Bikes</h2>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">best lightweight machines</h5>
+                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
+                            href="{% url 'products' %}?category=road_bikes">View Bikes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="album_photo_container">
+        <div class="album_item ">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1508763718304-b2ddedcc2e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                    class="album_photo" alt="two mountain bikers riding down a path in autumn leafs">
+            </div>
+            <div class="image_description">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Mountain Bikes</h2>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Fast, light and even electrified
+                        </h5>
+                        <a class="btn  btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
+                            href="{% url 'products' %}?category=mountain_bikes">View Bikes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-1 album_photo_container">
+        <div class="album_item ">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1547278786-125863d9ba64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                    class="album_photo" alt="Kid riding bike in sunset next to monument">
+            </div>
+            <div class="image_description">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Kids Bikes</h2>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">For up and coming riders</h5>
+                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
+                            href="{% url 'products' %}?category=kids_bikes">View Bikes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-1 album_photo_container">
+        <div class="album_item ">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1653548240576-6c1b5a97a675?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                    class="album_photo" alt="road bike with deep section front wheel from profile">
+            </div>
+            <div class="image_description">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing"> Bike Wheels</h2>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Sticky Tyres and Performance
+                        Wheels</h5>
+                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
+                            href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">View Accessories</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5 mb-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner px-5">
+            <div class="carousel-item active">
+                <div class="row ">
+                    <div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-                </form>
+                    <div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="product-container col-12">
+                            <div class="row justify-content-around-2">
+                                {% for product in products %}
+                                    {% if product.sku == 'SKU91190801' %}
+                                    <div class="col mb-4 card-size">
+                                        <a href="/product/{{ product.name }}" class="text-decoration-none " >
+                                            <!-- Update -->
+                                            <div class="card h-100 " >
+                                                {% if product.image %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid  align-middle" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                {% else %}
+                                                <a class=" image-size" href="{% url 'product_details' product.id %}">
+                                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                </a>
+                                                {% endif %}
+                                                <div class="card-body d-block align-self-stretch">
+                                                    <div class="small"> {{product.brand}} </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div><h5 class="card-title mb-2 title-height"> {{ product.name }}</h5></div>
+                                                </div>
+                                              
+                                                <div class="dropdown-divider"></div>
+                                                <div class="card-footer bg-white pt-0 border-0 d-flex align-items-end justify-content-between">
+                                                    <div class="dropdown-divider"></div>
+                                                    <small class=""><strong>Size:</strong> {{product.size}}</small>
+                                                    <small class=""><strong>Color:</strong> {{product.color}}</small>
+                                                    {% if product.rating %}
+                                                    <small class=""><i class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                    <small class="">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-------------------------->
+        <a class="carousel-control-prev text-warning" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class=" carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <!--Why Us Section Start-->
-    <div class="album_container mt-5">
-        <div class="album_photo_container">
-            <div class="album_item " >
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1552434195-d7e9db6cacd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo"  alt="Hairdressers">
-                </div>
-                <div class="image_description">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                        <h2 class="font-weight-bold display-5 text-uppercase title-spacing" >Road Bikes</h2>
-                        <h4 class="font-weight-bold display-6 text-uppercase title-spacing">best lightweight machines</h5>
-                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing" href="{% url 'products' %}?category=road_bikes">View Bikes</a>
-                    </div>
-                </div>
-            </div>
+</div>
+
+
+
+
+<div class="container col-12 py-5 mb-5">
+    <div class="row row align-items-center text-center">
+        <div class="col-lg-6">
+            <h1 class="mt-3 text-center">TOOLS </h1>
+            <p class="lead text-secondary my-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </p>
+            <a href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes" class="btn btn-signup">Road
+                Bikes</a>
         </div>
-        <div class="album_photo_container">    
-            <div class="album_item " >
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1508763718304-b2ddedcc2e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo" alt="Hairdressers">
-                </div>
-                <div class="image_description">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                        <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Mountain Bikes</h2>
-                        <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Fast, light and even electrified</h5>
-                        <a class="btn  btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing" href="{% url 'products' %}?category=mountain_bikes">View Bikes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="py-1 album_photo_container">
-            <div class="album_item " >
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1547278786-125863d9ba64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo"  alt="Hairdressers">
-                </div>
-                <div class="image_description">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                        <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Kids Bikes</h2>
-                        <h4 class="font-weight-bold display-6 text-uppercase title-spacing">For up and coming riders</h5>
-                        <a  class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing" href="{% url 'products' %}?category=kids_bikes">View Bikes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="py-1 album_photo_container">    
-            <div class="album_item " >
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1653548240576-6c1b5a97a675?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" class="album_photo" alt="Hairdressers">
-                </div>
-                <div class="image_description">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                        <h2 class="font-weight-bold display-5 text-uppercase title-spacing"> Bike Wheels</h2>
-                        <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Sticky Tyres and Performance Wheels</h5>
-                            <a  class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing" href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">View Accessories</a>
-                    </div>
-                </div>
-        
-            </div>
+        <div class="col-md-6 col-lg-6 ">
+            <img src="https://images.unsplash.com/photo-1475666675596-cca2035b3d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                class="img-fluid rounded-corners pt-5" alt="Placeholder">
         </div>
     </div>
+</div>
 
-    <div class="container col-12 py-5 mb-5">
-        <div class="row row align-items-center text-center" >
-            <div class="col-lg-6">
-                <h1 class="mt-3 text-center">Why Choose Us </h1>
-                <p class="lead text-secondary my-5">TT Beauty is an independent family run business, the new London salon has
-                been built on the success and reputation of our exceptional stylists. Original and authentic in its inspiration
-                the salon has a cosy and relaxing feel inspired by the love of the minimalistic lifestyle.</p>
-                <a href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes" class="btn btn-signup">Road Bikes</a>
-            </div>
-            <div class="col-md-6 col-lg-6 ">
-                <img src="#" class="img-fluid rounded-corners pt-5" alt="Hairdressers">
-            </div>
+
+
+
+
+<div class="container col-12 py-5 mb-5">
+    <div class="row row align-items-center text-center">
+        <div class="col-lg-6">
+            <h1 class="mt-3 text-center">Services </h1>
+            <p class="lead text-secondary my-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </p>
+            <a href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes" class="btn btn-signup">Road
+                Bikes</a>
         </div>
-    </div> 
-
-  <!--Why Us Section End-->
-
-
-    <div class="d-block new_height">
-        <p class="new_height">PLACEHOLDER</p>
+        <div class="col-md-6 col-lg-6 ">
+            <img src="https://images.unsplash.com/photo-1475666675596-cca2035b3d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                class="img-fluid rounded-corners pt-5" alt="Placeholder">
+        </div>
     </div>
+</div>
 
 
-    
+
+<div class="container col-12 py-5 mb-5">
+    <div class="row row align-items-center text-center">
+        <div class="col-lg-6">
+            <h1 class="mt-3 text-center">Contact Us </h1>
+            <p class="lead text-secondary my-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </p>
+            <a href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes" class="btn btn-signup">Road
+                Bikes</a>
+        </div>
+        <div class="col-md-6 col-lg-6 ">
+            <img src="https://images.unsplash.com/photo-1475666675596-cca2035b3d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                class="img-fluid rounded-corners pt-5" alt="Placeholder">
+        </div>
+    </div>
+</div>
+
+
+<!--Why Us Section End-->
+
+
+<div class="d-block new_height">
+    <p class="new_height">PLACEHOLDER</p>
+</div>
+
+
+
 
 <!--end carousel-->
-    
+
 {% endblock %}
