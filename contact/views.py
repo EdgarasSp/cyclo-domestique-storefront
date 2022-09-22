@@ -36,7 +36,12 @@ def contact(request):
 
         template = 'contact/contact.html'
 
-        return render(request, template)
+        context = {
+        'on_inventory_page': True,
+    }
+
+
+        return render(request, template, context)
 
     else:
         return render(request, 'contact/contact.html')

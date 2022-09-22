@@ -138,12 +138,46 @@ body {
     /*max-width: 318px;*/
 }
 
+.card-image-size{
+    height: 50px;
+    width: 50px;
+}
+
 .poundSign:before{
     content: '£';
 }
 
 .image-size{
     min-height: 285px;
+}
+
+/* styling for main site */
+
+.title-spacing{
+    letter-spacing: 5px;
+}
+
+.title-height{
+    height: 32%;
+}
+
+.background-none{
+    background-color: transparent;
+}
+
+.logo-font-width{
+    width: 120px;
+}
+
+/*basket adjustment */
+
+.basket-vertical-align{
+    vertical-align: top !important;
+}
+
+.basket-max-height{
+    max-height: 29px !important;
+    min-height: 29px !important;
 }
 
 /* back to top button */
@@ -422,7 +456,6 @@ body {
 
  .album_item .image_description {
     opacity: 1;
-    border: #dc3545 1px solid;
     position: absolute;
     padding: 20px;
     text-align: center;

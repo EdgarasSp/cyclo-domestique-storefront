@@ -9,6 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
   {% endblock %}
 
   {% block extra_meta %}
@@ -19,6 +21,9 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  
   {% endblock %}
 
   {% block extra_css %}
@@ -52,7 +57,7 @@
 <body>
   <header class="container-fluid fixed-top">
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-4 pr-4" id="MainNavbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-4 pb-1 pr-4" id="MainNavbar">
       <!--logo start-->
       <a href="/" class=" logo-font nav-logo">Cyclo Domestique</a>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -63,7 +68,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item logo-font">
-            <a class="nav-link" style="width: 140px;" href="{% url 'products' %}">All Products</a>
+            <a class="nav-link logo-font-width" href="{% url 'products' %}">Products</a>
           </li>
           <!--categories start-->
           <li class="nav-item dropdown">
@@ -108,7 +113,7 @@
             </div>
           </li>
           <li class="nav-item logo-font">
-            <a class="nav-link" style="width: 120px;" href="{% url 'products' %}?category=service">Bike Service</a>
+            <a class="nav-link logo-font-width" href="{% url 'products' %}?category=service">Bike Service</a>
           </li>
 
           <li class="nav-item logo-font">
@@ -125,7 +130,7 @@
               <li class="list-inline-item dropdown">
                 <a class="text-black nav-link pr-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
-                  <div class="text-center bg-dark border border-dark rounded py-1 px-4" style="max-height: 29px !important; min-height: 29px !important">
+                  <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height">
                     <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg "></i></p>
                   </div>
                 </a>
@@ -153,9 +158,9 @@
                 </div>
               </li>
               <!--basket start-->
-              <li class="list-inline-item mt-2" style="vertical-align: top !important;">
+              <li class="list-inline-item mt-2 basket-vertical-align">
                 <div class="show-basket-test ">
-                  <a class="nav-link btn btn-dark text-white py-1" style="max-height: 29px !important;" href="{% url 'view_basket' %}">
+                  <a class="nav-link btn btn-dark text-white py-1 basket-max-height" href="{% url 'view_basket' %}">
                     <div class="text-left">
                       <p class="my-0 mx-0 pl-0 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 "></i>
                         <span >
