@@ -171,6 +171,16 @@ body {
     font-size: 100% !important;
 }
 
+.font-responsive-1{
+    font-size: 2vmax !important;
+
+}
+
+.font-responsive-2{
+    font-size: 1vmax !important;
+}
+
+
 /* styling for main site */
 
 .title-spacing{
@@ -511,9 +521,27 @@ body {
     opacity: 1;
     animation-name: text_fade_in;
     transition: opacity .5s;
-    transition-delay: .3s;
- 
+    transition-delay: .3s;   
  }
+
+ .bronze-color{
+    background-color: #CD7F32 !important;
+    border: #CD7F32 solid 1px !important;
+ }
+
+ .silver-color{
+    background-color: #C0C0C0 !important;
+    border: #C0C0C0 solid 1px !important;
+    color: #000 !important;;
+ }
+
+ .gold-color{
+    background-color:  #FFD700 !important;
+    border:  #FFD700 solid 1px !important;
+    color: #000 !important;;
+ }
+
+
 
 /* google maps*/
 

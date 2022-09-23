@@ -145,6 +145,11 @@
 </div>
 
 <div class="container-fluid my-5 pr-5">
+    <div class="row">
+        <div class="col">
+            <h3 class="text-black text-uppercase font-weight-bold mb-5 text-center pl-3"> Best selling products</h3>
+        </div>
+    </div>
     <div id="carouselExampleIndicators" class="carousel slide"  data-ride="carousel"> <!--data-interval="true"-->
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -591,9 +596,6 @@
     </div>
 </div>
 
-
-
-
 <div class="container col-12 py-5 mb-5">
     <div class="row row align-items-center text-center">
         <div class="col-lg-6">
@@ -616,20 +618,58 @@
 
 
 
-<div class="container col-12 py-5 mb-5">
-    <div class="row row align-items-center text-center">
-        <div class="col-lg-6">
-            <h1 class="mt-3 text-center">Services </h1>
-            <p class="lead text-secondary my-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
-                laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </p>
-            <a href="{% url 'products' %}?category=road_bikes,mountain_bikes,kids_bikes" class="btn btn-signup">Road
-                Bikes</a>
+<div class="container-fluid col-12 py-5 px-5 mb-5">
+    <div class="row justify-content-between text-center">
+        <div class="col-md-6 col-lg-4  p-3">
+            <div class="album_item">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1497515098781-e965764ab601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+                        class="album_photo" alt="road bike with deep section front wheel from profile">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold text-uppercase title-spacing font-responsive-1"> Bronze Service</h2>
+                        <h4 class="font-weight-bold text-uppercase title-spacing font-responsive-2">12 point check and basic chainset service</h5>
+                            <a class="btn btn-primary bronze-color my-3 text-white text-uppercase font-weight-bold title-spacing"
+                                href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Bronze</a>
+                    </div>
+                </div>
+    
+            </div>
         </div>
-        <div class="col-md-6 col-lg-6 ">
-            <img src="https://images.unsplash.com/photo-1475666675596-cca2035b3d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
-                class="img-fluid rounded-corners pt-5" alt="Placeholder">
+        <div class="col-md-6 col-lg-4  p-3">
+            <div class="album_item">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1499438182938-87d87862e154?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="album_photo" alt="road bike with deep section front wheel from profile">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold text-uppercase title-spacing font-responsive-1">Silver Service</h2>
+                        <h4 class="font-weight-bold text-uppercase title-spacing font-responsive-2">20 point check + Bronze service and bearing service</h5>
+                            <a class="btn btn-primary silver-color my-3 text-white text-uppercase font-weight-bold title-spacing px-4"
+                                href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Silver</a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4  p-3">
+            <div class="album_item">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1503669678209-c68d00b3765d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="album_photo" alt="road bike with deep section front wheel from profile">
+                </div>
+                <div class="image_description">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                        <h2 class="font-weight-bold text-uppercase title-spacing font-responsive-1">Gold Service</h2>
+                        <h4 class="font-weight-bold text-uppercase title-spacing font-responsive-2">30 point check + silver and full frameset service</h5>
+                            <a class="btn btn-primary gold-color my-3 text-white text-uppercase font-weight-bold title-spacing px-5"
+                                href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Gold</a>
+                    </div>
+                </div>
+    
+            </div>
         </div>
     </div>
 </div>
