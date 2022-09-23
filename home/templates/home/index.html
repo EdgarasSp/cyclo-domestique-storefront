@@ -45,11 +45,11 @@
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
-        <span class="fas fa-caret-left p-0 pr-4 text-light" aria-hidden="true"></span>
+        <span class="fas fa-caret-left p-0 text-light" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
-        <span class="fas fa-caret-right p-0 pl-4 text-light" aria-hidden="true"></span>
+        <span class="fas fa-caret-right p-0 text-light" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
     <!----------SEARCH START------------->
@@ -73,7 +73,6 @@
     </div>
     <!----------SEARCH END------------->
 </div>
-<!----------CAROUSEL END------------->
 
 
 <!----------PRODUCTS CATEGORIES START------------->
@@ -140,14 +139,14 @@
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Sticky Tyres and Performance
                         Wheels</h5>
                         <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
-                            href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">View Accessories</a>
+                            href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">View Rims</a>
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-<!----------PRODUCTS CATEGORIES END------------->
+
 
 
 <!----------BEST PRODUCTS START------------->
@@ -735,8 +734,6 @@
     </div>
 </div>
 
-<!----------BEST PRODUCTS END------------->
-
 
 <!----------STORE MESSAGE START------------->
 <hr>
@@ -747,9 +744,9 @@
                 & IN-STORE SERVICES</h3>
         </div>
     </div>
-    <div class="row row align-items-center text-center">
+    <div class="row row align-items-center text-center ">
         <div class="col">
-            <p class="lead text-dark my-5">Whether you ride on the road, on the trails, with the kids, or around
+            <p class="lead text-dark  my-5">Whether you ride on the road, on the trails, with the kids, or around
                 town we have a huge range of the latest road bikes, mountain bikes, kids bikes and hybrid bikes from all
                 the very best brands ready for you to choose from. Thinking about trying an electric bike? You have come
                 to the right place.</p>
@@ -767,18 +764,18 @@
     </div>
 </div>
 <hr>
-<!----------STORE MESSAGE END------------->
 
 
-<!----------SERVICE CONTAINER START------------->
-<div class="container-fluid col-12 px-5 mb-5 bg">
+
+<!----------SERVICING CONTAINER START------------->
+<div class="container-fluid col-12 px-5 mb-5 no-pading">
     <div class="row">
         <div class="col">
             <h3 class="text-black text-uppercase font-weight-bold my-5 text-center pl-3"> Bike Servicing</h3>
         </div>
     </div>
     <div class="row justify-content-between text-center">
-        <div class="col-md-6 col-lg-4  p-3">
+        <div class="col-md-6 col-lg-4  p-1">
             <div class="album_item">
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1497515098781-e965764ab601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
@@ -796,7 +793,7 @@
 
             </div>
         </div>
-        <div class="col-md-6 col-lg-4  p-3">
+        <div class="col-md-6 col-lg-4  p-1">
             <div class="album_item">
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1499438182938-87d87862e154?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -814,7 +811,7 @@
 
             </div>
         </div>
-        <div class="col-md-6 col-lg-4  p-3">
+        <div class="col-md-6 col-lg-4  p-1">
             <div class="album_item">
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1503669678209-c68d00b3765d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -833,10 +830,10 @@
         </div>
     </div>
 </div>
-<!----------SERVICE CONTAINER END------------->
 
 
-<div class="container col-12 py-5 mb-5">
+<!----------COMMUNITY CONTAINER START------------->
+<div class="container col-12 pt-5">
     <div class="row">
         <div class="col">
             <h3 class="text-black text-uppercase font-weight-bold mb-5 text-center pl-3"> Our community work</h3>
@@ -844,24 +841,24 @@
     </div>
     <div class="row row align-items-center text-center">
         <div class="col-lg-6">
-            <p class="lead text-dark my-5">We love cycling! And right from the start, we have sought to share our
+            <p class="lead text-dark my-3">We love cycling! And right from the start, we have sought to share our
                 passion for two-wheeled travel with our local communities.</p>
 
-            <p class="lead text-dark my-5">We also deliver community maintenance classes
+            <p class="lead text-dark my-3">We also deliver community maintenance classes
                 and bike events. For beginners' we host road rides every Wednesday at 6pm and MTB ride in Shorne Woods
                 every Friday at 5pm. No booking needed just come and ride with us.. </p>
 
-            <p class="lead text-dark my-5">We also enjoy offering proactive support to our local charity partners by participating in fundraising
+            <p class="lead text-dark my-3">We also enjoy offering proactive support to our local charity partners by participating in fundraising
                 events, offer event support and raise awareness. </p>
     
                 <div>
                     <a href="{% url 'about' %}"
-                            class="btn text-center text-uppercase border gold-color font-weight-bold mx-3 px-4">About Us</a>
+                            class="btn text-center text-uppercase border gold-color font-weight-bold mx-3 m-2 px-4">About Us</a>
                     <a href="{% url 'contact' %}"
-                            class=" btn  text-center text-uppercase border gold-color  font-weight-bold mx-3 px-3">Contact Us</a>
+                            class=" btn  text-center text-uppercase border gold-color  font-weight-bold mx-3 m-2 px-3">Contact Us</a>
                 </div>
         </div>
-        <div class="col-md-6 col-lg-6 ">
+        <div class="col-md-12 col-lg-6 px-0 ">
             <img src="https://images.unsplash.com/photo-1515164084382-4ac60f929e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
                 class="img-fluid rounded-corners pt-5" alt="Placeholder">
         </div>
@@ -869,4 +866,5 @@
 </div>
 
 
+{% include "includes/footer.html" %}
 {% endblock %}

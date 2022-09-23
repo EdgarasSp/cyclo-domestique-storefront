@@ -1,19 +1,22 @@
 html {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
     /*height: calc(100vh - 100px);*/
-    position: relative;
-    padding-bottom: 60px;
+    /*position: relative;*/
+    /*padding-bottom: 60px;*/
     min-height: 100%;
     font-family: 'Lato';
     /*background-color: #f9f9f9;*/
+    overflow-x: hidden;
 }
 
 .container {
-    padding-bottom: 100px; 
+    /*padding-bottom: 40px !important;*/
+    overflow-x: hidden;
 
 }
 .icon {
@@ -245,22 +248,20 @@ body {
 /* Sticky footer styles */
 
 .footer {
-    position: absolute;
+    /*position: absolute;*/
+    /*margin-top: -100px;*/
     left: 0;
     bottom: 0;
     width: 100%;
     color: #f8f9fa !important;
-    z-index: 1030;
+
+    z-index: 9999999;
     /* Set the fixed height of the footer here */
     height: 60px;
-    
 }
-  
-.footer > .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    
 
+.bg-black{
+    background-color: #000000;
 }
 
 .footer > p {
@@ -577,7 +578,7 @@ iframe{
 @media (max-width: 991px) {
     .main-carousel-item {  /*-----------------------------------------------------------*/
         height: auto;
-        max-height: 640px;
+        max-height: 500px;
     }
     #navbarNav .navbar-nav .nav-link {
         color: #000;
@@ -679,6 +680,10 @@ iframe{
    
    .album_item .resp_text h1 {
         margin-top: 40%;
+   }
+   .no-pading{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
    }
 }
 
