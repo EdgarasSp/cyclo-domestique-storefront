@@ -2,22 +2,26 @@ html {
     height: 100%;
     margin: 0;
     /*overflow-x: hidden;*/
+    /*border:#1d20d4 solid 2px;*/
 }
 
 body {
-    /*height: calc(100vh - 100px);*/
+    padding-bottom: calc(100vh - 720px);
+    
     position: relative;
-    /*padding-bottom: 60px;*/
+    /*padding-bottom: 100px;*/
     min-height: 100%;
     font-family: 'Lato';
     /*background-color: #f9f9f9;*/
     overflow-x: hidden;
+    /*border:#dc3545 solid 2px;*/
 
 }
 
 .container{
     /*padding-bottom: 40px !important;*/
-    overflow-x: hidden;
+    
+
 }
 
 .icon {
@@ -246,19 +250,27 @@ body {
     cursor: pointer;
 }
 
+/*authorisation*/
+
+.form-width{
+    min-width: 430px !important;
+}
+
 /* Sticky footer styles */
 
+
 .footer {
-    /*position: absolute;*/
-    /*margin-top: -100px;*/
+    position: absolute;
+    margin-top: 100px;
     left: 0;
     bottom: 0;
     width: 100%;
     color: #f8f9fa !important;
 
+
     z-index: 9999999;
     /* Set the fixed height of the footer here */
-    height: 60px;
+    /*height: auto;*/
 }
 
 .bg-black{
@@ -700,6 +712,10 @@ iframe{
     padding-left: 0 !important;
     padding-right: 0 !important;
    }
+
+   .mob-nav-buttons{
+    padding: 20px !important;
+   }
 }
 
 
@@ -708,9 +724,7 @@ iframe{
         min-width: 310px;
         max-width: 345px;
     }
-    .header-mobile{
-        padding-top:50px !important;
-    }
+   
 }
 
 
@@ -741,5 +755,10 @@ iframe{
 
     .album_item .resp_text h1 {
         margin-top: 40%;
+    }
+
+    .text-sm-center{
+        text-align: center !important;
+        padding-left: 0px !important;
     }
 }

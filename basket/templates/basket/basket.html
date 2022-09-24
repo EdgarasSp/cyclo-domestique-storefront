@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="ml-3">
+<div class="ml-3 pt-1">
     <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
@@ -27,26 +27,26 @@
         </nav>
     </div>
 </div>
-<div class="container mb-2 mt-5">
+<div class="container container-md mb-2 mt-5">
     <div class="row">
         <div class="col">
-            <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left pl-3 "> Shopping Basket </h3>
+            <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left text-sm-center pl-3 "> Shopping Basket </h3>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-sm-12 p-1">
             {% if basket_items %}
             <div class="table-responsive rounded">
-                <table class="table table-sm table-borderless">
+                <table class="table table-sm table-borderless ">
                     <thead class="text-light bg-dark ">
                         <tr>
-                            <th scope="col" class="font-weight-normal">Product Info</th>
+                            <th scope="col" class="font-weight-normal">Image</th>
                             <th scope="col" class="font-weight-normal">Name</th>
                             <th scope="col" class="font-weight-normal pr-5 d-none d-md-block d-lg-block d-xl-block">Size</th>
                             <th scope="col" class="font-weight-normal">Price</th>
                             <th scope="col" class="font-weight-normal px-5">Qty</th>
-                            <th scope="col" class="font-weight-normal">Subtotal</th>
+                            <th scope="col" class="font-weight-normal pr-2">Subtotal</th>
                         </tr>
                     </thead>
 
@@ -125,7 +125,7 @@
             </div>
             {% endif %}
         </div>
-        <div class="col-md-3 wrapper ">
+        <div class="col-md-3 col-sm-12 wrapper ">
             <aside>
                 {% if basket_items %}
                 <div class="table-responsive rounded border py-4 px-2 bg-light ">
