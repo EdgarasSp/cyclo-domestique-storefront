@@ -1,24 +1,25 @@
 html {
     height: 100%;
     margin: 0;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 body {
     /*height: calc(100vh - 100px);*/
-    /*position: relative;*/
+    position: relative;
     /*padding-bottom: 60px;*/
     min-height: 100%;
     font-family: 'Lato';
     /*background-color: #f9f9f9;*/
     overflow-x: hidden;
+
 }
 
-.container {
+.container{
     /*padding-bottom: 40px !important;*/
     overflow-x: hidden;
-
 }
+
 .icon {
     align-items: center;
     display: inline-flex;
