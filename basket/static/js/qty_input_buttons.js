@@ -1,11 +1,15 @@
 $(document).ready(function() {
     
     // Disable +/- buttons outside 1-99 range
-    function handleEnableDisable(itemId) {
+    function handleEnableDisable(itemId, itemAmount) {
 
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        console.log(currentValue)
+        var maxValue = parseInt($(`.max_${itemAmount}`).val());
+        console.log(maxValue)
         var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 99;
+        var plusDisabled = currentValue > maxValue;
+        console.log(plusDisabled)
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }

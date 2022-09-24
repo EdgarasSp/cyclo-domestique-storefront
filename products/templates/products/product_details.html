@@ -107,9 +107,9 @@
                                                 </button>
                                             </div>
                                             <!-- INPUT MAX TO BE FIXED IF BUTTONS NO BUTTON MAX IS WOrKING BASED ON AMOUNT-->
-                                            <input class="form-control qty_input input-smaller" type="number"
+                                            <input class="form-control qty_input input-smaller max_{{ product.amount }}" type="number"
                                                 name="quantity" value="1" min="1" max="{{ product.amount }}"
-                                                data-item_id="{{ product.id }}"
+                                                data-item_id="{{ product.id }}" data-item_amount="{{ product.amount }}"
                                                 id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn btn-black rounded-0 btn-smaller"
@@ -144,9 +144,6 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-                      <!--THIS-->
-
-                    <!-- add if in stock show button disabled "out of stock" if in stock enabled success "Add To Basket"-->
                 </div>
             </div>
         </div>

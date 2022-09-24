@@ -3,12 +3,14 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 
-from .models import Order, OrderLineItem
-from products.models import Product
 from profiles.models import UserProfile
+from products.models import Product
+from .models import Order, OrderLineItem
 
 import json
 import time
+
+
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -65,8 +67,8 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_full_name = shipping_details.full.name
-                profile.default_email = shipping_details.email
+                profile.default_full_name = shipping_details.name
+                profile.default_email = billing_details.email
                 profile.default_phone_number = shipping_details.phone
                 profile.default_street_address1 = shipping_details.address.line1
                 profile.default_street_address2 = shipping_details.address.line2
