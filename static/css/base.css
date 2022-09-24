@@ -148,7 +148,7 @@ body {
 
 .card-size{
     min-width: 310px;
-    /*max-width: 318px;*/
+    max-width: 345px;
 }
 
 .card-image-size{
