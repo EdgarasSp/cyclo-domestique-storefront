@@ -52,8 +52,6 @@ def site_messages(request):
     """ Display site messages. """
     all_messages = ContactForm.objects.all()
 
-
-################################################################
     query = None
     categories = None
     sort = None
@@ -87,8 +85,6 @@ def site_messages(request):
 
     current_sorting = f'{sort}_{direction}'
 
-##########################################################
-
     template = 'contact/contact_messages.html'
     context = {
         'all_messages': all_messages,
@@ -101,9 +97,13 @@ def site_messages(request):
     return render(request, template, context)
 
 
+
+###################  FIX   ##################################### 
+
+
 @login_required
 def delete_message(request, pk):   ### product_id
-    """ Delete a product from the store """
+    """ Delete user messages from the admin inbox"""
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -111,6 +111,6 @@ def delete_message(request, pk):   ### product_id
     
     message = get_object_or_404(ContactForm, pk=pk)   ## new
     message.delete()
-    messages.success(request, 'Product deleted!')
+    messages.success(request, 'Message deleted!')
 
     return redirect(reverse('site_messages'))

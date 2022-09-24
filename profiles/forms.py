@@ -42,16 +42,20 @@ class UserProfileForm(forms.ModelForm):
 
 
 ################################# CHANGE STATUS ORDER ##############################
+
 class UpdateOrder(forms.ModelForm):
 
         class Meta:
             model = Order
-            fields = ('status',)
+            fields = '__all__'  ### ('status',)
 
-        def status(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            state = Order.status.objects.all()
 
-            self.fields['status'].choices = state
-            for field_name, field in self.fields.items():
-                field.widget.attrs['class'] = ''
+
+        def __init__(self, *args, **kwargs):
+                super().__init__(*args, **kwargs)
+                status = Order.objects.all()
+                ## friendly_names = [(c.id, c.get_friendly_name()) for c in status]
+
+                self.fields['status'].choices = status
+                for field_name, field in self.fields.items():
+                    field.widget.attrs['class'] = ''
