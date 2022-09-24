@@ -7,8 +7,47 @@
 
 
 {% block content %}
+
+<!---------------MOBILE COVER------------->
+<div class="container w-100 mt-5 pt-2 text-center background-none mob-nav-header">
+    <div class="col-md-8 m-auto">
+        <form method="GET" action="{% url 'products' %}">
+            <div class="input-group w-100 ">
+                <input class="form-control border rounded-left py-2 border-secondary" type="text" name="q"
+                    placeholder="Shimano, Trek...">
+                <div class="input-group-append ">
+                    <button class=" btn btn-black text-center border border-secondary rounded-right"
+                        type="submit">
+                        <span class="icon  ">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="mt-2 mob-nav-header">
+    <div class="album_photo_container">
+        <div class="album_item ">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1478278307695-d63046a5becb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                    class="album_photo" alt="Three road cyclist standing and chatting">
+            </div>
+            <div class="image_description">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Welcome to Cyclo Domestique!</h2>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">   </h5>
+                        <!--<a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
+                            href="{% url 'products' %}?category=road_bikes">Shop Now</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!----------CAROUSEL START------------->
-<div id="carouselCaptions" class="carousel slide carousel-fade  " data-ride="carousel">
+<div id="carouselCaptions" class="carousel slide carousel-fade mob-nav-header-hide  " data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item main-carousel-item active ">
             <div class="d-flex justify-content-center">
@@ -16,8 +55,8 @@
             </div>
             <div class="carousel-caption  w-100 h-100">
                 <div class="text-center font-italic caption-text w-100 py-4">
-                    <h1 class="display-2">title</h1>
-                    <h3 class="font-weight-bolder">sub-title</h3>
+                    <h1 class="display-4">Any Bike, Any Budget</h1>
+                    <h3 class="font-weight-bolder">Explore a range of bikes for all family</h3>
                 </div>
             </div>
         </div>
@@ -27,8 +66,8 @@
             </div>
             <div class="carousel-caption  w-100 h-100">
                 <div class="text-center font-italic caption-text w-100 py-4">
-                    <h1 class="display-3">title</h1>
-                    <h3 class="font-weight-bolder">sub-title</h3>
+                    <h1 class="display-4">Does your bike need some TLC?</h1>
+                    <h3 class="font-weight-bolder">We offer extensive bike servicing for any bike</h3>
                 </div>
             </div>
         </div>
@@ -38,8 +77,8 @@
             </div>
             <div class="carousel-caption  w-100 h-100">
                 <div class="text-center font-italic caption-text w-100 py-4">
-                    <h1 class="display-4">title</h1>
-                    <h3 class="font-weight-bolder">sub-title</h3>
+                    <h1 class="display-4">Free delivery on order over £70.00</h1>
+                    <h3 class="font-weight-bolder">In-store collections available</h3>
                 </div>
             </div>
         </div>
@@ -60,7 +99,7 @@
                     <input class="form-control border rounded-left py-4 border-secondary" type="text" name="q"
                         placeholder="Shimano, Trek...">
                     <div class="input-group-append ">
-                        <button class=" btn btn-primary text-center border border-secondary rounded-right"
+                        <button class=" btn btn-black text-center border border-secondary rounded-right"
                             type="submit">
                             <span class="icon  ">
                                 <i class="fas fa-search"></i>
@@ -77,7 +116,7 @@
 
 <!----------PRODUCTS CATEGORIES START------------->
 
-<div class="album_container mt-5">
+<div class="album_container mt-3">
     <div class="album_photo_container">
         <div class="album_item ">
             <div class="image">
@@ -86,10 +125,10 @@
             </div>
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Road Bikes</h2>
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Road Bikes</h2>
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">best lightweight machines</h5>
-                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
-                            href="{% url 'products' %}?category=road_bikes">View Bikes</a>
+                        <a class="btn silver-color my-3 text-white   title-spacing"
+                            href="{% url 'products' %}?category=road_bikes">Explore</a>
                 </div>
             </div>
         </div>
@@ -102,27 +141,27 @@
             </div>
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Mountain Bikes</h2>
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Mountain Bikes</h2>
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Fast, light and even electrified
                         </h5>
-                        <a class="btn  btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
-                            href="{% url 'products' %}?category=mountain_bikes">View Bikes</a>
+                        <a class="btn  silver-color my-3 text-white text-uppercase title-spacing"
+                            href="{% url 'products' %}?category=mountain_bikes">Explore</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="py-1 album_photo_container">
-        <div class="album_item ">
-            <div class="image">
+        <div class="album_item">
+            <div class="image " >
                 <img src="https://images.unsplash.com/photo-1547278786-125863d9ba64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
                     class="album_photo" alt="Kid riding bike in sunset next to monument">
             </div>
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing">Kids Bikes</h2>
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Kids Bikes</h2>
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">For up and coming riders</h5>
-                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
-                            href="{% url 'products' %}?category=kids_bikes">View Bikes</a>
+                        <a class="btn silver-color my-3 text-white text-uppercase  title-spacing"
+                            href="{% url 'products' %}?category=kids_bikes">Explore</a>
                 </div>
             </div>
         </div>
@@ -135,11 +174,11 @@
             </div>
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing"> Bike Wheels</h2>
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3"> Bike Wheels</h2>
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Sticky Tyres and Performance
                         Wheels</h5>
-                        <a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
-                            href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">View Rims</a>
+                        <a class="btn silver-color my-3 text-white text-uppercase  title-spacing"
+                            href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Explore</a>
                 </div>
             </div>
 
