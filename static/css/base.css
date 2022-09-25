@@ -317,6 +317,7 @@ body {
     display: none;
 }
 
+
 .show-basket-test:hover + .hide-test {
     display:block;
     position:absolute;
@@ -665,7 +666,7 @@ iframe{
     .basket-max-height{
         max-height: 40px !important;
         min-height: 40px !important;
-        max-width: 100px !important;
+        width: auto !important;
         min-width: 100px !important;
 
     }
@@ -678,6 +679,11 @@ iframe{
     .header-mobile{
         padding-top:50px !important;
     }
+
+    .hide-test {
+        display: none !important;
+    }
+
 }
 
 /* fixed top navbar only on medium and up */
@@ -698,6 +704,8 @@ iframe{
         display: none;
     }
 
+
+    
 
     
 }
@@ -761,6 +769,8 @@ iframe{
     padding: 10px !important;
 
    }
+
+
 }
 
 
@@ -769,7 +779,8 @@ iframe{
         min-width: 310px;
         max-width: 345px;
     }
-   
+
+
 }
 
 
@@ -806,4 +817,7 @@ iframe{
         text-align: center !important;
         padding-left: 0px !important;
     }
+
+
+    
 }

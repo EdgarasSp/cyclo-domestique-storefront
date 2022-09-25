@@ -104,7 +104,7 @@
               <div class="show-basket-test ">
                 <a class="nav-link btn btn-dark text-white py-1 basket-max-height mob-nav-buttons" href="{% url 'view_basket' %}">
                   <div class="text-left">
-                    <p class="my-0 mx-0 pl-0 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 "></i>
+                    <p class="my-0 mx-0 pl-0 logo-font small "><i class="fas fa-shopping-bag fa-lg mr-1 "></i>
                       <span >
                         {% if grand_total %}
                           <span class="poundSign currency px-1 ">{{ grand_total|floatformat:2 }}</span>
@@ -233,7 +233,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="hide-test">
+                <div class="hide-test hide-preview-mobile">
                   {% include "includes/basket_preview.html" %}
                 </div>
               </li>
