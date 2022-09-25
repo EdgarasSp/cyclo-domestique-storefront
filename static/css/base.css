@@ -118,7 +118,7 @@ body {
     font-size: 44px;
 }
 .main-carousel-item {
-    height: 100vh;
+    max-height: 100vh;
     min-height: 360px;
 }
 .carousel-caption {
