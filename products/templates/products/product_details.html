@@ -5,11 +5,11 @@
 <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
 {% endblock %}
 
-
-
+{% block extra_js %}
+{% endblock %}
 
 {% block page_header %}
-<div class="header-container header-mobile" style="border: rgb(27, 54, 207) 1px solid;">
+<div class="header-container header-mobile">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -19,7 +19,7 @@
 {% block content %}
 <!--<div class="col" style="border: rgb(199, 7, 17) 1px solid;">-->
     <!----Breadcrumbs Section-->
-    <div class="ml-3" style="border: rgb(111, 0, 255) 1px solid;">
+    <div class="ml-3">
         <div class="col-md-12 px-0 mb-1">
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <!----Title Section-->
-    <div class="container mb-2 mt-3" style="border: rgb(37, 209, 51) 1px solid; ">
+    <div class="container mb-2 mt-3">
         <div class="row">
             <div class="col-12">
                 <div class="col">
@@ -182,10 +182,7 @@
     </div>
 <!--</div>-->
 {% include "includes/footer.html" %}
-{% static 'js/qty_input_buttons.js' %}
-{% endblock %}
-
-
-{% block extra_js %}
 
 {% endblock %}
+
+
