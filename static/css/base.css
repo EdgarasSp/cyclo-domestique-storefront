@@ -542,6 +542,7 @@ iframe{
 
 
 
+
 @media (min-width: 1425px) {
     .d-block-large{
         display:flex!important;
@@ -550,6 +551,11 @@ iframe{
     .header-container {
         padding-top: 55px;
     }
+
+    .mob-nav-header{
+        display: none;
+    }
+
 
     /* .d-block-buttons{
         display: none !important;
@@ -569,7 +575,11 @@ iframe{
 
 
 /*---------------------------- 1024 --------------------------------------*/
-
+@media screen and (min-width: 1024px) {
+    .mob-nav-header{
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -626,9 +636,6 @@ iframe{
         background-color: #ffffff !important;
         padding-top: 8px !important;
     }
-
-   
-
     .navbar-brand {
         opacity: 1;
     }
@@ -638,12 +645,6 @@ iframe{
     .d-block-mid{
         display: none;
     }
-    
-
-    /* body {                                                     # footer if on middle fixed 
-        height: calc(100vh - 116px);
-    } */
-
     .btn-smaller{
         padding:3px;
     }
@@ -677,9 +678,6 @@ iframe{
     .header-mobile{
         padding-top:50px !important;
     }
-
-    
-
 }
 
 /* fixed top navbar only on medium and up */
