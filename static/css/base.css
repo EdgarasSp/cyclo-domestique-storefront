@@ -226,22 +226,22 @@ body {
     position: fixed;
     bottom: 100px;
     right: 20px;
-    background-color: black !important;
+    /* background-color: black !important; */
     border-radius: 25px;
 
 }
 
 .btt-button:hover {
-    background-color: white !important;
+    /* background-color: white !important; */
 
 }
 
 .fa-arrow-up{
-    color: white !important;
+    /* color: white !important; */
 }
 
 .fa-arrow-up:hover{
-    color: black !important;
+    /* color: black !important; */
 }
 
 .btt-link,
