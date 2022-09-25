@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    padding-bottom: calc(20vh); 
+    padding-bottom: calc(25vh); 
     
     position: relative;
     /*padding-bottom: 100px;*/
@@ -683,6 +683,15 @@ iframe{
     .hide-test {
         display: none !important;
     }
+
+    .show-basket-test:hover + .hide-test {
+        display:none;
+        position:absolute;
+        z-index: 999999;
+        width: 340px;
+        left: -93px;
+        top: 72px;
+        right: 15px;
 
 }
 
