@@ -699,7 +699,7 @@ iframe{
     }
 
     body {
-        padding-bottom: calc(60vh);
+        padding-bottom: calc(30vh);
     }
 
 }
@@ -808,9 +808,7 @@ iframe{
         display:none !important;
     }
 
-    body {
-        padding-bottom: calc(60vh);
-    }
+ 
 }
 
 
@@ -876,9 +874,7 @@ iframe{
         display:none !important;
     }
 
-    body {
-        padding-bottom: calc(60vh);
-    }
+    
 
 
     
