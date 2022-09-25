@@ -1,1 +1,1 @@
-web: gunicorn cyclo-domestique.wsgi:application
+web: gunicorn cyclo_domestique.wsgi:application
