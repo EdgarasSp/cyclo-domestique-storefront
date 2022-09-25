@@ -8,11 +8,11 @@
 
 
 {% block page_header %}
-    <div class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-12"></div>
-        </div>
+<div class="header-container header-mobile mt-5 pt-5">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block inner_content %}
@@ -36,27 +36,31 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 </div>
 
-{% include "socialaccount/snippets/login_extra.html" %}
 
-{% else %}
-<p class="text-center pb-3">{% blocktrans %}New customer? Please
-<a href="{{ signup_url }}">register</a> to create an account.{% endblocktrans %}</p>
-{% endif %}
+<div class="container text-center ">
+  {% include "socialaccount/snippets/login_extra.html" %}
 
-<form class="login " method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  <div class="text left pl-5 pr-5">  
-    {{ form|crispy }}
-  </div>
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% else %}
+  <p class="text-center pb-3">{% blocktrans %}New customer? Please
+  <a href="{{ signup_url }}">register</a> to create an account.{% endblocktrans %}</p>
   {% endif %}
-  <div class="text-center py-1 mr-1 ">
-    <a class="button secondaryAction btn btn-secondary flex-column py-1 mr-1 " href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-    <button class="primaryAction btn btn-success flex-column py-1" type="submit"><span class="px-4">{% trans "Login" %}</span></button>
-  </div>
 
-</form>
+  <form class="login " method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    <div class="text left pl-5 pr-5">  
+      {{ form|crispy }}
+    </div>
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="text-center py-1 mr-1 ">
+      <a class="button secondaryAction btn btn-secondary flex-column py-1 mr-1 " href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      <button class="primaryAction btn btn-success flex-column py-1" type="submit"><span class="px-4">{% trans "Login" %}</span></button>
+    </div>
+
+  </form>
+
+</div>
 
 
 <!-- THIS NEEDS TO BE LOADED FROM CSS FILE-->
@@ -84,4 +88,5 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
       height: auto;
   }
 </style>
+
 {% endblock %}
