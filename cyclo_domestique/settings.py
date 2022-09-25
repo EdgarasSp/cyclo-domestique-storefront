@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-1a4fr#2fzep9t2vwfkwm(tz==9bk)9@q$yllgc(y@#sfx(76bd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cyclo-domestique.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -123,6 +123,19 @@ WSGI_APPLICATION = 'cyclo_domestique.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
 
 DATABASES = {
     'default':{
