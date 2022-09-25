@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="header-container header-mobile" style="border: rgb(27, 54, 207) 1px solid; overflow-x: hidden;">
+<div class="mt-4" style="border: rgb(27, 54, 207) 1px solid;">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -15,167 +15,169 @@
 {% endblock %}
 
 {% block content %}
-<!----Breadcrumbs Section-->
-<div class="ml-3" style="border: red 1px solid; overflow-x: hidden;">
-    <div class="col-md-12 px-0 mt-0 mb-1">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products">products</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products/?category={{ product.category }}">{{ product.category }} </a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="">{{ product.sku }} </a></li>
-          </ol>
-        </nav>
+<div class="col" style="border: rgb(199, 7, 17) 1px solid;">
+    <!----Breadcrumbs Section-->
+    <div class="ml-3" style="border: rgb(111, 0, 255) 1px solid;">
+        <div class="col-md-12 px-0 mt-0 mb-1">
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">home</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products">products</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/products/?category={{ product.category }}">{{ product.category }} </a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="">{{ product.sku }} </a></li>
+            </ol>
+            </nav>
+        </div>
     </div>
-</div>
-<!----Title Section-->
-<div class="container mb-2 mt-3" style="border: rgb(37, 209, 51) 1px solid; overflow-x: hidden;">
-    <div class="row">
-        <div class="col-12">
-            <div class="col">
-                <h2 id="productTitle" class="font-weight-bold">{{ product.brand }}</h2>
-                <h3 id="productTitle" class="font-weight-bold">{{ product.name }}</h3>
+    <!----Title Section-->
+    <div class="container mb-2 mt-3" style="border: rgb(37, 209, 51) 1px solid; ">
+        <div class="row">
+            <div class="col-12">
+                <div class="col">
+                    <h2 id="productTitle" class="font-weight-bold">{{ product.brand }}</h2>
+                    <h3 id="productTitle" class="font-weight-bold">{{ product.name }}</h3>
+                    <div class="dropdown-divider col-11"></div>
+                </div>
+            </div>
+        </div>
+
+    <!----Card Imaage Section-->
+        <div class="row mt-1 " style="border: rgb(204, 18, 157) 1px solid;">
+            <div class="mb-1 col-md-7 col-sm-12 ">
+                <div class="" style="max-width: 620px !important;" >
+                    {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="img-fluid"  src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+
+
+            <div class="mb-1 col-md-5 col-sm-12">
+                <div class="w-100">
+                    <h5 class="mb-0 font-weight-bold">{{ product.name }}</h5>
+                    <h6 class="mt-2 w-100 font-weight-bold">{{ product.description }}</h6>
+
+                    {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-muted">No Rating</small>
+                    {% endif %}
+                    
+                </div>
+                <div class="mt-3 w-100 new_height">
+                    <div class="product-details-container my-1">
+                        <h6 class="text-black font-weight-bold">About Product:</h6>
+                        <div class="dropdown-divider"></div>
+                        <p class="mt-2 w-100">{{ product.full_description }}</p>
+                    </div>
+                </div>
+                <div class="mt-1 w-100 h-25">
+                    <h6 class="text-black font-weight-bold">Product Details:</h6>
+                    <div class="dropdown-divider"></div>
+                    <div class="row mx-1 mb-2 bg-light">
+                        <small class="mt-2 w-50"><strong class="mr-3">Brand: </strong>{{ product.brand }}</small>
+                        <small class="mt-1 w-50"><strong class="mr-3">Size: </strong>{{ product.size}}</small >
+                        <small  class="mt-1 w-50"><strong class="mr-3">Color:</strong> {{ product.color }}</small >
+                        <small  class="mt-1 w-50"><strong class="mr-2">Stock: </strong>{{ product.amount}}</small >
+                        <small  class="mt-1 mb-2 w-50"><strong class="mr-2">Item No.:</strong>{{ product.sku}}</small >
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="product-details-container mt-1 text-right ">
+                        <p class="d-inline-flex align-items-end lead mb-1 text-right font-weight-bold poundSign currency">{{ product.price }}</p>
+                        <p class="d-inline-flex align-items-end text-muted small text-right">VAT Included</p>
+                    </div>
+                    <div class="product-details-container mt-1 text-right">
+                        <!--THIS-->
+                        <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="w-100 ">
+                                <div class="d-flex align-items-start justify-content-end">
+                                    {% if product.amount > 1 %}
+                                        <p class="mt-3  mr-2 small align-items-start "><span class="row pr-3"><strong> Quantity:</strong></span></p>
+                                        <div class="form-group mr-3">
+                                            <div class="input-group d-flex align-items-start justify-content-between">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-black rounded-0 btn-smaller" 
+                                                        data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-minus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <!-- INPUT MAX TO BE FIXED IF BUTTONS NO BUTTON MAX IS WOrKING BASED ON AMOUNT-->
+                                                <input class="form-control qty_input input-smaller max_{{ product.amount }}" type="number"
+                                                    name="quantity" value="1" min="1" max="{{ product.amount }}"
+                                                    data-item_id="{{ product.id }}" data-item_amount="{{ product.amount }}"
+                                                    id="id_qty_{{ product.id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-black rounded-0 btn-smaller"
+                                                        data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-plus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+
+                                                <!-- <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"> -->
+
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="btn btn-success flex-column ml-4x float-right" value="Add to basket">
+                                    {% else %}
+                                        <p class="mt-3  mr-2 small align-items-start text-danger" ><strong>Out of Stock</strong></p>
+                                        <input type="submit" class="btn btn-success flex-column ml-4x float-right" disabled="disabled" value="Add to basket">
+                                    {% endif %}
+
+                                </div>
+                                <div class="row justify-content-end"> 
+                                    {% if request.user.is_superuser %}
+                                        <small class="ml-3 mt-2 pr-2">
+                                            <a class="btn btn-success btn-sm mx-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt pr-1"></i>Edit</a>
+                                            <a class="btn btn-danger btn-sm mx-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle pr-1"></i>Delete</a>
+                                            <a class="btn btn-dark btn-sm mx-1" href="{% url 'inventory' %}"><i class="fas fa-list-ul pr-1"></i>Inventory</a>
+                                            
+                                        </small>
+                                    {% endif %}
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    <!----Key Features Section-->
+        <div class="col" style="border: rgb(6, 247, 135) 1px solid;">
+            <h6 class="text-black font-weight-bold mt-3 ">Key Features:</h6>
+            <div class=" w-100">
+                <div class="dropdown-divider col-11"></div>
+                <div class="col-12 bg-light ">
+                    <div class="product-details-container pt-1 pb-5">
+                        <p class="mt-2">{{ product.key_features }}</p>
+                    </div>
+                </div>
                 <div class="dropdown-divider col-11"></div>
             </div>
-        </div>
+            <h6 class="text-black font-weight-bold mt-3 ">Product Reviews:</h6>
+            <div class=" w-100">
+                <div class="dropdown-divider col-11"></div>
+                <div class="col-11">
+                    <div class="product-details-container pt-1 pb-5">
+                        <p class="mt-2">PLACEHOLDER</p>
+                    </div>
+                </div>
+                <div class="dropdown-divider col-11"></div>
+            </div>
+        </div> 
     </div>
-
-<!----Card Imaage Section-->
-    <div class="row mt-1 " style="border: rgb(204, 18, 157) 1px solid;">
-        <div class="mb-1 col-md-7 col-sm-12 ">
-            <div class="" style="max-width: 620px !important;" >
-                {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank">
-                    <img class="img-fluid"  src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                </a>
-                {% endif %}
-            </div>
-        </div>
-
-
-        <div class="mb-1 col-md-5 col-sm-12">
-            <div class="w-100">
-                <h5 class="mb-0 font-weight-bold">{{ product.name }}</h5>
-                <h6 class="mt-2 w-100 font-weight-bold">{{ product.description }}</h6>
-
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
-                
-            </div>
-            <div class="mt-3 w-100 new_height">
-                <div class="product-details-container my-1">
-                    <h6 class="text-black font-weight-bold">About Product:</h6>
-                    <div class="dropdown-divider"></div>
-                    <p class="mt-2 w-100">{{ product.full_description }}</p>
-                </div>
-            </div>
-            <div class="mt-1 w-100 h-25">
-                <h6 class="text-black font-weight-bold">Product Details:</h6>
-                <div class="dropdown-divider"></div>
-                <div class="row mx-1 mb-2 bg-light">
-                    <small class="mt-2 w-50"><strong class="mr-3">Brand: </strong>{{ product.brand }}</small>
-                    <small class="mt-1 w-50"><strong class="mr-3">Size: </strong>{{ product.size}}</small >
-                    <small  class="mt-1 w-50"><strong class="mr-3">Color:</strong> {{ product.color }}</small >
-                    <small  class="mt-1 w-50"><strong class="mr-2">Stock: </strong>{{ product.amount}}</small >
-                    <small  class="mt-1 mb-2 w-50"><strong class="mr-2">Item No.:</strong>{{ product.sku}}</small >
-                </div>
-                <div class="dropdown-divider"></div>
-                <div class="product-details-container mt-1 text-right ">
-                    <p class="d-inline-flex align-items-end lead mb-1 text-right font-weight-bold poundSign currency">{{ product.price }}</p>
-                    <p class="d-inline-flex align-items-end text-muted small text-right">VAT Included</p>
-                </div>
-                <div class="product-details-container mt-1 text-right">
-                    <!--THIS-->
-                    <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="w-100 ">
-                            <div class="d-flex align-items-start justify-content-end">
-                                {% if product.amount > 1 %}
-                                    <p class="mt-3  mr-2 small align-items-start "><span class="row pr-3"><strong> Quantity:</strong></span></p>
-                                    <div class="form-group mr-3">
-                                        <div class="input-group d-flex align-items-start justify-content-between">
-                                            <div class="input-group-prepend">
-                                                <button class="decrement-qty btn btn-black rounded-0 btn-smaller" 
-                                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-minus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <!-- INPUT MAX TO BE FIXED IF BUTTONS NO BUTTON MAX IS WOrKING BASED ON AMOUNT-->
-                                            <input class="form-control qty_input input-smaller max_{{ product.amount }}" type="number"
-                                                name="quantity" value="1" min="1" max="{{ product.amount }}"
-                                                data-item_id="{{ product.id }}" data-item_amount="{{ product.amount }}"
-                                                id="id_qty_{{ product.id }}">
-                                            <div class="input-group-append">
-                                                <button class="increment-qty btn btn-black rounded-0 btn-smaller"
-                                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-plus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-
-                                            <!-- <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"> -->
-
-                                        </div>
-                                    </div>
-                                    <input type="submit" class="btn btn-success flex-column ml-4x float-right" value="Add to basket">
-                                {% else %}
-                                    <p class="mt-3  mr-2 small align-items-start text-danger" ><strong>Out of Stock</strong></p>
-                                    <input type="submit" class="btn btn-success flex-column ml-4x float-right" disabled="disabled" value="Add to basket">
-                                {% endif %}
-
-                            </div>
-                            <div class="row justify-content-end"> 
-                                {% if request.user.is_superuser %}
-                                    <small class="ml-3 mt-2 pr-2">
-                                        <a class="btn btn-success btn-sm mx-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt pr-1"></i>Edit</a>
-                                        <a class="btn btn-danger btn-sm mx-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle pr-1"></i>Delete</a>
-                                        <a class="btn btn-dark btn-sm mx-1" href="{% url 'inventory' %}"><i class="fas fa-list-ul pr-1"></i>Inventory</a>
-                                        
-                                    </small>
-                                {% endif %}
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-<!----Key Features Section-->
-    <div class="col" style="border: rgb(6, 247, 135) 1px solid;">
-        <h6 class="text-black font-weight-bold mt-3 ">Key Features:</h6>
-        <div class=" w-100">
-            <div class="dropdown-divider col-11"></div>
-            <div class="col-12 bg-light ">
-                <div class="product-details-container pt-1 pb-5">
-                    <p class="mt-2">{{ product.key_features }}</p>
-                </div>
-            </div>
-            <div class="dropdown-divider col-11"></div>
-        </div>
-        <h6 class="text-black font-weight-bold mt-3 ">Product Reviews:</h6>
-        <div class=" w-100">
-            <div class="dropdown-divider col-11"></div>
-            <div class="col-11">
-                <div class="product-details-container pt-1 pb-5">
-                    <p class="mt-2">PLACEHOLDER</p>
-                </div>
-            </div>
-            <div class="dropdown-divider col-11"></div>
-        </div>
-    </div> 
 </div>
 {% include "includes/footer.html" %}
 {% endblock %}
