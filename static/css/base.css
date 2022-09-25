@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    padding-bottom: calc(100vh - 720px);  /*MOBILE BROKEN*/
+    padding-bottom: calc(20vh); 
     
     position: relative;
     /*padding-bottom: 100px;*/
@@ -268,7 +268,7 @@ body {
     color: #f8f9fa !important;
 
 
-    z-index: 9999999;
+    z-index: 999;
     /* Set the fixed height of the footer here */
     /*height: auto;*/
 }
