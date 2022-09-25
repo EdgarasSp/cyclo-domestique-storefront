@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="header-container pt-3 mt-3">
+<div class="header-container pt-3 mt-3" style="border: rgb(27, 54, 207) 1px solid;">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -15,9 +15,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="ml-3 mt-1">
+<!----Breadcrumbs Section-->
+<div class="ml-3 mt-1" style="border: red 1px solid;">
     <div class="col-md-12 px-0 mt-0 mb-1">
-        <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent pl-0 mb-0 small ">
             <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">home</a></li>
@@ -28,7 +28,8 @@
         </nav>
     </div>
 </div>
-<div class="container mb-2 mt-3">
+<!----Title Section-->
+<div class="container mb-2 mt-3" style="border: rgb(37, 209, 51) 1px solid;">
     <div class="row">
         <div class="col-12">
             <div class="col">
@@ -38,7 +39,9 @@
             </div>
         </div>
     </div>
-    <div class="row mt-1 ">
+
+<!----Card Imaage Section-->
+    <div class="row mt-1 " style="border: rgb(204, 18, 157) 1px solid;">
         <div class="mb-1 col-md-7 col-sm-12 ">
             <div class="" style="max-width: 620px !important;" >
                 {% if product.image %}
@@ -150,8 +153,8 @@
 
     </div>
 
-
-    <div>
+<!----Key Features Section-->
+    <div style="border: rgb(6, 247, 135) 1px solid;">
         <h6 class="text-black font-weight-bold mt-3 ">Key Features:</h6>
         <div class=" w-100">
             <div class="dropdown-divider col-11"></div>
@@ -173,8 +176,6 @@
             <div class="dropdown-divider col-11"></div>
         </div>
     </div> 
-
-
 </div>
 {% include "includes/footer.html" %}
 {% endblock %}

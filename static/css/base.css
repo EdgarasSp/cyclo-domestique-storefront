@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    padding-bottom: calc(25vh); 
+    padding-bottom: calc(20vh); /*20vh*/
     
     position: relative;
     /*padding-bottom: 100px;*/
@@ -685,15 +685,26 @@ iframe{
     }
 
     .show-basket-test:hover + .hide-test {
-        display:none;
+        display: none !important;;
         position:absolute;
         z-index: 999999;
         width: 340px;
         left: -93px;
         top: 72px;
         right: 15px;
+    }
+
+    .hide-preview-mobile{
+        display:none !important;
+    }
+
+    body {
+        padding-bottom: calc(60vh);
+    }
 
 }
+
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 991px) {
@@ -779,7 +790,27 @@ iframe{
 
    }
 
+   .hide-test {
+    display: none !important;
+    }
 
+    .show-basket-test:hover + .hide-test {
+        display: none !important;;
+        position:absolute;
+        z-index: 999999;
+        width: 340px;
+        left: -93px;
+        top: 72px;
+        right: 15px;
+    }
+
+    .hide-preview-mobile{
+        display:none !important;
+    }
+
+    body {
+        padding-bottom: calc(60vh);
+    }
 }
 
 
@@ -825,6 +856,28 @@ iframe{
     .text-sm-center{
         text-align: center !important;
         padding-left: 0px !important;
+    }
+
+    .hide-test {
+        display: none !important;
+    }
+
+    .show-basket-test:hover + .hide-test {
+        display: none !important;;
+        position:absolute;
+        z-index: 999999;
+        width: 340px;
+        left: -93px;
+        top: 72px;
+        right: 15px;
+    }
+
+    .hide-preview-mobile{
+        display:none !important;
+    }
+
+    body {
+        padding-bottom: calc(60vh);
     }
 
 
