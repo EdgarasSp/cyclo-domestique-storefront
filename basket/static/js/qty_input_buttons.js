@@ -8,7 +8,7 @@ $(document).ready(function() {
         var maxValue = parseInt($(`.max_${itemAmount}`).val());
         console.log(maxValue)
         var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > maxValue;
+        var plusDisabled = currentValue > maxValue;   // Stops over but does not disable button
         console.log(plusDisabled)
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
