@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
@@ -191,7 +191,7 @@ def edit_order(request, order_number):
         form = UpdateOrder(instance=order)  ####WAS ORDER
         messages.info(request, f'You are editing {order.order_number}')
 
-    template = 'profiles/edit_order2.html'     # order2 is summery, order is table
+    template = 'profiles/edit_order3.html'     # order2 is summery, order is table
     context = {
         'form': form,
         'order': order,

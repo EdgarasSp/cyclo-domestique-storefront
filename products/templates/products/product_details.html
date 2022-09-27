@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
 {% endblock %}
@@ -113,7 +115,7 @@
                                                     </button>
                                                 </div>
                                                 <!-- INPUT MAX TO BE FIXED IF BUTTONS NO BUTTON MAX IS WOrKING BASED ON AMOUNT-->
-                                                <input class="form-control qty_input input-smaller max_{{ product.amount }}" type="number"
+                                                <input class="form-control qty_input input-smaller max_{{ product.amount }} qty_input "  type="number"
                                                     name="quantity" value="1" min="1" max="{{ product.amount }}"
                                                     data-item_id="{{ product.id }}" data-item_amount="{{ product.amount }}"
                                                     id="id_qty_{{ product.id }}">

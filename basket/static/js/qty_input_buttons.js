@@ -5,10 +5,10 @@ $(document).ready(function() {
 
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         console.log(currentValue)
-        var maxValue = parseInt($(`.max_${itemAmount}`).val());
+        var maxValue = parseInt($(`.qty_input`).attr('data-item_amount'));
         console.log(maxValue)
         var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > maxValue;   // Stops over but does not disable button
+        var plusDisabled = currentValue >= maxValue;   // Stops over but does not disable button
         console.log(plusDisabled)
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);

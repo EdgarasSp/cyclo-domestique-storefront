@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% load basket_tools %}
 
 {% block extra_css %}
@@ -82,9 +83,9 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control form-control-sm qty_input input-smaller"  type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.item_id }}"
+                                        <input class="form-control form-control-sm qty_input input-smaller max_{{ item.product.amount }} qty_input"  type="number"
+                                            name="quantity" value="{{ item.quantity }}" max="{{ item.product.amount }}"
+                                            data-item_id="{{ item.item_id }}" data-item_amount="{{ item.product.amount }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-sm btn-black rounded-0 btn-smaller"
