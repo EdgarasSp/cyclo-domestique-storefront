@@ -723,7 +723,7 @@
         "pk":37,
         "model":"products.product",
         "fields":{
-            "category":"11",
+            "category":"10",
             "sku":"SKU97621235",
             "brand":"Silver Service",
             "name":"Same or next day service",
@@ -743,7 +743,7 @@
         "pk":38,
         "model":"products.product",
         "fields":{
-            "category":"12",
+            "category":"10",
             "sku":"SKU97621236",
             "brand":"Bronze Service",
             "name":"Same or next day service",

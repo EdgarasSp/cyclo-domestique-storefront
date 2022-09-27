@@ -85,26 +85,9 @@
         "model":"products.category",
         "fields":{
             "division":"4",
-            "name":"gold_service",
-            "friendly_name":"Gold Service"
-        }
-    },
-    {
-        "pk":11,
-        "model":"products.category",
-        "fields":{
-            "division":"4",
-            "name":"silver_service",
-            "friendly_name":"Silver Service"
-        }
-    },
-    {
-        "pk":12,
-        "model":"products.category",
-        "fields":{
-            "division":"4",
-            "name":"bronze_service",
-            "friendly_name":"Bronze Service"
+            "name":"service",
+            "friendly_name":"Bike Service"
         }
     }
+
 ]
