@@ -76,7 +76,9 @@
                                 <tr class="border-bottom">
                                     <td class="pt-2 small ">
                                         {% if contact.status == 1 %}
-                                            <span class="p-1 rounded bg-success text-white ">Actioned</span>                                    
+                                            <span class="p-1 rounded bg-danger text-white ">Pending</span>
+                                        {% elif contact.status == 2 %}
+                                            <span class="p-1 rounded bg-success text-white">Done</span>                                     
                                         {% else %}
                                             <span class="p-1 rounded bg-primary text-white">New</span>  
                                         {% endif %}
@@ -90,7 +92,8 @@
                                     <td>{{ contact.received_date }}</td>
                                     <td> <div>
                                         <!--####################FIX###################-->
-                                        <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'view_message' %}"><i class="fas fa-pencil-alt"></i></a>
+                                        <a class="btn btn-secondary btn-sm text-white py-0 px-1" href="{% url 'view_message' pk=contact.pk %}"><i class="fas fa-eye"></i></a>
+                                        <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_message' pk=contact.pk %}"><i class="fas fa-pencil-alt"></i></a>
                                         <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_message' pk=contact.pk %}"><i class="far fa-times-circle"></i></a>
                                     </div></td>  
                                 </tr>

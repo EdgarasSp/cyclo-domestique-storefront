@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .models import ContactForm
+from .forms import UpdateMessage
 
 # Create your views here.
 
@@ -100,9 +101,11 @@ def site_messages(request):
 ##################  NEW    #################################
 
 @login_required
-def view_message(request):
-    """ Display site messages. """
-    all_messages = ContactForm.objects.all()
+def view_message(request, pk):
+    """ Display site message. """
+    #all_messages = ContactForm.objects.all()
+
+    message = get_object_or_404(ContactForm, pk=pk)
 
     query = None
     categories = None
@@ -115,7 +118,7 @@ def view_message(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                all_messages = all_messages.annotate(lower_name=Lower('name'))
+                message = message.annotate(lower_name=Lower('name'))
 
             if sortkey == 'category':
                 sortkey = 'category__name'
@@ -124,22 +127,22 @@ def view_message(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            all_messages = all_messages.order_by(sortkey)
+            message = message.order_by(sortkey)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Please enter search term!")
+                message.error(request, "Please enter search term!")
                 return redirect(reverse('site_message'))  #tbs was site
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
-            all_messages = all_messages.filter(queries)
+            message = message.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
     template = 'contact/view_contact_message.html'
     context = {
-        'all_messages': all_messages,
+        'message': message,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -150,7 +153,7 @@ def view_message(request):
 
 
 
-###################  FIXed   ##################################### 
+###################  FIXED   ##################################### 
 
 
 @login_required
@@ -166,3 +169,51 @@ def delete_message(request, pk):   ### product_id
     messages.success(request, 'Message deleted!')
 
     return redirect(reverse('site_messages'))
+
+
+
+######################### CHANGE MESSAGE STATUS ORDER ##########################################
+@login_required
+def edit_message(request, pk):
+    """ Edit a order in the store """
+
+    message = get_object_or_404(ContactForm, pk=pk)
+
+    #####################------------------------------------
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = UpdateMessage(request.POST, instance=message)    ####MABU THIS SHOULD BE order_number ####WAS ORDER
+        print(form, ' this form line 150')
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated message status!')
+            # return redirect(reverse('inventory'))
+            print(' this form is valid line 155')
+
+
+
+            return redirect('site_messages')  # (reverse('site_messages')) or view_message if from product details and if from inventory
+        
+
+
+        else:
+            messages.error(request, 'Failed to update message status. Please ensure the form is valid.')
+            print(' this form has error line 158')
+    else:
+        form = UpdateMessage(instance=message)  ####WAS ORDER
+        messages.info(request, f'You are editing {message.email_address}')
+
+    #####################--------------------------------------
+
+    template = 'contact/edit_message.html'     # order2 is summery, order is table
+    context = {
+        'form': form,
+        'message': message,
+        'on_inventory_page': True
+    }
+
+    return render(request, template, context)
