@@ -19,7 +19,8 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
-        messages.success(request, f'{product.name} quantity updated to {basket[item_id]}')
+        messages.success(request, f'{product.name} quantity '
+                                  f'updated to {basket[item_id]}')
     else:
         basket[item_id] = quantity
         messages.success(request, f'{product.name} added to basket')
@@ -38,8 +39,9 @@ def update_basket(request, item_id):
     if quantity > 0:
         print(quantity)
         basket[item_id] = quantity
-        messages.success(request, f'{product.name} quantity updated to {basket[item_id]}')
-        
+        messages.success(request, f'{product.name} quantity '
+                                  f'updated to {basket[item_id]}')
+
     else:
         basket.pop(item_id)
         messages.success(request, f'{product.name} removed from the basket')

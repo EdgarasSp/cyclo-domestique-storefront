@@ -100,7 +100,6 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-# Attempt to prefill the form with any info the user maintains in their profile
     if request.user.is_authenticated:
         try:
             profile = UserProfile.objects.get(user=request.user)
@@ -181,11 +180,14 @@ def checkout_success(request, order_number):
         order_product_current = int(order_product.product.amount),
         print(order_product_current[0], ' current stock L177')
 # test
+        # [Decimal(int(order_product.product.amount) - order_sale_quantity)]
         order_product.product.amount = (int(order_product.product.amount) - (
-                                         order_sale_quantity))  # [Decimal(int(order_product.product.amount) - order_sale_quantity)]
-        print(order_product.product.amount, 'correct new L180')  # output correct stock - order
-
-        order_product.product.save()  # it seems at save order multiplied x 2 (is it passing amount as incorrect type ie int instead of decimal or revers?)
+                                         order_sale_quantity))
+        # output correct stock - order
+        print(order_product.product.amount, 'correct new L180')
+        # it seems at save order multiplied x 2 (is it passing amount as
+        # incorrect type ie int instead of decimal or revers?)
+        order_product.product.save()
         print(order_product.product, 'after save L183')
 
     if 'basket' in request.session:
