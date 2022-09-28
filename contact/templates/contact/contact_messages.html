@@ -50,7 +50,60 @@
             </div>
         </div>
     </div>
-    <div class="row">
+
+<!--------------------------------------------------------------------------------------->
+
+
+    <div class="product-container col-12 d-none d-show-buttons">
+        <div class="row justify-content-around-2 pb-4">
+            {% for contact in all_messages %}
+                <div class="col mb-4 card-size pr-1">
+                    
+                        <!-- Update -->
+                        <div class="card h-100 text-black bg-light" >
+                            <div class="card-body d-block align-self-stretch py-1 px-3">
+                                
+                                <div class="pt-2 text-right">
+                                    <p class="text-black text-uppercase">Message Status: 
+                                    {% if contact.status == 1 %}
+                                        <span class="p-1 rounded bg-danger text-white ml-2 px-2 py-1 small">Pending</span>
+                                    {% elif contact.status == 2 %}
+                                        <span class="p-1 rounded bg-success text-white ml-2 px-2 py-1">Done</span>                                     
+                                    {% else %}
+                                        <span class="p-1 rounded bg-primary text-white ml-2 px-2 py-1">New</span>  
+                                    {% endif %}
+                                    </p>
+                                </div>
+                                <div class="dropdown-divider mt-1"></div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">Received Date: </span>{{ contact.received_date }}</div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">subject_type: </span> {{ contact.subject_type }} </div>
+                                <div class="dropdown-divider mt-1"></div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">First Name: </span>{{ contact.first_name }}</div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">Last Name: </span>{{ contact.last_name }}</div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">Contact Number: </span>{{ contact.contact_number }}</div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">Email: </span>{{ contact.email_address }}</div>
+                                <div class="dropdown-divider mt-1"></div>
+                                <div class="small pt-2 text-left"><span class="font-weight-bold pr-2">Client Message: </span>{{ contact.message }}</div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                               
+    
+                            <div class=" row pb-2 justify-content-center ">
+                                <a class="btn btn-secondary text-white py-0 px-1 px-2 mr-1" href="{% url 'view_message' pk=contact.pk %}"><i class="fas fa-eye pr-2"></i>View</a>
+                                <a class="btn btn-success text-white py-0 px-1 px-2 mr-1" href="{% url 'edit_message' pk=contact.pk %}"><i class="fas fa-pencil-alt pr-2"></i>Edit</a>
+                                <a class="btn btn-danger text-white py-0 px-1 px-2 mr-1" href="{% url 'delete_message' pk=contact.pk %}"><i class="far fa-times-circle pr-2"></i>Delete</a>
+                            </div>
+    
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+<!--------------------------------------------------------------------------------------->
+
+    <div class="row mob-nav-header-hide">
         <div class="col-12">
             <div class="order-history table-responsive rounded">
                 <table class="table table-sm table-borderless">
@@ -64,10 +117,7 @@
                             <th class="font-weight-normal">Email</th>
                             <th class="font-weight-normal">Message</th>
                             <th class="font-weight-normal small">Received On</th>
-
                             <th class="font-weight-normal small">Action</th>
-
-
                         </tr>
                     </thead>
                     <tbody>
@@ -91,7 +141,6 @@
                                     <td>{{ contact.message }}</td>
                                     <td>{{ contact.received_date }}</td>
                                     <td> <div>
-                                        <!--####################FIX###################-->
                                         <a class="btn btn-secondary btn-sm text-white py-0 px-1" href="{% url 'view_message' pk=contact.pk %}"><i class="fas fa-eye"></i></a>
                                         <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_message' pk=contact.pk %}"><i class="fas fa-pencil-alt"></i></a>
                                         <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_message' pk=contact.pk %}"><i class="far fa-times-circle"></i></a>
