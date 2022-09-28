@@ -110,9 +110,7 @@
                       
                                     
             
-                                    <div class=" row pb-2 small justify-content-center ">
-                                        
-                                                                          
+                                    <div class=" row pb-2 small justify-content-center ">                  
                                         <a class="btn btn-secondary text-white py-0 px-1 px-2 mr-1" href="{% url 'product_details' product.id %}"><i class="fas fa-eye pr-2"></i>View</a>
                                         <a class="btn btn-success text-white py-0 px-1 px-2 mr-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt pr-2"></i>Edit</a>
                                         <a class="btn btn-danger text-white py-0 px-1 px-2 mr-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle pr-2"></i>Delete</a>
@@ -183,6 +181,7 @@
                                 </td>
                                 <td class=" poundSign currency">{{product.price}}</td>
                                 <td> <div>
+                                    <a class="btn btn-secondary btn-sm text-white py-0 px-1" href="{% url 'product_details' product.id %}"><i class="fas fa-eye"></i></a>
                                     <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_product' product.id %}"><i class="fas fa-pencil-alt"></i></a>
                                     <a class="btn btn-danger btn-sm text-white py-0 px-1" href="{% url 'delete_product' product.id %}"><i class="far fa-times-circle"></i></a>
                                 </div></td>

@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -14,7 +13,6 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
-    catg_value = None
     sort = None
     direction = None
 
@@ -45,8 +43,9 @@ def all_products(request):
             if not query:
                 messages.error(request, "Please enter search term!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = (Q(name__icontains=query)
+                       | Q(description__icontains=query))
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -56,7 +55,6 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-
     }
 
     return render(request, 'products/products.html', context)
@@ -73,14 +71,13 @@ def product_details(request, product_id):
 
     return render(request, 'products/product_details.html', context)
 
+
 @login_required
 def inventory(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all products  """
 
     products = Product.objects.all()
-    query = None
     categories = None
-    catg_value = None
     sort = None
     direction = None
 
@@ -106,24 +103,13 @@ def inventory(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "Please enter search term!")
-                return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
-
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
-        'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
         'on_inventory_page': True
-
     }
 
     return render(request, 'products/inventory.html', context)
@@ -143,12 +129,12 @@ def add_product(request):
             product = form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_details', args=[product.id]))
-            # return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product.'
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -172,10 +158,10 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            # return redirect(reverse('inventory'))
-            return redirect(reverse('product_details', args=[product.id]))  # if from product details and if from inventory
+            return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -200,6 +186,5 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request,'Product deleted!')
+    messages.success(request, 'Product deleted!')
     return redirect(reverse('inventory'))
-
