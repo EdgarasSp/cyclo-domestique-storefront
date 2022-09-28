@@ -38,8 +38,8 @@
 
     <div class="row">
         <div class="col-md-7">
-            <p class="pl-3 py-1 bg-dark text-white rounded ">Please fill out the form below to complete your order</p>
-            <form class="rounded bg-light pt-3" action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <p class="pl-3 py-1 bg-dark text-white rounded pr-2">Please fill out the form below to complete your order</p>
+            <form class="rounded bg-light pt-3 mb-5" action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5 ">
                     <legend class="fieldset-label small font-weight-bold text-black px-2 w-auto">Details</legend>

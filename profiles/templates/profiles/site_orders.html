@@ -44,8 +44,8 @@
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (A-Z)</option>
                     <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (Z-A)</option>
-                    <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (Latest)</option>
-                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (Oldest)</option>
+                    <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (Oldest)</option>
+                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (Latest)</option>
                 </select>
             </div>
         </div>
@@ -64,15 +64,15 @@
                             <div class="pt-2 text-right">
                                 <p class="text-black text-uppercase">Order Status: 
                                 {% if order.status == 1 %}
-                                    <span class="p-1 rounded bg-primary text-white ml-2 px-2 py-1 small">Shipped</span>
+                                    <span class="p-1 rounded bg-primary text-white ml-2 px-2 py-1 ">Shipped</span>
                                 {% elif order.status == 2 %}
-                                    <span class="p-1 rounded bg-success text-white ml-2 px-2 py-1">Completed</span>
+                                    <span class="p-1 rounded bg-success text-white ml-2 px-2 py-1 ">Completed</span>
                                 {% elif order.status == 3 %}
-                                    <span class="p-1 rounded bg-warning text-dark ml-2 px-2 py-1">Hold</span>
+                                    <span class="p-1 rounded bg-warning text-dark ml-2 px-2 py-1 ">Hold</span>
                                 {% elif order.status == 4 %}
-                                    <span class="p-1 rounded bg-danger text-white ml-2 px-2 py-1">Canceled</span>                                     
+                                    <span class="p-1 rounded bg-danger text-white ml-2 px-2 py-1 ">Canceled</span>                                     
                                 {% else %}
-                                    <span class="p-1 rounded bg-secondary text-white ml-2 px-2 py-1">Processing</span>  
+                                    <span class="p-1 rounded bg-secondary text-white ml-2 px-2 py-1 ">Processing</span>  
                                 {% endif %}
                                 </p>
                             </div>

@@ -65,10 +65,10 @@
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3  d-none d-md-block d-lg-block d-xl-block">
-                            <p class="my-0">{{ item.product.size }}</p>
+                            <p class="my-0 ">{{ item.product.size }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0 poundSign currency">{{ item.product.price }}</p>
+                            <p class="my-0 small poundSign currency">{{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
                             <form class="form update-form" method="POST" action="{% url 'update_basket' item.item_id %}">
@@ -102,7 +102,7 @@
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0 poundSign currency">{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small poundSign currency">{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
 
