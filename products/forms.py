@@ -4,6 +4,7 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
+    """ View form to add and edit update products """
 
     class Meta:
         model = Product
