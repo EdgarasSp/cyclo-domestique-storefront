@@ -96,7 +96,7 @@ TEMPLATES = [
 ]
 
 
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'  #save mesage in session browser storage needed for gitpod
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
 AUTHENTICATION_BACKENDS = [
@@ -117,7 +117,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'  #"/success" opens this after successfully login default /
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'cyclo_domestique.wsgi.application'
 
@@ -136,8 +136,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -203,8 +201,6 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-
-
 
 
 FREE_DELIVERY_THRESHOLD = 70
