@@ -40,11 +40,9 @@
                     {% for c in current_categories %}
                     <h3 class="text-black text-uppercase font-weight-bold mb-3 text-center "> {{ c.friendly_name }}</h3>
                     {% endfor %}
-                        <!--- NO LONGER WORKS IF REMOVED SORTING OPTIONS IN NAV, CURRENTLY COMMENTED OUT IN BASE-->
                         {% if current_categories or current_sorting == 'None_None' %} 
                         {% else %} 
-                        <h3 class="text-black text-uppercase font-weight-bold mb-3 text-center "> Our Products 2 </h3> 
-                            <!--- FIXED TO SHOW FRIENDLY TITLE-->
+                        <h3 class="text-black text-uppercase font-weight-bold mb-3 text-center "> Our Products </h3> 
                         {% endif %}
                 {% else %}
                 <h3 class="text-black text-uppercase mb-3 font-weight-bold text-center ">Our Products</h3>
