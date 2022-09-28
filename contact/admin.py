@@ -4,6 +4,7 @@ from .models import ContactForm
 
 @admin.register(ContactForm)
 class ContactAdmin(admin.ModelAdmin):
+    """ Django admin setup """
     list_display = ('subject_type', 'first_name', 'last_name', 'email_address',
                     'received_date', 'message', 'status')
     readonly_fields = ['received_date']

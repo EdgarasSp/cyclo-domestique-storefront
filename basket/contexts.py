@@ -5,6 +5,7 @@ from products.models import Product
 
 
 def basket_contents(request):
+    """ Show basket contents and user profile details """
 
     basket_items = []
     total = 0

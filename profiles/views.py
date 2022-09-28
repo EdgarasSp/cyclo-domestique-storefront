@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from .models import UserProfile
-from .forms import UserProfileForm, UpdateOrder
 from checkout.models import Order
+from .forms import UserProfileForm, UpdateOrder
 
 
 @login_required
