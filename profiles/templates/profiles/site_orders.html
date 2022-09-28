@@ -59,7 +59,7 @@
                 
                     <!-- Update -->
                     <div class="card h-100 text-black bg-light" >
-                        <div class="card-body d-block align-self-stretch py-1 px-2">
+                        <div class="card-body d-block align-self-stretch py-1 px-3">
                             
                             <div class="pt-2 text-right">
                                 <p class="text-black text-uppercase">Order Status: 
@@ -103,7 +103,7 @@
 
                         <div class=" row pb-2 small justify-content-center ">
                             <!--####################FIX###################-->
-                            <a class="btn btn-dark h-100 text-white py-1 px-2 " href="{% url 'edit_order' order.order_number %}">View Order</a>
+                            <a class="btn btn-dark h-100 text-white py-1 px-2 " href="{% url 'checkout_success' order.order_number %}">View Order</a>
                             <a class="px-1"></a>
                             <a class="btn btn-success h-100 text-white py-1 px-2" href="{% url 'edit_order' order.order_number %}">Update Status</a>
                         </div>
@@ -175,6 +175,7 @@
                             <div>
                                 <!--####################FIX###################-->
                                 <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_order' order.order_number %}"><i class="fas fa-pencil-alt"></i></a>
+                                <a class="btn btn-secondary btn-sm text-white py-0 px-1" href="{% url 'checkout_success' order.order_number %}"><i class="fas fa-eye"></i></a>
                             </div></td>  
                         </tr>
                     </div>
