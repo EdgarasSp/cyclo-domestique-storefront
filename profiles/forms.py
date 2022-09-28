@@ -1,9 +1,11 @@
+from checkout.models import Order
 from django import forms
 from .models import UserProfile
-from checkout.models import Order
+
 
 
 class UserProfileForm(forms.ModelForm):
+    """ A user profile form   """
     class Meta:
         model = UserProfile
         exclude = ('user',)
@@ -39,7 +41,7 @@ class UserProfileForm(forms.ModelForm):
 
 
 class UpdateOrder(forms.ModelForm):
-
+    """Update user order status  """
     class Meta:
         model = Order
         fields = ['status']
