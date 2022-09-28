@@ -109,80 +109,80 @@
                 <fieldset class="rounded px-3 mb-3 ">
                     <legend class="fieldset-label text-black  w-auto">Delivering To:</legend>
                     <hr class="mt-0 mb-2">
-                    <div class="row">
-                        <div class="col-12 col-md-6 small font-weight-bold">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6 col-sm-6 small font-weight-bold">
                             <p class="mb-0 text-black">Full Name</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 col-sm-6 text-left">
                             <p class="mb-0">{{ order.full_name }}</p>
                         </div>
                     </div>
     
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0 small text-black font-weight-bold">Address Line 1</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.street_address1 }}</p>
                         </div>
                     </div>
     
                     {% if order.street_address2 %}
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">Address Line 2</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.street_address1 }}</p>
                         </div>
                     </div>
                     {% endif %}
     
                     {% if order.county %}
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">County</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.county }}</p>
                         </div>
                     </div>
                     {% endif %}
     
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">Town or City</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.town_or_city }}</p>
                         </div>
                     </div>
     
                     {% if order.postcode %}
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">Postal Code</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.postcode }}</p>
                         </div>
                     </div>
                     {% endif %}
     
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">Country</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.country }}</p>
                         </div>
                     </div>
     
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">Phone Number</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0">{{ order.phone_number }}</p>
                         </div>
                     </div>
@@ -191,29 +191,29 @@
                 <fieldset class="rounded px-3 mb-6 ">
                     <legend class="fieldset-label  text-black  w-auto">Order Cost:</legend>
                     <hr class="mt-0 mb-2">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0  small text-black font-weight-bold">Order Total</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0 poundSign currency">{{ order.order_total }}</p>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0 small text-black font-weight-bold">Delivery</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0 poundSign currency">{{ order.delivery_cost }}</p>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="col-12 d-inline-flex">
+                        <div class="col-6 col-md-6">
                             <p class="mb-0 small text-black font-weight-bold">Grand Total</p>
                         </div>
-                        <div class="col-12 col-md-6 text-left">
+                        <div class="col-6 col-md-6 text-left">
                             <p class="mb-0 poundSign currency">{{ order.grand_total }}</p>
                         </div>
                     </div>
@@ -222,16 +222,16 @@
         
             <div class="text-right mt-5 mb-4 float-right">
                 {% if from_profile %}
-                    <a href="" class="btn btn-success rounded flex-column my-2 mr-3  ">
-                        <span class="">Print Order</span>
+                    <!--<a href="" class="btn btn-success rounded flex-column my-2 mr-3  ">
+                            <span class="">Print Order</span>-->
                     </a>
                     <a href="{% url 'profile_orders' %}" class="btn btn-dark rounded flex-column my-2 float-right mr-3  ">
                         <span class="">Back to Profile</span>
                     </a>
                 {% else %}
                     {% if user.is_authenticated %}
-                        <a href="" class="btn btn-success rounded flex-column my-2 mr-3 mr-3  ">
-                            <span class="">Print Order</span>
+                        <!--<a href="" class="btn btn-success rounded flex-column my-2 mr-3  ">
+                            <span class="">Print Order</span>-->
                         </a>
                         <a href="{% url 'profile_orders' %}" class="btn btn-dark rounded flex-column my-2 mr-3 ">
                             <span class="">View Your Orders</span>
@@ -242,8 +242,8 @@
 
                     {% else %}
 
-                        <a href="" class="btn btn-success rounded flex-column my-2 mr-3  ">
-                            <span class="">Print Order</span>
+                        <!--<a href="" class="btn btn-success rounded flex-column my-2 mr-3  ">
+                            <span class="">Print Order</span>-->
                         </a>
                         <a href="{% url 'products' %}" class="btn btn-dark rounded flex-column my-2 mr-3  ">
                             <span class="">View Our Products</span>
