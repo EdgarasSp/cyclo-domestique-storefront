@@ -35,10 +35,10 @@
 <div class="container ">
     <div class="row">
         <div class="col-12">
-            <div class="col">
+            <div class="col  text-center ">
                 {% if current_categories or current_sorting != 'None_None' %}
                     {% for c in current_categories %}
-                    <h3 class="text-black text-uppercase font-weight-bold mb-3 text-center "> {{ c.friendly_name }}</h3>
+                    <h3 class=" d-inline-flex text-black text-uppercase font-weight-bold px-3 mb-3"> {{ c.friendly_name }}</h3>
                     {% endfor %}
                         {% if current_categories or current_sorting == 'None_None' %} 
                         {% else %} 
