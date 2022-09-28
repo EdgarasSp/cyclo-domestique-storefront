@@ -70,13 +70,13 @@
         <div class="col-12 col-lg-4 my-auto mr-5 px-0 text-rights d-none d-show-buttons border-bottom">
           <ul class="list-inline list-unstyled my-0" >
             <li class="list-inline-item dropdown">
-              <a class="text-black nav-link pr-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              <a class="text-black nav-link pr-0" href="#" id="user-options-1" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height ">
                   <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg mob-nav-buttons"></i></p>
                 </div>
               </a>
-              <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options">
+              <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options-1">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'inventory' %}" class="dropdown-item text-primary text-uppercase">Inventory</a>
@@ -111,8 +111,7 @@
                         {% else %}
                           £0.00
                         {% endif %}
-                        <!--</span>
-                            <span class="ml-1 small">(50) </span> -->
+                      </span>
                     </p>
                   </div>
                 </a>
@@ -149,8 +148,8 @@
               Parts
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
-              <a class="dropdown-item" href="{% url 'products' %}?category=wheel_hubs">Wheel &amp Hubs</a>
-              <a class="dropdown-item" href="{% url 'products' %}?category=tyres_tubes">Tyres &amp Tubes</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=wheel_hubs">Wheel &amp; Hubs</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=tyres_tubes">Tyres &amp; Tubes</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Show All</a>
             </div>
@@ -164,10 +163,10 @@
               <a class="dropdown-item" href="{% url 'products' %}?category=bike_stands">Bike Work Stands</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=multi_tools">Multi Tools</a>
               <a class="dropdown-item" href="{% url 'products' %}?category=track_pump">Track Pump</a>
-              <a class="dropdown-item" href="{% url 'products' %}?category=lubes_grease">Lubes &amp Grease</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=lubes_grease">Lubes &amp; Grease</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item"
-                href="{% url 'products' %}?category=track_pump,bike_multi_tools,stands, lubes_grease">Show All</a>
+                href="{% url 'products' %}?category=track_pump,bike_multi_tools,stands,lubes_grease">Show All</a>
             </div>
           </li>
           <li class="nav-item logo-font">
@@ -186,13 +185,13 @@
           <div class="col-12 col-lg-4 my-auto mr-5 py-lg-0 d-block-mid d-block-sml">
             <ul class="list-inline list-unstyled my-0" >
               <li class="list-inline-item dropdown">
-                <a class="text-black nav-link pr-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                <a class="text-black nav-link pr-0" href="#" id="user-options-2" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
                   <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height ">
                     <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg mob-nav-buttons"></i></p>
                   </div>
                 </a>
-                <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options">
+                <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options-2">
                   {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                   <a href="{% url 'inventory' %}" class="dropdown-item text-primary text-uppercase">Inventory</a>
@@ -227,8 +226,7 @@
                           {% else %}
                             £0.00
                           {% endif %}
-                          <!--</span>
-                              <span class="ml-1 small">(50) </span> -->
+                        </span>
                       </p>
                     </div>
                   </a>
@@ -240,6 +238,7 @@
               <!--basket end-->
             </ul>
           </div>
+        </ul>
       </div>
     </nav>
     <!--end navbar-->

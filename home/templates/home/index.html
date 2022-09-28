@@ -8,7 +8,7 @@
 
 {% block content %}
 
-<!---------------MOBILE COVER------------->
+<!--MOBILE COVER-->
 <div class="container w-100 mt-5 pt-2 text-center background-none mob-nav-header">
     <div class="col-md-8 m-auto">
         <form method="GET" action="{% url 'products' %}">
@@ -16,8 +16,7 @@
                 <input class="form-control border rounded-left py-2 border-secondary" type="text" name="q"
                     placeholder="Shimano, Trek...">
                 <div class="input-group-append ">
-                    <button class=" btn btn-black text-center border border-secondary rounded-right"
-                        type="submit">
+                    <button class=" btn btn-black text-center border border-secondary rounded-right" type="submit">
                         <span class="icon  ">
                             <i class="fas fa-search"></i>
                         </span>
@@ -36,22 +35,20 @@
             </div>
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
-                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Welcome to Cyclo Domestique!</h2>
-                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">   </h5>
-                        <!--<a class="btn btn-primary my-3 text-white text-uppercase font-weight-bold title-spacing"
-                            href="{% url 'products' %}?category=road_bikes">Shop Now</a>-->
+                    <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Welcome to Cyclo
+                        Domestique!</h2>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!----------CAROUSEL START------------->
+<!--CAROUSEL START-->
 <div id="carouselCaptions" class="carousel slide carousel-fade mob-nav-header-hide  " data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item main-carousel-item active ">
             <div class="d-flex justify-content-center">
-                <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="cover-1">
+                <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    class="d-block w-100" alt="cover-1">
             </div>
             <div class="carousel-caption  w-100 h-100">
                 <div class="text-center font-italic caption-text w-100 py-4">
@@ -62,7 +59,8 @@
         </div>
         <div class="carousel-item main-carousel-item ">
             <div class="d-flex justify-content-center">
-                <img src="https://images.unsplash.com/photo-1555482000-9ea363917a18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="cover-2">
+                <img src="https://images.unsplash.com/photo-1555482000-9ea363917a18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    class="d-block w-100" alt="cover-2">
             </div>
             <div class="carousel-caption  w-100 h-100">
                 <div class="text-center font-italic caption-text w-100 py-4">
@@ -73,7 +71,8 @@
         </div>
         <div class="carousel-item main-carousel-item ">
             <div class="d-flex justify-content-center">
-                <img src="https://images.unsplash.com/photo-1571169205612-9eae9d2027ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="cover-3">
+                <img src="https://images.unsplash.com/photo-1571169205612-9eae9d2027ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    class="d-block w-100" alt="cover-3">
             </div>
             <div class="carousel-caption  w-100 h-100">
                 <div class="text-center font-italic caption-text w-100 py-4">
@@ -91,7 +90,7 @@
         <span class="fas fa-caret-right p-0 text-light" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-    <!----------SEARCH START------------->
+    <!--SEARCH START-->
     <div class="carousel-caption  w-100 h-50 text-center background-none">
         <div class="col-md-4 m-auto">
             <form method="GET" action="{% url 'products' %}">
@@ -99,8 +98,7 @@
                     <input class="form-control border rounded-left py-4 border-secondary" type="text" name="q"
                         placeholder="Shimano, Trek...">
                     <div class="input-group-append ">
-                        <button class=" btn btn-black text-center border border-secondary rounded-right"
-                            type="submit">
+                        <button class=" btn btn-black text-center border border-secondary rounded-right" type="submit">
                             <span class="icon  ">
                                 <i class="fas fa-search"></i>
                             </span>
@@ -110,11 +108,11 @@
             </form>
         </div>
     </div>
-    <!----------SEARCH END------------->
+    <!--SEARCH END-->
 </div>
 
 
-<!----------PRODUCTS CATEGORIES START------------->
+<!--PRODUCTS CATEGORIES START-->
 
 <div class="album_container mt-3">
     <div class="album_photo_container">
@@ -126,9 +124,9 @@
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                     <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Road Bikes</h2>
-                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">best lightweight machines</h5>
-                        <a class="btn silver-color my-3 text-white  text-uppercase title-spacing"
-                            href="{% url 'products' %}?category=road_bikes">Explore</a>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">best lightweight machines</h4>
+                    <a class="btn silver-color my-3 text-white  text-uppercase title-spacing"
+                        href="{% url 'products' %}?category=road_bikes">Explore</a>
                 </div>
             </div>
         </div>
@@ -143,25 +141,25 @@
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                     <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Mountain Bikes</h2>
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Fast, light and even electrified
-                        </h5>
-                        <a class="btn  silver-color my-3 text-white text-uppercase title-spacing"
-                            href="{% url 'products' %}?category=mountain_bikes">Explore</a>
+                    </h4>
+                    <a class="btn  silver-color my-3 text-white text-uppercase title-spacing"
+                        href="{% url 'products' %}?category=mountain_bikes">Explore</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="py-1 album_photo_container">
         <div class="album_item">
-            <div class="image " >
+            <div class="image ">
                 <img src="https://images.unsplash.com/photo-1547278786-125863d9ba64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
                     class="album_photo" alt="Kid riding bike in sunset next to monument">
             </div>
             <div class="image_description">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                     <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3">Kids Bikes</h2>
-                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">For up and coming riders</h5>
-                        <a class="btn silver-color my-3 text-white text-uppercase  title-spacing"
-                            href="{% url 'products' %}?category=kids_bikes">Explore</a>
+                    <h4 class="font-weight-bold display-6 text-uppercase title-spacing">For up and coming riders</h4>
+                    <a class="btn silver-color my-3 text-white text-uppercase  title-spacing"
+                        href="{% url 'products' %}?category=kids_bikes">Explore</a>
                 </div>
             </div>
         </div>
@@ -176,9 +174,9 @@
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                     <h2 class="font-weight-bold display-5 text-uppercase title-spacing mt-3"> Bike Wheels</h2>
                     <h4 class="font-weight-bold display-6 text-uppercase title-spacing">Sticky Tyres and Performance
-                        Wheels</h5>
-                        <a class="btn silver-color my-3 text-white text-uppercase  title-spacing"
-                            href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Explore</a>
+                        Wheels</h4>
+                    <a class="btn silver-color my-3 text-white text-uppercase  title-spacing"
+                        href="{% url 'products' %}?category=wheel_hubs,tyres_tubes">Explore</a>
                 </div>
             </div>
 
@@ -188,7 +186,7 @@
 
 
 
-<!----------BEST PRODUCTS START------------->
+<!--BEST PRODUCTS START-->
 
 <div class="container-fluid my-5 ">
     <div class="row">
@@ -208,51 +206,48 @@
                     <div class="col px-0">
                         <div class="product-container px-2">
                             <div class="col ">
-                                <!-- 1-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU71331904' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold ">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold ">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -263,51 +258,48 @@
                     <div class="col px-0  d-none d-md-block d-lg-block d-xl-block">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- 2-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU71286469' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -322,47 +314,45 @@
                                 {% for product in products %}
                                 {% if product.sku == 'SKU70762615' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -373,51 +363,48 @@
                     <div class="col px-0 d-none   d-block-mid   d-xl-block ">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- 4 d-block-sml d-block-mid-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU93918118' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span>
+                                                </h5>
                                             </div>
                                         </div>
-                                    </a>
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -428,51 +415,49 @@
                     <div class="col px-0 d-none d-block-large  d-xxl-block">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- d-block-large 5-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU93199412' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span>
+                                                </h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -487,51 +472,49 @@
                     <div class="col px-0">
                         <div class="product-container px-2">
                             <div class="col ">
-                                <!-- 1-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU91190901' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold ">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold ">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span>
+                                                </h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -542,51 +525,48 @@
                     <div class="col px-0  d-none d-md-block d-lg-block d-xl-block">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- 2-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU91313713' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -597,51 +577,48 @@
                     <div class="col px-0  d-none  d-lg-block d-xl-block">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- 3-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU70013703' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -652,51 +629,48 @@
                     <div class="col px-0 d-none   d-block-mid   d-xl-block ">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- 4 d-block-sml d-block-mid-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU91598804' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -707,51 +681,48 @@
                     <div class="col px-0 d-none d-block-large  d-xxl-block">
                         <div class="product-container px-2">
                             <div class="col">
-                                <!-- d-block-large 5-->
                                 {% for product in products %}
                                 {% if product.sku == 'SKU91027901' %}
                                 <div class="col mb-4 card-size card-size-responsive px-0">
-                                    <a href="/product/{{ product.name }}" class="text-decoration-none ">
-                                        <div class="card h-100 ">
-                                            {% if product.image %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid  align-middle"
-                                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            {% else %}
-                                            <a class=" image-size image-size-responsive"
-                                                href="{% url 'product_details' product.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="{{ product.name }}">
-                                            </a>
-                                            {% endif %}
-                                            <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
-                                                <div class=""> {{product.brand}} </div>
-                                                <div class="dropdown-divider"></div>
-                                                <div>
-                                                    <h5
-                                                        class="card-title mb-2 title-height font-responsive font-weight-bold">
-                                                        {{ product.name }} - <span><strong>Size:</strong>
-                                                            {{product.size}}</span></h5>
-                                                </div>
-                                            </div>
-
+                                    <div class="card h-100 ">
+                                        {% if product.image %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid  align-middle"
+                                                src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a class=" image-size image-size-responsive"
+                                            href="{% url 'product_details' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="{{ product.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body d-block align-self-stretch px-3 pt-2 pb-1">
+                                            <div class=""> {{product.brand}} </div>
                                             <div class="dropdown-divider"></div>
-                                            <div
-                                                class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
-                                                <div class="dropdown-divider"></div>
-                                                <small class="font-responsive pr-2"><strong>Color:</strong>
-                                                    {{product.color}}</small>
-                                                {% if product.rating %}
-                                                <small class="font-responsive"><i
-                                                        class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                <small class="font-responsive">No Rating</small>
-                                                {% endif %}
+                                            <div>
+                                                <h5
+                                                    class="card-title mb-2 title-height font-responsive font-weight-bold">
+                                                    {{ product.name }} - <span><strong>Size:</strong>
+                                                        {{product.size}}</span></h5>
                                             </div>
                                         </div>
-                                    </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <div
+                                            class="card-footer bg-white pt-0 px-0 border-0 d-flex justify-content-center">
+                                            <div class="dropdown-divider"></div>
+                                            <small class="font-responsive pr-2"><strong>Color:</strong>
+                                                {{product.color}}</small>
+                                            {% if product.rating %}
+                                            <small class="font-responsive"><i
+                                                    class="fas fa-star mx-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                            <small class="font-responsive">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                                 {% else %}
                                 {% endif %}
@@ -772,9 +743,7 @@
         </a>
     </div>
 </div>
-
-
-<!----------STORE MESSAGE START------------->
+<!--STORE MESSAGE START-->
 <hr>
 <div class="container col-12 py-5 rounded mb-5">
     <div class="row">
@@ -796,15 +765,16 @@
                 stores or via our expert sales team. </p>
 
             <a href="{% url 'products' %}"
-                class="btn text-center text-uppercase border gold-color font-weight-bold mx-3 px-4">Shop Now</a>
+                class="btn text-center text-uppercase border gold-color font-weight-bold mx-3 px-4">Shop Now
+            </a>
             <a href="{% url 'contact' %}"
-                class=" btn  text-center text-uppercase border gold-color  font-weight-bold mx-3 px-3">Ask Question</a>
+                class=" btn  text-center text-uppercase border gold-color  font-weight-bold mx-3 px-3">Ask Question
+            </a>
         </div>
     </div>
 </div>
 <hr>
-
-<!----------SERVICING CONTAINER START------------->
+<!--SERVICING CONTAINER START-->
 <div class="container-fluid">
     <div class="row">
         <div class="col">
@@ -822,12 +792,12 @@
                     <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                         <h2 class="font-weight-bold text-uppercase title-spacing font-responsive-1"> Bronze Service</h2>
                         <h4 class="font-weight-bold text-uppercase title-spacing font-responsive-2">12 point check and
-                            basic chainset service</h5>
-                            <a class="btn btn-primary bronze-color my-3 text-white text-uppercase font-weight-bold title-spacing"
-                                href="/products/38/">Bronze</a>
+                            basic chainset service</h4>
+                        <a class="btn btn-primary bronze-color my-3 text-white text-uppercase font-weight-bold title-spacing"
+                            href="/products/38/">Bronze
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="col-md-6 col-lg-4 px-2 py-2 no-pading">
@@ -840,12 +810,12 @@
                     <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                         <h2 class="font-weight-bold text-uppercase title-spacing font-responsive-1">Silver Service</h2>
                         <h4 class="font-weight-bold text-uppercase title-spacing font-responsive-2">20 point check +
-                            Bronze service and bearing service</h5>
-                            <a class="btn btn-primary silver-color my-3 text-white text-uppercase font-weight-bold title-spacing px-4"
-                                href="/products/37/">Silver</a>
+                            Bronze service and bearing service</h4>
+                        <a class="btn btn-primary silver-color my-3 text-white text-uppercase font-weight-bold title-spacing px-4"
+                            href="/products/37/">Silver
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="col-md-6 col-lg-4 px-0 py-2">
@@ -858,9 +828,10 @@
                     <div class="d-flex flex-column justify-content-center align-items-center h-100 ">
                         <h2 class="font-weight-bold text-uppercase title-spacing font-responsive-1">Gold Service</h2>
                         <h4 class="font-weight-bold text-uppercase title-spacing font-responsive-2">30 point check +
-                            silver and full frameset service</h5>
-                            <a class="btn btn-primary gold-color my-3 text-white text-uppercase font-weight-bold title-spacing px-5"
-                                href="/products/36/">Gold</a>
+                            silver and full frameset service
+                        </h4>
+                        <a class="btn btn-primary gold-color my-3 text-white text-uppercase font-weight-bold title-spacing px-5"
+                            href="/products/36/">Gold</a>
                     </div>
                 </div>
             </div>
@@ -869,7 +840,7 @@
 </div>
 
 
-<!----------COMMUNITY CONTAINER START------------->
+<!--COMMUNITY CONTAINER START-->
 <div class="container col-12 pt-5">
     <div class="row">
         <div class="col">
@@ -885,15 +856,17 @@
                 and bike events. For beginners' we host road rides every Wednesday at 6pm and MTB ride in Shorne Woods
                 every Friday at 5pm. No booking needed just come and ride with us.. </p>
 
-            <p class="lead text-dark my-3">We also enjoy offering proactive support to our local charity partners by participating in fundraising
+            <p class="lead text-dark my-3">We also enjoy offering proactive support to our local charity partners by
+                participating in fundraising
                 events, offer event support and raise awareness. </p>
-    
-                <div>
-                    <a href="{% url 'about' %}"
-                            class="btn text-center text-uppercase border gold-color font-weight-bold mx-3 m-2 px-4">About Us</a>
-                    <a href="{% url 'contact' %}"
-                            class=" btn  text-center text-uppercase border gold-color  font-weight-bold mx-3 m-2 px-3">Contact Us</a>
-                </div>
+
+            <div>
+                <a href="{% url 'about' %}"
+                    class="btn text-center text-uppercase border gold-color font-weight-bold mx-3 m-2 px-4">About Us</a>
+                <a href="{% url 'contact' %}"
+                    class=" btn  text-center text-uppercase border gold-color  font-weight-bold mx-3 m-2 px-3">Contact
+                    Us</a>
+            </div>
         </div>
         <div class="col-md-12 col-lg-6 px-0 ">
             <img src="https://images.unsplash.com/photo-1515164084382-4ac60f929e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
