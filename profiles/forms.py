@@ -34,27 +34,12 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = ''  # may need to change to match crispy form style border-black rounded-0 profile-form-input
+            self.fields[field].widget.attrs['class'] = ''
             self.fields[field].label = False
 
 
-
-
-
-################################# CHANGE STATUS ORDER ##############################
-
 class UpdateOrder(forms.ModelForm):
 
-        class Meta:
-            model = Order
-            fields = ['status']  ### ('status',)
-
-
-
-       # def __init__(self, *args, **kwargs):
-        #        super().__init__(*args, **kwargs)
-         #       status = Order.objects.all()
-
-          #      self.fields['status'].choices = status
-           #     for field_name, field in self.fields.items():
-            #        field.widget.attrs['class'] = ''
+    class Meta:
+        model = Order
+        fields = ['status']
