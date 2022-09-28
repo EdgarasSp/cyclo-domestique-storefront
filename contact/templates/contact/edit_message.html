@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-    <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -14,17 +14,20 @@
 </div>
 {% endblock %}
 
-{% block content %}        <!----Order confirmation FORM view----->
+{% block content %}
+<!----Order confirmation FORM view----->
 <div class="ml-3">
     <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/contact">contact</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/contact/all-messages">all-messages</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/contact/all-messages/message">message</a></li>
-          </ol>
+            <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/contact">contact</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase"
+                        href="/contact/all-messages">all-messages</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase"
+                        href="/contact/all-messages/message">message</a></li>
+            </ol>
         </nav>
     </div>
 </div>
@@ -36,27 +39,32 @@
     </div>
     <div class="row">
         <!----------FORM------------>
-        <div class="col-2 d-none d-md-block d-lg-block d-xl-block"></div>    
+        <div class="col-2 d-none d-md-block d-lg-block d-xl-block"></div>
         <div class="col-12 col-md-8 ">
-            <form method="POST" action="#" class="form bg-light rounded " enctype="multipart/form-data">  <!--update link once we have edit view wih form chekc edit order for link details-->
-                <h5 class="pl-3 bg-success rounded-top text-white font-weight-normal small py-2 mb-0">User Message details</h5>
-                <div class="px-3"> 
-                    <p class="pt-1 m-0 small"><span class="font-weight-bold pr-2">You are edit message No.:</span>{{ message.pk}}</p>
-                    <p class="pt-1 m-0 small"><span class="font-weight-bold pr-2">Received from:</span>{{ message.email_address}}</p>
-                    <p class="pt-1 m-0 small"><span class="font-weight-bold pr-2">Dated:</span>{{ message.received_date}}</p>
+            <form method="POST" action="#" class="form bg-light rounded " enctype="multipart/form-data">
+                <h5 class="pl-3 bg-success rounded-top text-white font-weight-normal small py-2 mb-0">User Message
+                    details</h5>
+                <div class="px-3">
+                    <p class="pt-1 m-0 small"><span class="font-weight-bold pr-2">You are edit message
+                            No.:</span>{{ message.pk}}</p>
+                    <p class="pt-1 m-0 small"><span class="font-weight-bold pr-2">Received
+                            from:</span>{{ message.email_address}}</p>
+                    <p class="pt-1 m-0 small"><span
+                            class="font-weight-bold pr-2">Dated:</span>{{ message.received_date}}</p>
                 </div>
-
-
                 {% csrf_token %}
                 <div class="px-3 mt-2">
                     {% for field in form %}
-                        {{ field | as_crispy_field  }}
+                    {{ field | as_crispy_field  }}
                     {% endfor %}
                 </div>
                 <div class="text-right py-3 mb-5">
-                    <a class="btn  btn-dark rounded flex-column mt-1 py-1 mr-3" href="{% url 'site_messages' %}">Back to All Messages</a>
-                    <a class="btn  btn-dark rounded flex-column mt-1 py-1 mr-3" href="{% url 'view_message' pk=message.pk %}">Back to Message</a>   <!--- PK ISSUE --->
-                    <button class="btn btn-success rounded flex-column py-1 float-right mt-1 mr-3" type="submit">Save Changes</button>
+                    <a class="btn  btn-dark rounded flex-column mt-1 py-1 mr-3" href="{% url 'site_messages' %}">Back to
+                        All Messages</a>
+                    <a class="btn  btn-dark rounded flex-column mt-1 py-1 mr-3"
+                        href="{% url 'view_message' pk=message.pk %}">Back to Message</a>
+                    <button class="btn btn-success rounded flex-column py-1 float-right mt-1 mr-3" type="submit">Save
+                        Changes</button>
                 </div>
             </form>
         </div>

@@ -14,7 +14,8 @@
 </div>
 {% endblock %}
 
-{% block content %}        <!----Order confirmation FORM view----->
+{% block content %}
+<!--Order confirmation FORM view-->
 <div class="ml-3">
     <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
@@ -29,15 +30,10 @@
     </div>
 </div>
 <div class="container">
-
-
-        <!----------VIEW MESSAGE------------>
+    <!--VIEW MESSAGE-->
     <div class="row">
         <div class="col-2 d-none d-md-block d-lg-block d-xl-block"></div>    
         <div class="col-12 col-md-8 ">
-
-            <!------------------------------------------------------------------------------------------>
-
             <p class="pl-3 py-1 bg-dark text-white rounded">Message Details</p>
             <div class="row">
                 <div class="col-12 col-md-8 small">
@@ -74,7 +70,6 @@
                             <p class="mb-0">{{ message.first_name }}</p>
                         </div>
                     </div>
-    
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <p class="mb-0 text-black small font-weight-bold">Last Name</p>
@@ -83,7 +78,6 @@
                             <p class="mb-0">{{ message.last_name }}</p>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <p class="mb-0 text-black small font-weight-bold">Contact Number</p>
@@ -92,7 +86,6 @@
                             <p class="mb-0">{{ message.contact_number }}</p>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <p class="mb-0 text-black small font-weight-bold">Contact Email</p>
@@ -101,7 +94,6 @@
                             <p class="mb-0">{{ message.email_address }}</p>
                         </div>
                     </div>
-                
                 </fieldset>
                 <fieldset class="rounded px-3 mb-3 ">
                     <legend class="fieldset-label text-black  w-auto">Message Details:</legend>
@@ -122,11 +114,7 @@
                         <span class="">Return to Messages</span></a>
                     <a class="btn btn-success rounded flex-column my-2 mr-3 " href="{% url 'edit_message' pk=message.pk %}">Update Status</a>  <!-- PK Issue 'edit_message' pk=contact.pk-->
                 </div>
-
             </div>
-         
-
-            <!------------------------------------------------------------------------------------------>
         </div>
         <div class="col-2 d-none d-md-block d-lg-block d-xl-block"></div>
     </div> 
