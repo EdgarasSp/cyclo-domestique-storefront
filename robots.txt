@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /basket/
+Sitemap: https://cyclo-domestique.herokuapp.com/sitemap.xml
