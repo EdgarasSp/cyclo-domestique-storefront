@@ -43,9 +43,7 @@
   <script src="{% static 'js/currency.js' %}"></script>
   <script src="{% static 'js/qty_input_buttons.js' %}"></script>
   <script src="https://js.stripe.com/v3/"></script>
-  <!--<script src="{% static 'js/update_qty.js' %}"></script>    replaced by inlcludes html -->
-
-
+ 
   {% endblock %}
 
   {% block extra_js %}
@@ -86,7 +84,6 @@
                 <a href="{% url 'site_messages' %}" class="dropdown-item text-primary text-uppercase">Site Messages</a>
                 <div class="dropdown-divider"></div>
                 {% endif %}
-                <!-- <a class="dropdown-item">Hi, {{ user.username }}</a> -->
                 <a href="{% url 'profile' %}" class="dropdown-item ">My Profile</a>
                 <div class="dropdown-divider"></div>
                 <a href="{% url 'profile_orders' %}" class="dropdown-item ">My Orders</a>
@@ -201,7 +198,6 @@
                   <a href="{% url 'site_messages' %}" class="dropdown-item text-primary text-uppercase">Site Messages</a>
                   <div class="dropdown-divider"></div>
                   {% endif %}
-                  <!-- <a class="dropdown-item">Hi, {{ user.username }}</a> -->
                   <a href="{% url 'profile' %}" class="dropdown-item ">My Profile</a>
                   <div class="dropdown-divider"></div>
                   <a href="{% url 'profile_orders' %}" class="dropdown-item ">My Orders</a>

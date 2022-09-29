@@ -4,14 +4,17 @@
 {% load i18n %}
 {% load account socialaccount %}
 
+{% block extra_css %}
+{% endblock %}
+
 {% block head_title %}{% trans "Login" %}{% endblock %}
 
 
 {% block page_header %}
 <div class="header-container header-mobile mt-5 pt-5">
-    <div class="row">
-        <div class="col"></div>
-    </div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
 </div>
 {% endblock %}
 
@@ -23,70 +26,70 @@
 
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+  of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+  for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
-
   <ul class="socialaccount_providers">
     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
   </ul>
-
   <div class="login-or">{% trans 'or' %}</div>
-
 </div>
 
 
-<div class="container text-center ">
-  {% include "socialaccount/snippets/login_extra.html" %}
 
-  {% else %}
-  <p class="text-center pb-3">{% blocktrans %}New customer? Please
+{% include "socialaccount/snippets/login_extra.html" %}
+
+{% else %}
+<p class="text-center pb-3">{% blocktrans %}New customer? Please
   <a href="{{ signup_url }}">register</a> to create an account.{% endblocktrans %}</p>
+{% endif %}
+
+<form class="login " method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  <div class="text left pl-5 pr-5">
+    {{ form|crispy }}
+  </div>
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
   {% endif %}
-
-  <form class="login " method="POST" action="{% url 'account_login' %}">
-    {% csrf_token %}
-    <div class="text left pl-5 pr-5">  
-      {{ form|crispy }}
-    </div>
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <div class="text-center py-1 mr-1 ">
-      <a class="button secondaryAction btn btn-secondary flex-column py-1 mr-1 " href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-      <button class="primaryAction btn btn-success flex-column py-1" type="submit"><span class="px-4">{% trans "Login" %}</span></button>
-    </div>
-
-  </form>
-
-</div>
+  <div class="text-center py-1 mr-1 ">
+    <a class="button secondaryAction btn btn-secondary flex-column py-1 mr-1 "
+      href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    <button class="primaryAction btn btn-success flex-column py-1" type="submit"><span
+        class="px-4">{% trans "Login" %}</span></button>
+  </div>
+</form>
 
 
-<!-- THIS NEEDS TO BE LOADED FROM CSS FILE-->
+
+<!--B-->
 <style>
   .navbar-expand-lg {
-      padding-top: .5rem !important;
-      background-color: #ffffff;
+    padding-top: .5rem !important;
+    background-color: #ffffff;
   }
+
   #navbarNav .navbar-nav .nav-link {
-      color: #000;
+    color: #000;
   }
 
   .nav-logo {
-      color: #000000 !important;
-      font-weight: bold;
-      text-decoration: none !important;
+    color: #000000 !important;
+    font-weight: bold;
+    text-decoration: none !important;
   }
 
   .brand-home {
-      opacity: 1 !important;
+    opacity: 1 !important;
   }
+
   .bike-img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
   }
 </style>
+
 
 {% endblock %}
