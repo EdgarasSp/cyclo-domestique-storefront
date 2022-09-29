@@ -5,6 +5,32 @@
 {% load account socialaccount %}
 
 {% block extra_css %}
+<style>
+  .navbar-expand-lg {
+    padding-top: .5rem !important;
+    background-color: #ffffff;
+  }
+
+  #navbarNav .navbar-nav .nav-link {
+    color: #000;
+  }
+
+  .nav-logo {
+    color: #000000 !important;
+    font-weight: bold;
+    text-decoration: none !important;
+  }
+
+  .brand-home {
+    opacity: 1 !important;
+  }
+
+  .bike-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+</style>
 {% endblock %}
 
 {% block head_title %}{% trans "Login" %}{% endblock %}
@@ -64,32 +90,6 @@
 
 
 <!--B-->
-<style>
-  .navbar-expand-lg {
-    padding-top: .5rem !important;
-    background-color: #ffffff;
-  }
-
-  #navbarNav .navbar-nav .nav-link {
-    color: #000;
-  }
-
-  .nav-logo {
-    color: #000000 !important;
-    font-weight: bold;
-    text-decoration: none !important;
-  }
-
-  .brand-home {
-    opacity: 1 !important;
-  }
-
-  .bike-img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-  }
-</style>
 
 
 {% endblock %}

@@ -5,7 +5,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 from products.models import Product
 from profiles.models import UserProfile
-
+from decimal import Decimal
 
 status = ((0, "Processing"), (1, "Shipped"), (2, "Completed"),
           (3, "Hold"), (4, "Cancelled"))
@@ -54,7 +54,7 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            self.delivery_cost = self.order_total * (settings.STANDARD_DELIVERY_PERCENTAGE / 100)
             if self.delivery_cost > settings.STANDARD_DELIVERY_MAXIMUM:
                 self.delivery_cost = self.order_total + settings.STANDARD_DELIVERY_MAXIMUM
         else:
@@ -85,7 +85,7 @@ class OrderLineItem(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     product_size = models.CharField(max_length=10, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+    lineitem_total = models.DecimalField(max_digits=10, decimal_places=2,
                                          null=False, blank=False,
                                          editable=False)
 
@@ -94,7 +94,7 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        self.lineitem_total = Decimal(self.product.price) * Decimal(self.quantity)
         super().save(*args, **kwargs)
 
     def __str__(self):

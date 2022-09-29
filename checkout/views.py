@@ -11,8 +11,7 @@ from profiles.forms import UserProfileForm
 from basket.contexts import basket_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-
-# from decimal import Decimal
+from decimal import Decimal
 
 
 @require_POST
@@ -66,9 +65,8 @@ def checkout(request):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
-                            quantity=item_data,    # [Decimal(item_data)]
+                            quantity=item_data,
                         )
-                        print(order_line_item, ' order_line_item L69')
                         order_line_item.save()
 
                 except Product.DoesNotExist:
@@ -167,28 +165,13 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-# ##################  FIX deducts stock x2 order amount ##################
-
     order_products = OrderLineItem.objects.filter(order=order)
-
-    print(order_products, ' order_products L170')
 
     for order_product in order_products:
         order_sale_quantity = order_product.quantity
-        print(order_sale_quantity,  ' order_sale_quantity L174')  # <<1
-# test to check what is value before order deduction
-        order_product_current = int(order_product.product.amount),
-        print(order_product_current[0], ' current stock L177')
-# test
-        # [Decimal(int(order_product.product.amount) - order_sale_quantity)]
         order_product.product.amount = (int(order_product.product.amount) - (
                                          order_sale_quantity))
-        # output correct stock - order
-        print(order_product.product.amount, 'correct new L180')
-        # it seems at save order multiplied x 2 (is it passing amount as
-        # incorrect type ie int instead of decimal or revers?)
         order_product.product.save()
-        print(order_product.product, 'after save L183')
 
     if 'basket' in request.session:
         del request.session['basket']
