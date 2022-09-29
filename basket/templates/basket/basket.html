@@ -20,21 +20,21 @@
     <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent pl-0 mb-0 small">
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/basket">basket</a></li>
+            <ol class="breadcrumb bg-transparent pl-0 mb-0 small">
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/basket">basket</a></li>
 
-          </ol>
+            </ol>
         </nav>
     </div>
 </div>
 <div class="container container-md mb-2 mt-5">
     <div class="row">
         <div class="col">
-            <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left text-sm-center pl-3 "> Shopping Basket </h3>
+            <h3 class="text-black text-uppercase font-weight-bold mb-5 text-left text-sm-center pl-3 "> Shopping Basket
+            </h3>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-9 col-sm-12 p-1">
             {% if basket_items %}
@@ -44,20 +44,22 @@
                         <tr>
                             <th scope="col" class="font-weight-normal">Image</th>
                             <th scope="col" class="font-weight-normal">Name</th>
-                            <th scope="col" class="font-weight-normal pr-5 d-none d-md-block d-lg-block d-xl-block">Size</th>
+                            <th scope="col" class="font-weight-normal pr-5 d-none d-md-block d-lg-block d-xl-block">Size
+                            </th>
                             <th scope="col" class="font-weight-normal">Price</th>
                             <th scope="col" class="font-weight-normal px-5">Qty</th>
                             <th scope="col" class="font-weight-normal pr-2">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in basket_items %}
                     <tr>
                         <td class="p-3 w-25">
                             {% if item.product.image %}
-                                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                alt="{{ item.product.name }}">
                             {% else %}
-                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ item.product.name }}">
                             {% endif %}
                         </td>
                         <td class="py-3">
@@ -71,22 +73,24 @@
                             <p class="my-0 small poundSign currency">{{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
-                            <form class="form update-form" method="POST" action="{% url 'update_basket' item.item_id %}">
+                            <form class="form update-form" method="POST"
+                                action="{% url 'update_basket' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0 btn-smaller" 
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0 btn-smaller"
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control form-control-sm qty_input input-smaller max_{{ item.product.amount }} qty_input"  type="number"
-                                            name="quantity" value="{{ item.quantity }}" max="{{ item.product.amount }}"
-                                            data-item_id="{{ item.item_id }}" data-item_amount="{{ item.product.amount }}"
-                                            id="id_qty_{{ item.item_id }}">
+                                        <input
+                                            class="form-control form-control-sm qty_input input-smaller max_{{ item.product.amount }} qty_input"
+                                            type="number" name="quantity" value="{{ item.quantity }}"
+                                            max="{{ item.product.amount }}" data-item_id="{{ item.item_id }}"
+                                            data-item_amount="{{ item.product.amount }}" id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-sm btn-black rounded-0 btn-smaller"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
@@ -99,13 +103,14 @@
                                 </div>
                             </form>
                             <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                                data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0 small poundSign currency">{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small poundSign currency">
+                                {{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
-
                     {% endfor %}
                 </table>
             </div>
@@ -116,7 +121,8 @@
                         <tr>
                             <th scope="col" class="font-weight-normal">Image</th>
                             <th scope="col" class="font-weight-normal">Name</th>
-                            <th scope="col" class="font-weight-normal pr-5 d-none d-md-block d-lg-block d-xl-block">Size</th>
+                            <th scope="col" class="font-weight-normal pr-5 d-none d-md-block d-lg-block d-xl-block">Size
+                            </th>
                             <th scope="col" class="font-weight-normal">Price</th>
                             <th scope="col" class="font-weight-normal px-5">Qty</th>
                             <th scope="col" class="font-weight-normal pr-2">Subtotal</th>
@@ -134,11 +140,13 @@
                         <div class="text-right mr-2">
                             <h6>Basket Total: <span class="poundSign currency">{{ total|floatformat:2 }}</span></h6>
                             <h6>Delivery: <span class="poundSign currency">{{ delivery|floatformat:2 }}</span></h6>
-                            <h5 class="mt-4"><strong>Grand Total: <span class="poundSign currency">{{ grand_total|floatformat:2 }}</span></strong></h5>
+                            <h5 class="mt-4"><strong>Grand Total: <span
+                                        class="poundSign currency">{{ grand_total|floatformat:2 }}</span></strong></h5>
                             {% if free_delivery_delta > 0 %}
-                                <p class="mb-1 text-danger small">
-                                    Spend <strong><span class="poundSign currency">{{ free_delivery_delta }}</span></strong> to get free standard delivery!
-                                </p>
+                            <p class="mb-1 text-danger small">
+                                Spend <strong><span class="poundSign currency">{{ free_delivery_delta }}</span></strong>
+                                to get free standard delivery!
+                            </p>
                             {% endif %}
                         </div>
                     </div>
@@ -149,7 +157,7 @@
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
                                 </span>
-                            </a>                     
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -165,7 +173,7 @@
                         <div class="text-right mx-2 mt-5">
                             <a href="{% url 'products' %}" class=" col-12 text-uppercase btn btn-primary rounded-1">
                                 <span class="">View Our Products</span>
-                            </a>                     
+                            </a>
                         </div>
                     </div>
                 </div>

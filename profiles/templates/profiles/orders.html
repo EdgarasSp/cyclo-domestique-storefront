@@ -49,13 +49,10 @@
             </div>
         </div>
     </div>
-
     <div class="product-container col-12 d-none d-show-buttons">
         <div class="row justify-content-around-2 pb-4">
             {% for order in orders %}
                 <div class="col mb-4 card-size pr-1">
-                    
-                        <!-- Update -->
                         <div class="card h-100 text-black bg-light" >
                             <div class="card-body d-block align-self-stretch py-1 px-3">
                                 
@@ -85,8 +82,6 @@
                                 <div class="small pt-2 text-left"><span class="font-weight-bold">Order Amount: </span>£{{ order.grand_total }}</div>
                             </div>
                             <div class="dropdown-divider"></div>
-    
-    
                             <div class="card-body d-block align-self-stretch p-1 text-left">
                                 {% for item in order.lineitems.all %}
                                     <li class="px-2 pt-1 display-6">
@@ -96,26 +91,14 @@
                                 {% endfor %}
                             </div>
                             <div class="dropdown-divider"></div>
-    
-                            
-    
                             <div class=" row pb-2 small justify-content-center ">
-                                <!--####################FIX###################-->
                                 <a class="btn btn-dark h-100 text-white py-1 px-2 " href="{% url 'checkout_success' order.order_number %}">View Order</a>
                             </div>
-    
                         </div>
-                    </a>
                 </div>
             {% endfor %}
         </div>
     </div>
-
-
-
-
-
-
     <div class="row mob-nav-header-hide">
         <div class="col-12 ml-3">
             <div class="order-history table-responsive rounded">
@@ -127,7 +110,6 @@
                             <th class="font-weight-normal">Items</th>
                             <th class="font-weight-normal">Order Total</th>
                             <th class="font-weight-normal">Order Status</th>
-
                         </tr>
                     </thead>
                     <tbody>

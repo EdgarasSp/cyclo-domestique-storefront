@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-    <link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'css/page_navbar.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -19,12 +19,13 @@
     <div class="col-md-12 px-0 mb-1">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile">profile</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile/orders">orders</a></li>
-            <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile/orders/all">all-orders</a></li>
-          </ol>
+            <ol class="breadcrumb bg-transparent pl-0 mb-0  small">
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/">/home</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile">profile</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase" href="/profile/orders">orders</a></li>
+                <li class="breadcrumb-item"><a class="text-black text-lowercase"
+                        href="/profile/orders/all">all-orders</a></li>
+            </ol>
         </nav>
     </div>
 </div>
@@ -40,109 +41,99 @@
         </div>
         <div class="col-6  my-auto  order-md-last d-flex justify-content-center justify-content-md-end">
             <div class="sort-select-wrapper w-50">
-                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
+                <select id="sort-selector"
+                    class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                    <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (A-Z)</option>
-                    <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status (Z-A)</option>
-                    <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (Oldest)</option>
-                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (Latest)</option>
+                    <option value="status_asc" {% if current_sorting == 'status_asc' %}selected{% endif %}>Status (A-Z)
+                    </option>
+                    <option value="status_desc" {% if current_sorting == 'status_desc' %}selected{% endif %}>Status
+                        (Z-A)</option>
+                    <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (Oldest)
+                    </option>
+                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (Latest)
+                    </option>
                 </select>
             </div>
         </div>
     </div>
-
-<!--------------------------------------------------------------------------------------------->
-<div class="product-container col-12 d-none d-show-buttons">
-    <div class="row justify-content-around-2 pb-4">
-        {% for order in orders %}
+    <div class="product-container col-12 d-none d-show-buttons">
+        <div class="row justify-content-around-2 pb-4">
+            {% for order in orders %}
             <div class="col mb-4 card-size pr-1">
-                
-                    <!-- Update -->
-                    <div class="card h-100 text-black bg-light" >
-                        <div class="card-body d-block align-self-stretch py-1 px-3">
-                            
-                            <div class="pt-2 text-right">
-                                <p class="text-black text-uppercase">Order Status: 
+                <div class="card h-100 text-black bg-light">
+                    <div class="card-body d-block align-self-stretch py-1 px-3">
+                        <div class="pt-2 text-right">
+                            <p class="text-black text-uppercase">Order Status:
                                 {% if order.status == 1 %}
-                                    <span class="p-1 rounded bg-primary text-white ml-2 px-2 py-1 ">Shipped</span>
+                                <span class="p-1 rounded bg-primary text-white ml-2 px-2 py-1 ">Shipped</span>
                                 {% elif order.status == 2 %}
-                                    <span class="p-1 rounded bg-success text-white ml-2 px-2 py-1 ">Completed</span>
+                                <span class="p-1 rounded bg-success text-white ml-2 px-2 py-1 ">Completed</span>
                                 {% elif order.status == 3 %}
-                                    <span class="p-1 rounded bg-warning text-dark ml-2 px-2 py-1 ">Hold</span>
+                                <span class="p-1 rounded bg-warning text-dark ml-2 px-2 py-1 ">Hold</span>
                                 {% elif order.status == 4 %}
-                                    <span class="p-1 rounded bg-danger text-white ml-2 px-2 py-1 ">Canceled</span>                                     
+                                <span class="p-1 rounded bg-danger text-white ml-2 px-2 py-1 ">Canceled</span>
                                 {% else %}
-                                    <span class="p-1 rounded bg-secondary text-white ml-2 px-2 py-1 ">Processing</span>  
+                                <span class="p-1 rounded bg-secondary text-white ml-2 px-2 py-1 ">Processing</span>
                                 {% endif %}
-                                </p>
-                            </div>
-                            <div class="dropdown-divider mt-1"></div>
-                            <div class="small pt-2   text-left"><span class="font-weight-bold">Order: </span> 
-                                <a href="{% url 'order_history' order.order_number %}"
-                                title="{{ order.order_number }}">
-                                    {{ order.order_number|truncatechars:25 }}
-                                </a> </div>
-                            <div class="small pt-2 text-left"><span class="font-weight-bold">Order Date: </span>{{ order.date }}</div>
-                            <div class="small pt-2 text-left"><span class="font-weight-bold">Client Name: </span> {{order.full_name}} </div>
-                            <div class="small pt-2 text-left"><span class="font-weight-bold">Order Amount: </span>£{{ order.grand_total }}</div>
+                            </p>
                         </div>
-                        <div class="dropdown-divider"></div>
-
-
-                        <div class="card-body d-block align-self-stretch p-1 text-left">
-                            {% for item in order.lineitems.all %}
-                                <li class="px-2 pt-1 display-6">
-                                    {{ item.quantity }} x {{ item.product.name }}
-                                    - {{ item.product.size }} 
-                                </li>
-                            {% endfor %}
-                        </div>
-                        <div class="dropdown-divider"></div>
-
-                        
-
-                        <div class=" row pb-2 small justify-content-center ">
-                            <!--####################FIX###################-->
-                            <a class="btn btn-dark h-100 text-white py-1 px-2 " href="{% url 'checkout_success' order.order_number %}">View Order</a>
-                            <a class="px-1"></a>
-                            <a class="btn btn-success h-100 text-white py-1 px-2" href="{% url 'edit_order' order.order_number %}">Update Status</a>
-                        </div>
-
+                        <div class="dropdown-divider mt-1"></div>
+                        <div class="small pt-2   text-left"><span class="font-weight-bold">Order: </span>
+                            <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                {{ order.order_number|truncatechars:25 }}
+                            </a> </div>
+                        <div class="small pt-2 text-left"><span class="font-weight-bold">Order Date:
+                            </span>{{ order.date }}</div>
+                        <div class="small pt-2 text-left"><span class="font-weight-bold">Client Name: </span>
+                            {{order.full_name}} </div>
+                        <div class="small pt-2 text-left"><span class="font-weight-bold">Order Amount:
+                            </span>£{{ order.grand_total }}</div>
                     </div>
-                </a>
+                    <div class="dropdown-divider"></div>
+                    <div class="card-body d-block align-self-stretch p-1 text-left">
+                        {% for item in order.lineitems.all %}
+                        <li class="px-2 pt-1 display-6">
+                            {{ item.quantity }} x {{ item.product.name }}
+                            - {{ item.product.size }}
+                        </li>
+                        {% endfor %}
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class=" row pb-2 small justify-content-center ">
+                        <a class="btn btn-dark h-100 text-white py-1 px-2 "
+                            href="{% url 'checkout_success' order.order_number %}">View Order</a>
+                        <a class="px-1"></a>
+                        <a class="btn btn-success h-100 text-white py-1 px-2"
+                            href="{% url 'edit_order' order.order_number %}">Update Status</a>
+                    </div>
+                </div>
             </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
-
-
-<!------------------------------------------------------------------------------------------------>
-<div class="product-container col-12  mob-nav-header-hide ">
-    <div class="order-history table-responsive rounded">   <!----- mob-nav-header-hide -->
-        <table class="table table-sm table-borderless">
-            <thead class="rounded">
-                <tr class="text-light bg-dark rounded py-1 px-1">
-                    <th class="font-weight-normal">User Name</th>
-                    <th class="font-weight-normal">Order Number</th>
-                    <th class="font-weight-normal">Order Date</th>
-                    <th class="font-weight-normal">Items</th>
-                    <th class="font-weight-normal">Order Total</th>
-                    <th class="font-weight-normal">Order Status</th>
-                    <th class="font-weight-normal small">Actions</th>
-
-
-                </tr>
-            </thead>
-            <tbody>
-                {% for order in orders %}
+    <div class="product-container col-12  mob-nav-header-hide ">
+        <div class="order-history table-responsive rounded">
+            <table class="table table-sm table-borderless">
+                <thead class="rounded">
+                    <tr class="text-light bg-dark rounded py-1 px-1">
+                        <th class="font-weight-normal">User Name</th>
+                        <th class="font-weight-normal">Order Number</th>
+                        <th class="font-weight-normal">Order Date</th>
+                        <th class="font-weight-normal">Items</th>
+                        <th class="font-weight-normal">Order Total</th>
+                        <th class="font-weight-normal">Order Status</th>
+                        <th class="font-weight-normal small">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
                     <div class="">
                         <tr class="border-bottom">
                             <td>
                                 {{ order.full_name }}
                             </td>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}"
-                                title="{{ order.order_number }}">
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
                                     {{ order.order_number|truncatechars:10 }}
                                 </a>
                             </td>
@@ -150,59 +141,64 @@
                             <td>
                                 <ul class="list-unstyled">
                                     {% for item in order.lineitems.all %}
-                                        <li class="">
-                                            {{ item.quantity }} x {{ item.product.name }}
-                                            - {{ item.product.size }} 
-                                        </li>
+                                    <li class="">
+                                        {{ item.quantity }} x {{ item.product.name }}
+                                        - {{ item.product.size }}
+                                    </li>
                                     {% endfor %}
                                 </ul>
                             </td>
                             <td class="poundSign currency">{{ order.grand_total }}</td>
                             <td class="pt-2 small ">
                                 {% if order.status == 1 %}
-                                    <span class="p-1 rounded bg-primary text-white ">Shipped</span>
+                                <span class="p-1 rounded bg-primary text-white ">Shipped</span>
                                 {% elif order.status == 2 %}
-                                    <span class="p-1 rounded bg-success text-white ">Completed</span>
+                                <span class="p-1 rounded bg-success text-white ">Completed</span>
                                 {% elif order.status == 3 %}
-                                    <span class="p-1 rounded bg-warning text-dark">Hold</span>
+                                <span class="p-1 rounded bg-warning text-dark">Hold</span>
                                 {% elif order.status == 4 %}
-                                    <span class="p-1 rounded bg-danger text-white">Canceled</span>                                     
+                                <span class="p-1 rounded bg-danger text-white">Canceled</span>
                                 {% else %}
-                                    <span class="p-1 rounded bg-secondary text-white">Processing</span>  
+                                <span class="p-1 rounded bg-secondary text-white">Processing</span>
                                 {% endif %}
                             </td>
                             <td>
-                            <div>
-                                <a class="btn btn-success btn-sm text-white py-0 px-1" href="{% url 'edit_order' order.order_number %}"><i class="fas fa-pencil-alt"></i></a>
-                                <a class="btn btn-secondary btn-sm text-white py-0 px-1" href="{% url 'checkout_success' order.order_number %}"><i class="fas fa-eye"></i></a>
-                            </div></td>  
+                                <div>
+                                    <a class="btn btn-success btn-sm text-white py-0 px-1"
+                                        href="{% url 'edit_order' order.order_number %}"><i
+                                            class="fas fa-pencil-alt"></i></a>
+                                    <a class="btn btn-secondary btn-sm text-white py-0 px-1"
+                                        href="{% url 'checkout_success' order.order_number %}"><i
+                                            class="fas fa-eye"></i></a>
+                                </div>
+                            </td>
                         </tr>
                     </div>
-                {% endfor %}
-            </tbody>
-        </table>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
-{% include "includes/footer.html" %}
-{% endblock %}
-{% block postloadjs %}
+    {% include "includes/footer.html" %}
+    {% endblock %}
+    {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 
     <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
+
     <script type="text/javascript">
-        $('#sort-selector').change(function() {
+        $('#sort-selector').change(function () {
             var selector = $(this);
             var currentUrl = new URL(window.location);
 
             var selectedVal = selector.val();
-            if(selectedVal != "reset"){
+            if (selectedVal != "reset") {
                 var sort = selectedVal.split("_")[0];
                 var direction = selectedVal.split("_")[1];
 
@@ -218,4 +214,4 @@
             }
         })
     </script>
-{% endblock %}
+    {% endblock %}
