@@ -64,7 +64,7 @@
       </button>
       <!--logo end-->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!--all auth account menu start-->
+        <!--all auth account mobile menu start-->
         <div class="col-12 col-lg-4 my-auto mr-5 px-0 text-rights d-none d-show-buttons border-bottom">
           <ul class="list-inline list-unstyled my-0" >
             <li class="list-inline-item dropdown">
@@ -120,7 +120,7 @@
             <!--basket end-->
           </ul>
         </div>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto ">
           <li class="nav-item logo-font">
             <a class="nav-link logo-font-width" href="{% url 'products' %}">Products</a>
           </li>
@@ -177,64 +177,63 @@
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
           <!--categories end-->
-
-          <!--all auth account menu start-->
-          <div class="col-12 col-lg-4 my-auto mr-5 py-lg-0 d-block-mid d-block-sml">
-            <ul class="list-inline list-unstyled my-0" >
-              <li class="list-inline-item dropdown">
-                <a class="text-black nav-link pr-0" href="#" id="user-options-2" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height ">
-                    <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg mob-nav-buttons"></i></p>
+        </ul>
+          <!--all auth account large menu start-->
+        <div class="col-2 text-right my-auto py-lg-0 pr-0 d-flex justify-content-end" style="min-width: 180px;" >
+          <div class="list-inline list-unstyled my-0 d-inline-flex" >
+            <div class="list-inline-item dropdown">
+              <a class="text-black nav-link pr-0 pl-0" href="#" id="user-options-2" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height ">
+                  <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg mob-nav-buttons"></i></p>
+                </div>
+              </a>
+              <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options-2">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'inventory' %}" class="dropdown-item text-primary text-uppercase">Inventory</a>
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'site_orders' %}" class="dropdown-item text-primary text-uppercase">Site Orders</a>
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'site_messages' %}" class="dropdown-item text-primary text-uppercase">Site Messages</a>
+                <div class="dropdown-divider"></div>
+                {% endif %}
+                <a href="{% url 'profile' %}" class="dropdown-item ">My Profile</a>
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'profile_orders' %}" class="dropdown-item ">My Orders</a>
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+              </div>
+            </div>
+            <!--basket start-->
+            <div class="list-inline-item mt-2 basket-vertical-align">
+              <div class="show-basket-test ">
+                <a class="nav-link btn btn-dark text-white py-1 px-1 basket-max-height " href="{% url 'view_basket' %}">
+                  <div class="text-left" style="min-width: 90px;">
+                    <p class="my-0 mx-0 pl-0 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 small"></i>
+                      <span class="" >
+                        {% if grand_total %}
+                          <span class="poundSign currency px-1" >{{ grand_total|floatformat:2 }}</span>
+                        {% else %}
+                          £1.00
+                        {% endif %}
+                      </span>
+                    </p>
                   </div>
                 </a>
-                <div class="dropdown-menu ropdown-menu-right" aria-labelledby="user-options-2">
-                  {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                  <a href="{% url 'inventory' %}" class="dropdown-item text-primary text-uppercase">Inventory</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="{% url 'site_orders' %}" class="dropdown-item text-primary text-uppercase">Site Orders</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="{% url 'site_messages' %}" class="dropdown-item text-primary text-uppercase">Site Messages</a>
-                  <div class="dropdown-divider"></div>
-                  {% endif %}
-                  <a href="{% url 'profile' %}" class="dropdown-item ">My Profile</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="{% url 'profile_orders' %}" class="dropdown-item ">My Orders</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                  {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                  {% endif %}
-                </div>
-              </li>
-              <!--basket start-->
-              <li class="list-inline-item mt-2 basket-vertical-align">
-                <div class="show-basket-test ">
-                  <a class="nav-link btn btn-dark text-white py-1 basket-max-height mob-nav-buttons" href="{% url 'view_basket' %}">
-                    <div class="text-left">
-                      <p class="my-0 mx-0 pl-0 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 "></i>
-                        <span >
-                          {% if grand_total %}
-                            <span class="poundSign currency px-1 ">{{ grand_total|floatformat:2 }}</span>
-                          {% else %}
-                            £0.00
-                          {% endif %}
-                        </span>
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="hide-test hide-preview-mobile">
-                  {% include "includes/basket_preview.html" %}
-                </div>
-              </li>
-              <!--basket end-->
-            </ul>
+              </div>
+              <div class="hide-test hide-preview-mobile">
+                {% include "includes/basket_preview.html" %}
+              </div>
+            </div>
+            <!--basket end-->
           </div>
-        </ul>
+        </div>
       </div>
     </nav>
     <!--end navbar-->
@@ -267,7 +266,7 @@
   {% endblock %}
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show');
   </script>
   {% endblock %}

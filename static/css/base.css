@@ -289,7 +289,7 @@ body {
     position:absolute;
     z-index: 999999;
     width: 340px;
-    left: -93px;
+    left: calc(100% - 340px) ;  /*calc(100% - 192px)*/
     top: 72px;
     right: 15px;
 }
