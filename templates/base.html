@@ -9,6 +9,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="Established in 2022, Cyclo Domestique is a family business with 1 store located in south west Endgland.
+    Cyclo Domestiques store feature Road, Mountain, Kids and Electric Bike and offer a wide range of products
+    and services to all types of cyclists, from children learning to ride their first bike, through to performance athletes.">
+  <meta name="keywords"
+    content="bicycle store, race bike, road bike shop, cycling wheels, big wheel bike, bike wheels,
+    bicycle store, mountain bike shop, bike retailer, workshop selling bikes, discover bikes,
+    leading specialist bike shop, bicycle shop near me, online bike shop uk,
+    electric bike shops in kent, bikeshop, wheels and tyres, road bike tyres, mountain bike tyres">
 
 
   {% endblock %}
@@ -21,13 +30,13 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  
+
   <link rel="shortcut icon" href="#" type="image/x-icon">
 
   <!--mailchimp-->
   <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 
-  
+
   {% endblock %}
 
   {% block extra_css %}
@@ -47,7 +56,7 @@
   <script src="{% static 'js/currency.js' %}"></script>
   <script src="{% static 'js/qty_input_buttons.js' %}"></script>
   <script src="https://js.stripe.com/v3/"></script>
- 
+
   {% endblock %}
 
   {% block extra_js %}
@@ -70,10 +79,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <!--all auth account mobile menu start-->
         <div class="col-12 col-lg-4 my-auto mr-5 px-0 text-rights d-none d-show-buttons border-bottom">
-          <ul class="list-inline list-unstyled my-0" >
+          <ul class="list-inline list-unstyled my-0">
             <li class="list-inline-item dropdown">
-              <a class="text-black nav-link pr-0" href="#" id="user-options-1" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
+              <a class="text-black nav-link pr-0" href="#" id="user-options-1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height ">
                   <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg mob-nav-buttons"></i></p>
                 </div>
@@ -105,12 +114,13 @@
               <div class="show-basket-test ">
                 <a class="nav-link btn btn-dark text-white py-1 basket-max-height" href="{% url 'view_basket' %}">
                   <div class="text-left ">
-                    <p class="my-0 mx-0 pl-0 logo-font small "><i class="fas fa-shopping-bag fa-lg mr-1 mob-nav-buttons "></i>
-                      <span >
+                    <p class="my-0 mx-0 pl-0 logo-font small "><i
+                        class="fas fa-shopping-bag fa-lg mr-1 mob-nav-buttons "></i>
+                      <span>
                         {% if grand_total %}
-                          <span class="poundSign currency px-1 ">{{ grand_total|floatformat:2 }}</span>
+                        <span class="poundSign currency px-1 ">{{ grand_total|floatformat:2 }}</span>
                         {% else %}
-                          £0.00
+                        £0.00
                         {% endif %}
                       </span>
                     </p>
@@ -182,12 +192,12 @@
           </li>
           <!--categories end-->
         </ul>
-          <!--all auth account large menu start-->
-        <div class="col-2 text-right my-auto py-lg-0 pr-0 d-flex justify-content-end" style="min-width: 180px;" >
-          <div class="list-inline list-unstyled my-0 d-inline-flex" >
+        <!--all auth account large menu start-->
+        <div class="col-2 text-right my-auto py-lg-0 pr-0 d-flex justify-content-end" style="min-width: 180px;">
+          <div class="list-inline list-unstyled my-0 d-inline-flex">
             <div class="list-inline-item dropdown">
-              <a class="text-black nav-link pr-0 pl-0" href="#" id="user-options-2" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
+              <a class="text-black nav-link pr-0 pl-0" href="#" id="user-options-2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <div class="text-center bg-dark border border-dark rounded py-1 px-4 basket-max-height ">
                   <p class="my-0 logo-font small text-white"><i class="fas fa-user fa-lg mob-nav-buttons"></i></p>
                 </div>
@@ -220,11 +230,11 @@
                 <a class="nav-link btn btn-dark text-white py-1 px-1 basket-max-height " href="{% url 'view_basket' %}">
                   <div class="text-left" style="min-width: 90px;">
                     <p class="my-0 mx-0 pl-1 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 small"></i>
-                      <span class="" >
+                      <span class="">
                         {% if grand_total %}
-                          <span class="poundSign currency px-1" >{{ grand_total|floatformat:2 }}</span>
+                        <span class="poundSign currency px-1">{{ grand_total|floatformat:2 }}</span>
                         {% else %}
-                          £0.00
+                        £0.00
                         {% endif %}
                       </span>
                     </p>
@@ -246,17 +256,17 @@
   {% if messages %}
   <div class="message-container">
     {% for message in messages %}
-      {% with message.level as level %}
-        {% if level == 40 %}
-          {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-          {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-          {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-          {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-      {% endwith %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
     {% endfor %}
   </div>
   {% endif %}
