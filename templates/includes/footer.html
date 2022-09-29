@@ -1,45 +1,115 @@
  <!-- FOOTER -->
 
  <footer class="footer align-items-center bg-black text-light mt-5">
-      <div class="bg-black pt-4">
-        <div class="text-center text-lg-center">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a class="text-light" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="{% url 'contact' %}">Contact</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-        <div class="bg-black text-center py-3 text-lg-center">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    <p class="bg-black text-light small text-center py-2 mb-0">&copy; By Edgaras Spiridonov for Code Institute 2022</p>
-  </footer>
+   <div class="d-flex bg-black pt-2">
+     <div class="col-6 text-center text-lg-center align-self-center">
+       <div class="d-flex flex-column align-self-center">
+         <ul class="list-inline mb-0">
+           <li class="list-inline-item">
+             <a class="text-light" href="{% url 'about' %}">About</a>
+           </li>
+           <li class="list-inline-item">&sdot;</li>
+           <li class="list-inline-item">
+             <a href="{% url 'contact' %}">Contact</a>
+           </li>
+           <li class="list-inline-item">&sdot;</li>
+           <li class="list-inline-item">
+             <a href="#">Terms of Use</a>
+           </li>
+           <li class="list-inline-item">&sdot;</li>
+           <li class="list-inline-item">
+             <a href="#">Privacy Policy</a>
+           </li>
+         </ul>
+
+         <div class="bg-black text-center py-3 text-lg-center">
+           <ul class="list-inline mb-0">
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="fab fa-facebook fa-2x fa-fw"></i>
+               </a>
+             </li>
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+               </a>
+             </li>
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="fab fa-instagram fa-2x fa-fw"></i>
+               </a>
+             </li>
+           </ul>
+         </div>
+         <p class="bg-black text-light small text-center py-2 mb-0">&copy; By Edgaras Spiridonov for Code Institute 2022
+         </p>
+       </div>
+     </div>
+
+     <!--MailChimp Subscriptions-->
+     <div class="col-6 text-center text-lg-center">
+       <!-- Begin Mailchimp Signup Form -->
+       <div id="mc_embed_signup">
+         <form
+           action="https://herokuapp.us18.list-manage.com/subscribe/post?u=fde8aa413d6d518dde09aa38d&amp;id=40b7d18649&amp;f_id=00f920e7f0"
+           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-50"
+           target="_blank" novalidate>
+           <div id="mc_embed_signup_scroll">
+             <h2 class="mt-0 ">Subscribe </h2>
+             <!--<span class="d-flex">
+              <div id="mce-responses" class="clear foot">
+                <div class="response m-0 p-0 small" id="mce-error-response" style="display:none; min-width: 300px;">
+                </div>
+                <div class="response m-0 p-0 small" id="mce-success-response"
+                  style="display:none; min-width: 300px;"></div>
+              </div>
+            </span>-->
+             <!--<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>-->
+             <div class="mc-field-group">
+               <!--<label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+               </label>-->
+               <input type="email" style="min-width: 330px;" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                 placeholder="Email Address" required>
+               <!--<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>-->
+             </div>
+
+             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                 name="b_fde8aa413d6d518dde09aa38d_40b7d18649" tabindex="-1" value=""></div>
+             <div class="optionalParent">
+               <div class="clear foot">
+                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                 <p class="brandingLogo"><a href="http://eepurl.com/iackJn"
+                     title="Mailchimp - email marketing made easy and fun"><img
+                       src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="MailChimp logo"></a></p>
+               </div>
+             </div>
+           </div>
+         </form>
+       </div>
+       <!--End mc_embed_signup-->
+     </div>
+   </div>
+
+ </footer>
+
+ <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+ <script>
+   (function ($) {
+     window.fnames = new Array();
+     window.ftypes = new Array();
+     fnames[0] = 'EMAIL';
+     ftypes[0] = 'email';
+     fnames[1] = 'FNAME';
+     ftypes[1] = 'text';
+     fnames[2] = 'LNAME';
+     ftypes[2] = 'text';
+     fnames[3] = 'ADDRESS';
+     ftypes[3] = 'address';
+     fnames[4] = 'PHONE';
+     ftypes[4] = 'phone';
+     fnames[5] = 'BIRTHDAY';
+     ftypes[5] = 'birthday';
+   }(jQuery));
+   var $mcj = jQuery.noConflict(true);
+ </script>
