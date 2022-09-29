@@ -215,12 +215,12 @@
               <div class="show-basket-test ">
                 <a class="nav-link btn btn-dark text-white py-1 px-1 basket-max-height " href="{% url 'view_basket' %}">
                   <div class="text-left" style="min-width: 90px;">
-                    <p class="my-0 mx-0 pl-0 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 small"></i>
+                    <p class="my-0 mx-0 pl-1 logo-font small"><i class="fas fa-shopping-bag fa-lg mr-1 small"></i>
                       <span class="" >
                         {% if grand_total %}
                           <span class="poundSign currency px-1" >{{ grand_total|floatformat:2 }}</span>
                         {% else %}
-                          £1.00
+                          £0.00
                         {% endif %}
                       </span>
                     </p>
